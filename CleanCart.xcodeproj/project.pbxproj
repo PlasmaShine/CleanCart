@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */; };
+		C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */; };
+		C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622B11A9AE12800520FE1 /* DataSourceTests.m */; };
+		C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622B81A9AECC200520FE1 /* ItemRepositorySpy.m */; };
+		C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622BC1A9AECFB00520FE1 /* ItemRepository.m */; };
+		C84622C01A9AED8100520FE1 /* ItemList.json in Resources */ = {isa = PBXBuildFile; fileRef = C84622BF1A9AED8100520FE1 /* ItemList.json */; };
 		DE119D491A997FC700FEEBCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D481A997FC700FEEBCB /* main.m */; };
 		DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D4B1A997FC700FEEBCB /* AppDelegate.m */; };
-		DE119D4F1A997FC700FEEBCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D4E1A997FC700FEEBCB /* ViewController.m */; };
 		DE119D521A997FC700FEEBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE119D501A997FC700FEEBCB /* Main.storyboard */; };
 		DE119D541A997FC700FEEBCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE119D531A997FC700FEEBCB /* Images.xcassets */; };
 		DE119D571A997FC700FEEBCB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE119D551A997FC700FEEBCB /* LaunchScreen.xib */; };
@@ -27,13 +32,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepositoryTests.m; sourceTree = "<group>"; };
+		C84622AD1A9AE10D00520FE1 /* JSONDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDataSource.h; sourceTree = "<group>"; };
+		C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDataSource.m; sourceTree = "<group>"; };
+		C84622B11A9AE12800520FE1 /* DataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceTests.m; sourceTree = "<group>"; };
+		C84622B51A9AE2E600520FE1 /* DataSourceIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSourceIO.h; sourceTree = "<group>"; };
+		C84622B71A9AECC200520FE1 /* ItemRepositorySpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemRepositorySpy.h; sourceTree = "<group>"; };
+		C84622B81A9AECC200520FE1 /* ItemRepositorySpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepositorySpy.m; sourceTree = "<group>"; };
+		C84622BB1A9AECFB00520FE1 /* ItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemRepository.h; sourceTree = "<group>"; };
+		C84622BC1A9AECFB00520FE1 /* ItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepository.m; sourceTree = "<group>"; };
+		C84622BF1A9AED8100520FE1 /* ItemList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ItemList.json; sourceTree = "<group>"; };
 		DE119D431A997FC700FEEBCB /* CleanCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE119D471A997FC700FEEBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE119D481A997FC700FEEBCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE119D4A1A997FC700FEEBCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DE119D4B1A997FC700FEEBCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DE119D4D1A997FC700FEEBCB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DE119D4E1A997FC700FEEBCB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DE119D511A997FC700FEEBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE119D531A997FC700FEEBCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DE119D561A997FC700FEEBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -60,6 +73,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C84622B01A9AE11300520FE1 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				C84622B61A9AE2EA00520FE1 /* Protocols */,
+				C84622AD1A9AE10D00520FE1 /* JSONDataSource.h */,
+				C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		C84622B31A9AE12E00520FE1 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				C84622B11A9AE12800520FE1 /* DataSourceTests.m */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		C84622B41A9AE13A00520FE1 /* ItemRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C84622BA1A9AECCA00520FE1 /* Mocks */,
+				C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */,
+			);
+			name = ItemRepository;
+			sourceTree = "<group>";
+		};
+		C84622B61A9AE2EA00520FE1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C84622B51A9AE2E600520FE1 /* DataSourceIO.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C84622BA1A9AECCA00520FE1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C84622B71A9AECC200520FE1 /* ItemRepositorySpy.h */,
+				C84622B81A9AECC200520FE1 /* ItemRepositorySpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		C84622BE1A9AED0100520FE1 /* ItemRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C84622BB1A9AECFB00520FE1 /* ItemRepository.h */,
+				C84622BC1A9AECFB00520FE1 /* ItemRepository.m */,
+			);
+			name = ItemRepository;
+			sourceTree = "<group>";
+		};
 		DE119D3A1A997FC700FEEBCB = {
 			isa = PBXGroup;
 			children = (
@@ -81,14 +147,15 @@
 		DE119D451A997FC700FEEBCB /* CleanCart */ = {
 			isa = PBXGroup;
 			children = (
+				C84622BF1A9AED8100520FE1 /* ItemList.json */,
 				DE119D4A1A997FC700FEEBCB /* AppDelegate.h */,
 				DE119D4B1A997FC700FEEBCB /* AppDelegate.m */,
-				DE119D4D1A997FC700FEEBCB /* ViewController.h */,
-				DE119D4E1A997FC700FEEBCB /* ViewController.m */,
 				DE119D501A997FC700FEEBCB /* Main.storyboard */,
 				DE119D531A997FC700FEEBCB /* Images.xcassets */,
 				DE119D551A997FC700FEEBCB /* LaunchScreen.xib */,
 				DE119D461A997FC700FEEBCB /* Supporting Files */,
+				C84622B01A9AE11300520FE1 /* DataSource */,
+				C84622BE1A9AED0100520FE1 /* ItemRepository */,
 			);
 			path = CleanCart;
 			sourceTree = "<group>";
@@ -107,6 +174,8 @@
 			children = (
 				DE119D621A997FC700FEEBCB /* CleanCartTests.m */,
 				DE119D601A997FC700FEEBCB /* Supporting Files */,
+				C84622B41A9AE13A00520FE1 /* ItemRepository */,
+				C84622B31A9AE12E00520FE1 /* DataSource */,
 			);
 			path = CleanCartTests;
 			sourceTree = "<group>";
@@ -199,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84622C01A9AED8100520FE1 /* ItemList.json in Resources */,
 				DE119D521A997FC700FEEBCB /* Main.storyboard in Resources */,
 				DE119D571A997FC700FEEBCB /* LaunchScreen.xib in Resources */,
 				DE119D541A997FC700FEEBCB /* Images.xcassets in Resources */,
@@ -219,8 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE119D4F1A997FC700FEEBCB /* ViewController.m in Sources */,
+				C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */,
 				DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */,
+				C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */,
 				DE119D491A997FC700FEEBCB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */,
+				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
+				C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */,
 				DE119D631A997FC700FEEBCB /* CleanCartTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +486,7 @@
 				DE119D681A997FC700FEEBCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE119D691A997FC700FEEBCB /* Build configuration list for PBXNativeTarget "CleanCartTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +495,7 @@
 				DE119D6B1A997FC700FEEBCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
