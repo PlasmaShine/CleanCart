@@ -19,6 +19,7 @@
 		DE119D541A997FC700FEEBCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE119D531A997FC700FEEBCB /* Images.xcassets */; };
 		DE119D571A997FC700FEEBCB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE119D551A997FC700FEEBCB /* LaunchScreen.xib */; };
 		DE119D631A997FC700FEEBCB /* CleanCartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D621A997FC700FEEBCB /* CleanCartTests.m */; };
+		DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE561A1A9B71B700D9C3D2 /* Item.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		DE119D5C1A997FC700FEEBCB /* CleanCartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanCartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE119D611A997FC700FEEBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE119D621A997FC700FEEBCB /* CleanCartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CleanCartTests.m; sourceTree = "<group>"; };
+		DEAE56191A9B71B700D9C3D2 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		DEAE561A1A9B71B700D9C3D2 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,7 @@
 				DE119D461A997FC700FEEBCB /* Supporting Files */,
 				C84622B01A9AE11300520FE1 /* DataSource */,
 				C84622BE1A9AED0100520FE1 /* ItemRepository */,
+				DEAE561C1A9B71BD00D9C3D2 /* Item */,
 			);
 			path = CleanCart;
 			sourceTree = "<group>";
@@ -186,6 +190,15 @@
 				DE119D611A997FC700FEEBCB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEAE561C1A9B71BD00D9C3D2 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56191A9B71B700D9C3D2 /* Item.h */,
+				DEAE561A1A9B71B700D9C3D2 /* Item.m */,
+			);
+			name = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */,
 				C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */,
 				DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */,
 				C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */,

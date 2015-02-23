@@ -12,27 +12,29 @@
 #import "DataSourceIO.h"
 #import "ItemRepositorySpy.h"
 #import "ItemRepository.h"
+#import "Item.h"
 
 @interface DataSourceTests : XCTestCase <DataSourceResponse>
 
 @property (nonatomic, assign) BOOL dataReceived;
 @property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) JSONDataSource *sut;
+
 @end
 
 @implementation DataSourceTests
 
 #pragma mark - Helper methods
 
-- (BOOL)waitFor:(BOOL *)flag timeout:(NSTimeInterval)timeoutSecs {
-    NSDate *timeoutDate = [NSDate dateWithTimeIntervalSinceNow:timeoutSecs];
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:timeoutDate];
-        if ([timeoutDate timeIntervalSinceNow] < 0.0) {
-            break;
-        }
+- (void)waitFor:(BOOL *)flag timeout:(NSTimeInterval)timeoutSecs {
+    NSTimeInterval runningTime = 0;
+    NSTimeInterval timeIncrement = 0.01;
+    NSDate *timeoutDate = [NSDate dateWithTimeIntervalSinceNow:timeIncrement];
+    while (!*flag && !runningTime>=timeoutSecs && [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:timeoutDate]) {
+        timeoutDate = [NSDate dateWithTimeIntervalSinceNow:timeIncrement];
+        ;
+        runningTime +=timeIncrement;
     }
-    while (!*flag);
-    return *flag;
 }
 
 #pragma mark - DataSourceResponse
@@ -46,11 +48,14 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.items = nil;
+    self.dataReceived = NO;
+    self.sut = [[JSONDataSource alloc] init];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.sut = nil;
+    self.items = nil;
     [super tearDown];
 }
 
@@ -59,24 +64,33 @@
 }
 
 - (void)testNonConformingDelegateCannotBeSetForDataSource {
-    JSONDataSource *ds = [[JSONDataSource alloc] init];
-    XCTAssertThrows(ds.delegate =
+    XCTAssertThrows(self.sut.delegate =
                     (id <DataSourceResponse>)[NSNull null], "Should not be able to set object not conforming to DataSourceResponse protocol as a delegate");
 }
 
+- (void)testNilCanBeSetAsDelegateForDataSource {
+    XCTAssertNoThrow(self.sut.delegate = nil, "Should be able to set nil as a delegate");
+}
+
 - (void)testWhenItemsAreReceivedMessageIsSentToDelegate {
-    JSONDataSource *ds = [[JSONDataSource alloc] init];
     ItemRepositorySpy *repo = [[ItemRepositorySpy alloc] init];
-    ds.delegate = repo;
-    [ds fetchItems];
+    self.sut.delegate = repo;
+    [self.sut fetchItems];
     XCTAssertTrue(repo.didReceiveItemRetrievalMessage, "Delegate should have received the didRetrieveItems message");
 }
 
 - (void)testDataIsCorrectlyFetchedFromJSONFile {
     JSONDataSource *ds = [[JSONDataSource alloc] init];
+    ds.delegate = self;
     [ds fetchItems];
     [self waitFor:&_dataReceived timeout:1];
-    XCTAssertEqual(self.items.count, 4, "There should be 4 items returned");
+    Item *item = self.items[0];
+    XCTAssertEqual(self.items.count, 4, "4 items should have been returned");
+    XCTAssertEqualObjects(item.itemId, @"1", @"Incorrect description for item");
+    XCTAssertEqualObjects(item.itemName, @"Item 1", @"Incorrect description for item");
+    XCTAssertEqualObjects(item.itemDescription, @"This is the description for item 1");
+    XCTAssertEqual(item.itemPrice, 3000, @"Item price should be 3000");
+    XCTAssertEqual(item.itemStock, 5, @"Item stock should be 5");
 }
 
 @end

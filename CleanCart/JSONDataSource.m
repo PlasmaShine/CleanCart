@@ -7,12 +7,13 @@
 //
 
 #import "JSONDataSource.h"
+#import "Item.h"
 
 @implementation JSONDataSource
 @synthesize delegate = _delegate;
 
 - (void)setDelegate:(id<DataSourceResponse>)delegate {
-    if (![delegate conformsToProtocol: @protocol(DataSourceResponse)]) {
+    if (delegate && ![delegate conformsToProtocol: @protocol(DataSourceResponse)]) {
         [[NSException exceptionWithName: NSInvalidArgumentException reason: @"Delegate object does not conform to the proper protocol" userInfo: nil] raise];
     }
     _delegate = delegate;
@@ -21,7 +22,35 @@
 #pragma mark - DataSourceRequest methods
 
 - (void)fetchItems {
-    [self.delegate didReceiveItems:[NSArray array]];
+    NSArray *itemList = [self _loadItemsFromJSONFile];
+    [self.delegate didReceiveItems:itemList];
+}
+
+- (NSArray *)_loadItemsFromJSONFile {
+    NSMutableArray *result = [NSMutableArray array];
+    NSDictionary *json = [self _loadJSONDictionary];
+    if(json) {
+        NSArray *jsonItemList = json[@"items"];
+        if ([jsonItemList isKindOfClass:[NSArray class]]) {
+            for (NSDictionary *dictionary in jsonItemList) {
+                Item *item = [[Item alloc] initWithJSON:dictionary];
+                [result addObject:item];
+            }
+        }
+    }
+    return result;
+}
+
+- (NSDictionary *)_loadJSONDictionary {
+    NSError *error = nil;
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ItemList" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if (!error) {
+        return json;
+    } else {
+        return nil;
+    }
 }
 
 @end
