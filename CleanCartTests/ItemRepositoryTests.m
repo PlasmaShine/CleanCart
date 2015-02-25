@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 Norbert Nemes. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "Item.h"
+#import "ItemRepository.h"
 
 @interface ItemRepositoryTests : XCTestCase
 
@@ -25,10 +26,21 @@
     [super tearDown];
 }
 
-//- (void)testItemRepositoryReturnsCorrectNumberOfItems {
-//    JSONDataSource dataSource = [[JSONDataSource alloc] init];
-//    ItemRepository *repo = [ItemRepository initWithDataSource:dataSource];
-//    [repo fetchItems];
-//}
+- (void)testItemRepositoryReturnsCorrectItems {
+    NSArray *items = [[NSArray alloc] initWithObjects:[[Item alloc]init], [[Item alloc] init], nil];
+    ItemRepository *repo = [[ItemRepository alloc]init];
+    [repo didReceiveItems:items];
+    XCTAssertEqualObjects([repo allItems], items, @"Items in the repository should be identical to those received from the data source");
+}
+
+- (void)testItemRepositoryNotifiesDelegateWhenItemsAreReceived {
+    ItemRepository *repo = [[ItemRepository alloc] init];
+    Item *item1 = [[Item alloc] init];
+    item1.itemId = @"1";
+    Item *item2 = [[Item alloc] init];
+    item2.itemId = @"2";
+    NSArray *items = [[NSArray alloc] initWithObjects:item1, item2, nil];
+    
+}
 
 @end

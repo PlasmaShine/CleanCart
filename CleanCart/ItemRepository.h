@@ -11,4 +11,6 @@
 
 @interface ItemRepository : NSObject <DataSourceResponse>
 
+- (NSArray *)allItems;
+
 @end

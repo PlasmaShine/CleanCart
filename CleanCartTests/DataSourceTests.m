@@ -37,6 +37,14 @@
     }
 }
 
+- (void)_assertItem:(Item *)item hasId:(NSString *)expectedId andName:(NSString *)expectedName andDescription:(NSString *)expectedDescription andPrice:(NSInteger)expectedPrice andStock:(NSInteger)expectedStock {
+    XCTAssertEqualObjects(item.itemId, expectedId, @"Incorrect item Id");
+    XCTAssertEqualObjects(item.itemName, expectedName, @"Incorrect name for item");
+    XCTAssertEqualObjects(item.itemDescription, expectedDescription, @"Incorrect Item description");
+    XCTAssertEqual(item.itemPrice, expectedPrice, @"Incorrect item price");
+    XCTAssertEqual(item.itemStock, expectedStock, @"Incorrect item stock");
+}
+
 #pragma mark - DataSourceResponse
 
 - (void)didReceiveItems:(NSArray *)items {
@@ -63,15 +71,6 @@
     XCTAssertTrue([JSONDataSource.class conformsToProtocol:@protocol(DataSourceRequest)], @"Data source should conform to DataSourceRequestProtocol");
 }
 
-- (void)testNonConformingDelegateCannotBeSetForDataSource {
-    XCTAssertThrows(self.sut.delegate =
-                    (id <DataSourceResponse>)[NSNull null], "Should not be able to set object not conforming to DataSourceResponse protocol as a delegate");
-}
-
-- (void)testNilCanBeSetAsDelegateForDataSource {
-    XCTAssertNoThrow(self.sut.delegate = nil, "Should be able to set nil as a delegate");
-}
-
 - (void)testWhenItemsAreReceivedMessageIsSentToDelegate {
     ItemRepositorySpy *repo = [[ItemRepositorySpy alloc] init];
     self.sut.delegate = repo;
@@ -80,17 +79,20 @@
 }
 
 - (void)testDataIsCorrectlyFetchedFromJSONFile {
+    //Since the data source is a mock that reads data from the disk,
+    //the test below can be done in a simpler fashion. However, I
+    //wanted to illustrate how to do testing of asynchronous calls
+    //using the self-shunt pattern.
     JSONDataSource *ds = [[JSONDataSource alloc] init];
     ds.delegate = self;
     [ds fetchItems];
     [self waitFor:&_dataReceived timeout:1];
-    Item *item = self.items[0];
+    
     XCTAssertEqual(self.items.count, 4, "4 items should have been returned");
-    XCTAssertEqualObjects(item.itemId, @"1", @"Incorrect description for item");
-    XCTAssertEqualObjects(item.itemName, @"Item 1", @"Incorrect description for item");
-    XCTAssertEqualObjects(item.itemDescription, @"This is the description for item 1");
-    XCTAssertEqual(item.itemPrice, 3000, @"Item price should be 3000");
-    XCTAssertEqual(item.itemStock, 5, @"Item stock should be 5");
+    [self _assertItem:self.items[0] hasId:@"1" andName:@"Item 1" andDescription:@"This is the description for item 1" andPrice:3000 andStock:5];
+    [self _assertItem:self.items[1] hasId:@"2" andName:@"Item 2" andDescription:@"This is the description for item 2" andPrice:4997 andStock:1];
+    [self _assertItem:self.items[2] hasId:@"3" andName:@"Item 3" andDescription:@"This is the description for item 3" andPrice:1000 andStock:0];
+    [self _assertItem:self.items[3] hasId:@"4" andName:@"Item 4" andDescription:@"This is the description for item 4" andPrice:9999 andStock:2];
 }
 
 @end

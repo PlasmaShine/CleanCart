@@ -8,6 +8,24 @@
 
 #import "ItemRepository.h"
 
+@interface ItemRepository()
+    
+@property (nonatomic, strong) NSArray* items;
+
+@end
+
 @implementation ItemRepository
+
+#pragma mark - ItemRepositoryRequestMethods
+
+- (NSArray *)allItems {
+    return self.items;
+}
+
+#pragma mark - DataSourceResponse protocol methods
+
+- (void)didReceiveItems:(NSArray *)items {
+    self.items = items;
+}
 
 @end
