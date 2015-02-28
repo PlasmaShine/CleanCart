@@ -11,5 +11,6 @@
 
 @interface ItemRepositorySpy : ItemRepository
 
+@property (nonatomic, assign) BOOL didReceiveAllItemsMessage;
 @property (nonatomic, assign) BOOL didReceiveItemRetrievalMessage;
 @end

@@ -25,7 +25,9 @@
 #pragma mark - DataSourceResponse protocol methods
 
 - (void)didReceiveItems:(NSArray *)items {
+    if (items.count == 0) return;
     self.items = items;
+    [self.delegate didReceiveItems:items];
 }
 
 @end

@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C83F283F1A9D8DFD00E3DA7B /* ListInteractorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F283E1A9D8DFD00E3DA7B /* ListInteractorTest.m */; };
+		C83F283F1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F283E1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m */; };
 		C83F28431A9D924A00E3DA7B /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28421A9D924A00E3DA7B /* Transaction.m */; };
 		C83F28481A9D927C00E3DA7B /* ListItemsTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28471A9D927C00E3DA7B /* ListItemsTransaction.m */; };
+		C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F284F1A9E847700E3DA7B /* ListItemsTransactionSpy.m */; };
+		C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28521AA047C100E3DA7B /* ListItemsPresenterTests.m */; };
+		C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28561AA04CC900E3DA7B /* ListItemsPresenter.m */; };
 		C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */; };
 		C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */; };
 		C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622B11A9AE12800520FE1 /* DataSourceTests.m */; };
@@ -21,7 +24,6 @@
 		DE119D521A997FC700FEEBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE119D501A997FC700FEEBCB /* Main.storyboard */; };
 		DE119D541A997FC700FEEBCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE119D531A997FC700FEEBCB /* Images.xcassets */; };
 		DE119D571A997FC700FEEBCB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE119D551A997FC700FEEBCB /* LaunchScreen.xib */; };
-		DE119D631A997FC700FEEBCB /* CleanCartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D621A997FC700FEEBCB /* CleanCartTests.m */; };
 		DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE561A1A9B71B700D9C3D2 /* Item.m */; };
 /* End PBXBuildFile section */
 
@@ -36,12 +38,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C83F283E1A9D8DFD00E3DA7B /* ListInteractorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListInteractorTest.m; sourceTree = "<group>"; };
+		C83F283E1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsTransactionTest.m; sourceTree = "<group>"; };
 		C83F28411A9D924A00E3DA7B /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		C83F28421A9D924A00E3DA7B /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		C83F28461A9D927C00E3DA7B /* ListItemsTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsTransaction.h; sourceTree = "<group>"; };
 		C83F28471A9D927C00E3DA7B /* ListItemsTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsTransaction.m; sourceTree = "<group>"; };
 		C83F284A1A9D934900E3DA7B /* ListItemsTransactionIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItemsTransactionIO.h; sourceTree = "<group>"; };
+		C83F284C1A9E82A400E3DA7B /* ItemRepositoryIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemRepositoryIO.h; sourceTree = "<group>"; };
+		C83F284E1A9E847700E3DA7B /* ListItemsTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsTransactionSpy.h; sourceTree = "<group>"; };
+		C83F284F1A9E847700E3DA7B /* ListItemsTransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsTransactionSpy.m; sourceTree = "<group>"; };
+		C83F28521AA047C100E3DA7B /* ListItemsPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsPresenterTests.m; sourceTree = "<group>"; };
+		C83F28551AA04CC900E3DA7B /* ListItemsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsPresenter.h; sourceTree = "<group>"; };
+		C83F28561AA04CC900E3DA7B /* ListItemsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsPresenter.m; sourceTree = "<group>"; };
+		C83F285A1AA052ED00E3DA7B /* ListItemsPresenterIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItemsPresenterIO.h; sourceTree = "<group>"; };
 		C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepositoryTests.m; sourceTree = "<group>"; };
 		C84622AD1A9AE10D00520FE1 /* JSONDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDataSource.h; sourceTree = "<group>"; };
 		C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDataSource.m; sourceTree = "<group>"; };
@@ -62,7 +71,6 @@
 		DE119D561A997FC700FEEBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DE119D5C1A997FC700FEEBCB /* CleanCartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanCartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE119D611A997FC700FEEBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE119D621A997FC700FEEBCB /* CleanCartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CleanCartTests.m; sourceTree = "<group>"; };
 		DEAE56191A9B71B700D9C3D2 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		DEAE561A1A9B71B700D9C3D2 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,12 +93,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C83F28401A9D8E0200E3DA7B /* ListItems */ = {
+		C83F28401A9D8E0200E3DA7B /* ListItemsTransaction */ = {
 			isa = PBXGroup;
 			children = (
-				C83F283E1A9D8DFD00E3DA7B /* ListInteractorTest.m */,
+				C83F28511A9E847B00E3DA7B /* Mocks */,
+				C83F283E1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m */,
 			);
-			name = ListItems;
+			name = ListItemsTransaction;
 			sourceTree = "<group>";
 		};
 		C83F28441A9D924E00E3DA7B /* Transaction */ = {
@@ -113,9 +122,8 @@
 		C83F28491A9D928500E3DA7B /* ListItems */ = {
 			isa = PBXGroup;
 			children = (
-				C83F284B1A9D934D00E3DA7B /* Protocols */,
-				C83F28461A9D927C00E3DA7B /* ListItemsTransaction.h */,
-				C83F28471A9D927C00E3DA7B /* ListItemsTransaction.m */,
+				C83F28591AA04D7200E3DA7B /* ListItemsTransaction */,
+				C83F28581AA04CD000E3DA7B /* ListItemsPresenter */,
 			);
 			name = ListItems;
 			sourceTree = "<group>";
@@ -124,6 +132,59 @@
 			isa = PBXGroup;
 			children = (
 				C83F284A1A9D934900E3DA7B /* ListItemsTransactionIO.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C83F284D1A9E82B400E3DA7B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C83F284C1A9E82A400E3DA7B /* ItemRepositoryIO.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C83F28511A9E847B00E3DA7B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C83F284E1A9E847700E3DA7B /* ListItemsTransactionSpy.h */,
+				C83F284F1A9E847700E3DA7B /* ListItemsTransactionSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		C83F28541AA047C700E3DA7B /* ListItemsPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				C83F28521AA047C100E3DA7B /* ListItemsPresenterTests.m */,
+			);
+			name = ListItemsPresenter;
+			sourceTree = "<group>";
+		};
+		C83F28581AA04CD000E3DA7B /* ListItemsPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				C83F285B1AA052F600E3DA7B /* Protocols */,
+				C83F28551AA04CC900E3DA7B /* ListItemsPresenter.h */,
+				C83F28561AA04CC900E3DA7B /* ListItemsPresenter.m */,
+			);
+			name = ListItemsPresenter;
+			sourceTree = "<group>";
+		};
+		C83F28591AA04D7200E3DA7B /* ListItemsTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				C83F284B1A9D934D00E3DA7B /* Protocols */,
+				C83F28461A9D927C00E3DA7B /* ListItemsTransaction.h */,
+				C83F28471A9D927C00E3DA7B /* ListItemsTransaction.m */,
+			);
+			name = ListItemsTransaction;
+			sourceTree = "<group>";
+		};
+		C83F285B1AA052F600E3DA7B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C83F285A1AA052ED00E3DA7B /* ListItemsPresenterIO.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -175,6 +236,7 @@
 		C84622BE1A9AED0100520FE1 /* ItemRepository */ = {
 			isa = PBXGroup;
 			children = (
+				C83F284D1A9E82B400E3DA7B /* Protocols */,
 				C84622BB1A9AECFB00520FE1 /* ItemRepository.h */,
 				C84622BC1A9AECFB00520FE1 /* ItemRepository.m */,
 			);
@@ -186,6 +248,7 @@
 			children = (
 				DE119D451A997FC700FEEBCB /* CleanCart */,
 				DE119D5F1A997FC700FEEBCB /* CleanCartTests */,
+				DE119D601A997FC700FEEBCB /* Supporting Files */,
 				DE119D441A997FC700FEEBCB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -230,11 +293,10 @@
 		DE119D5F1A997FC700FEEBCB /* CleanCartTests */ = {
 			isa = PBXGroup;
 			children = (
-				DE119D621A997FC700FEEBCB /* CleanCartTests.m */,
-				DE119D601A997FC700FEEBCB /* Supporting Files */,
 				C84622B31A9AE12E00520FE1 /* DataSource */,
 				C84622B41A9AE13A00520FE1 /* ItemRepository */,
-				C83F28401A9D8E0200E3DA7B /* ListItems */,
+				C83F28401A9D8E0200E3DA7B /* ListItemsTransaction */,
+				C83F28541AA047C700E3DA7B /* ListItemsPresenter */,
 			);
 			path = CleanCartTests;
 			sourceTree = "<group>";
@@ -245,6 +307,7 @@
 				DE119D611A997FC700FEEBCB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = CleanCartTests;
 			sourceTree = "<group>";
 		};
 		DEAE561C1A9B71BD00D9C3D2 /* Item */ = {
@@ -362,6 +425,7 @@
 				C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */,
 				DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */,
 				C83F28481A9D927C00E3DA7B /* ListItemsTransaction.m in Sources */,
+				C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */,
 				C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */,
 				DE119D491A997FC700FEEBCB /* main.m in Sources */,
 			);
@@ -371,11 +435,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */,
+				C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */,
 				C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */,
-				C83F283F1A9D8DFD00E3DA7B /* ListInteractorTest.m in Sources */,
+				C83F283F1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m in Sources */,
 				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
 				C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */,
-				DE119D631A997FC700FEEBCB /* CleanCartTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,12 @@
     return self;
 }
 
+- (NSArray *)allItems {
+    self.didReceiveAllItemsMessage = YES;
+    return [NSArray array];
+}
+    
+
 - (void)didReceiveItems:(NSArray *)items {
     self.didReceiveItemRetrievalMessage = YES;
 }

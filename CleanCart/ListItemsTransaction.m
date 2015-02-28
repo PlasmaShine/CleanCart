@@ -23,4 +23,14 @@
     return self;
 }
 
+- (void)execute {
+    [self.repository allItems];
+}
+
+#pragma mark - ItemRepositoryResponse
+
+- (void)didReceiveItems:(NSArray *)items {
+    
+}
+
 @end

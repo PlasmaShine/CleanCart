@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "DataSourceIO.h"
+#import "ItemRepositoryIO.h"
 
 @interface ItemRepository : NSObject <DataSourceResponse>
+
+@property (nonatomic, strong) id<ItemRepositoryResponse> delegate;
 
 - (NSArray *)allItems;
 

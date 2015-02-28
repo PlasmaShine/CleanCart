@@ -9,8 +9,13 @@
 #import <XCTest/XCTest.h>
 #import "Item.h"
 #import "ItemRepository.h"
+#import "ListItemsTransactionSpy.h"
 
 @interface ItemRepositoryTests : XCTestCase
+
+@property (nonatomic, strong) ListItemsTransactionSpy *interactorSpy;
+@property (nonatomic, strong) ItemRepository *sut;
+@property (nonatomic, strong) NSArray *items;
 
 @end
 
@@ -18,29 +23,39 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testItemRepositoryReturnsCorrectItems {
-    NSArray *items = [[NSArray alloc] initWithObjects:[[Item alloc]init], [[Item alloc] init], nil];
-    ItemRepository *repo = [[ItemRepository alloc]init];
-    [repo didReceiveItems:items];
-    XCTAssertEqualObjects([repo allItems], items, @"Items in the repository should be identical to those received from the data source");
-}
-
-- (void)testItemRepositoryNotifiesDelegateWhenItemsAreReceived {
-    ItemRepository *repo = [[ItemRepository alloc] init];
+    self.sut = [[ItemRepository alloc] init];
     Item *item1 = [[Item alloc] init];
     item1.itemId = @"1";
     Item *item2 = [[Item alloc] init];
     item2.itemId = @"2";
-    NSArray *items = [[NSArray alloc] initWithObjects:item1, item2, nil];
-    
+    self.items = [[NSArray alloc] initWithObjects:item1, item2, nil];
+    self.interactorSpy = [[ListItemsTransactionSpy alloc] init];
+    self.sut.delegate = self.interactorSpy;
+}
+
+- (void)tearDown {
+    self.sut = nil;
+    self.items = nil;
+    self.interactorSpy = nil;
+    [super tearDown];
+}
+
+#pragma mark - Tests
+
+- (void)testItemRepositoryReturnsCorrectItems {
+    [self.sut didReceiveItems:self.items];
+    XCTAssertEqualObjects([self.sut allItems], self.items, @"Items in the repository should be identical to those received from the data source");
+}
+
+- (void)testItemRepositoryNotifiesDelegateWhenItemsAreReceived {
+    [self.sut didReceiveItems:self.items];
+    XCTAssertTrue(self.interactorSpy.didReceiveItemsReceivedMessage, @"Delegate  should have received message from repository");
+    XCTAssertEqualObjects(self.items, self.interactorSpy.receivedItems, @"Interactor should have same list as received by repository");
+}
+
+- (void)testItemReposidoreDoesNotNotifyDelegateWhenThereAreNoItemsRetrieved {
+    [self.sut didReceiveItems:[NSArray array]];
+    XCTAssertFalse(self.interactorSpy.didReceiveItemsReceivedMessage, @"Delegate  should NOT have received message from repository");
 }
 
 @end
