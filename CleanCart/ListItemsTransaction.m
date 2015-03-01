@@ -7,6 +7,8 @@
 //
 
 #import "ListItemsTransaction.h"
+#import "DisplayItem.h"
+#import "Item.h"
 
 @interface ListItemsTransaction()
 
@@ -30,7 +32,18 @@
 #pragma mark - ItemRepositoryResponse
 
 - (void)didReceiveItems:(NSArray *)items {
-    
+    NSMutableArray *displayArray = [NSMutableArray array];
+    for (NSInteger i=0; i<items.count; i++) {
+        Item *currentItem = items[i];
+        DisplayItem *dispItem = [[DisplayItem alloc] init];
+        dispItem.itemId = currentItem.itemId;
+        dispItem.itemName = currentItem.itemName;
+        dispItem.itemDescription = currentItem.itemDescription;
+        dispItem.itemPrice = currentItem.itemPrice;
+        dispItem.itemStock = currentItem.itemStock;
+        [displayArray addObject:dispItem];
+    }
+    [self.delegate didReceiveItems:displayArray];
 }
 
 @end

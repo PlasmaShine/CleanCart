@@ -12,6 +12,7 @@
 #import "ListItemsTransactionIO.h"
 #import "ListItemsPresenterIO.h"
 #import "ListItemsTransactionSpy.h"
+#import "ListItemsViewControllerSpy.h"
 
 @interface ListItemsPresenterTests : XCTestCase
 
@@ -46,12 +47,10 @@
 }
 
 - (void)testReceivingItemsFromTransactionCallsUIRefresh {
-    
-}
-
-
-- (void)testItemsReceivedFromTransactionAreUpdatingModelProperty {
-    
+    ListItemsViewControllerSpy *viewControllerSpy = [[ListItemsViewControllerSpy alloc] init];
+    self.sut.delegate = viewControllerSpy;
+    [self.sut didReceiveItems:[NSArray array]];
+    XCTAssertTrue(viewControllerSpy.didReceiveRefreshUIMessage, @"Receiving new objects from the iteractor should have called refreshUI");
 }
 
 @end

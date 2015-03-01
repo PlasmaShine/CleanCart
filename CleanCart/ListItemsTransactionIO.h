@@ -13,5 +13,6 @@
 
 @protocol ListItemsTransactionResponse <NSObject>
 
+- (void)didReceiveItems:(NSArray *) items;
 
 @end

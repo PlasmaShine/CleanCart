@@ -25,6 +25,9 @@
 		DE119D541A997FC700FEEBCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE119D531A997FC700FEEBCB /* Images.xcassets */; };
 		DE119D571A997FC700FEEBCB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE119D551A997FC700FEEBCB /* LaunchScreen.xib */; };
 		DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE561A1A9B71B700D9C3D2 /* Item.m */; };
+		DEAE561F1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE561E1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m */; };
+		DEAE56231AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56221AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m */; };
+		DEAE56281AA35A4900D9C3D2 /* DisplayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56271AA35A4900D9C3D2 /* DisplayItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,12 @@
 		DE119D611A997FC700FEEBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEAE56191A9B71B700D9C3D2 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		DEAE561A1A9B71B700D9C3D2 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		DEAE561D1AA202EF00D9C3D2 /* ListItemsPresenterSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsPresenterSpy.h; sourceTree = "<group>"; };
+		DEAE561E1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsPresenterSpy.m; sourceTree = "<group>"; };
+		DEAE56211AA352CC00D9C3D2 /* ListItemsViewControllerSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsViewControllerSpy.h; sourceTree = "<group>"; };
+		DEAE56221AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsViewControllerSpy.m; sourceTree = "<group>"; };
+		DEAE56261AA35A4900D9C3D2 /* DisplayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayItem.h; sourceTree = "<group>"; };
+		DEAE56271AA35A4900D9C3D2 /* DisplayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				C83F28441A9D924E00E3DA7B /* Transaction */,
+				DEAE56261AA35A4900D9C3D2 /* DisplayItem.h */,
+				DEAE56271AA35A4900D9C3D2 /* DisplayItem.m */,
 			);
 			name = BaseClasses;
 			sourceTree = "<group>";
@@ -156,6 +167,7 @@
 		C83F28541AA047C700E3DA7B /* ListItemsPresenter */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE56201AA202F300D9C3D2 /* Mocks */,
 				C83F28521AA047C100E3DA7B /* ListItemsPresenterTests.m */,
 			);
 			name = ListItemsPresenter;
@@ -297,6 +309,7 @@
 				C84622B41A9AE13A00520FE1 /* ItemRepository */,
 				C83F28401A9D8E0200E3DA7B /* ListItemsTransaction */,
 				C83F28541AA047C700E3DA7B /* ListItemsPresenter */,
+				DEAE56241AA352D300D9C3D2 /* ListItemsViewController */,
 			);
 			path = CleanCartTests;
 			sourceTree = "<group>";
@@ -317,6 +330,32 @@
 				DEAE561A1A9B71B700D9C3D2 /* Item.m */,
 			);
 			name = Item;
+			sourceTree = "<group>";
+		};
+		DEAE56201AA202F300D9C3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE561D1AA202EF00D9C3D2 /* ListItemsPresenterSpy.h */,
+				DEAE561E1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		DEAE56241AA352D300D9C3D2 /* ListItemsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56251AA352DE00D9C3D2 /* Mocks */,
+			);
+			name = ListItemsViewController;
+			sourceTree = "<group>";
+		};
+		DEAE56251AA352DE00D9C3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56211AA352CC00D9C3D2 /* ListItemsViewControllerSpy.h */,
+				DEAE56221AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +463,7 @@
 				DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */,
 				C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */,
 				DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */,
+				DEAE56281AA35A4900D9C3D2 /* DisplayItem.m in Sources */,
 				C83F28481A9D927C00E3DA7B /* ListItemsTransaction.m in Sources */,
 				C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */,
 				C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */,
@@ -435,10 +475,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAE56231AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m in Sources */,
 				C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */,
 				C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */,
 				C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */,
 				C83F283F1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m in Sources */,
+				DEAE561F1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m in Sources */,
 				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
 				C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */,
 			);

@@ -14,5 +14,6 @@
 @interface ListItemsPresenter : NSObject <ListItemsTransactionResponse, ListItemsPresenterRequest>
 
 @property (nonatomic, strong) Transaction* listItemsTransaction;
+@property (nonatomic, weak) id<ListItemsPresenterResponse> delegate;
 
 @end

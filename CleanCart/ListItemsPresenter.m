@@ -14,4 +14,8 @@
     [self.listItemsTransaction execute];
 }
 
+- (void)didReceiveItems:(NSArray *)items {
+    [self.delegate refreshUI];
+}
+
 @end

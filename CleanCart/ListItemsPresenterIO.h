@@ -14,5 +14,6 @@
 
 @protocol ListItemsPresenterResponse <NSObject>
 
+- (void)refreshUI;
 
 @end
