@@ -13,6 +13,8 @@
 		C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F284F1A9E847700E3DA7B /* ListItemsTransactionSpy.m */; };
 		C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28521AA047C100E3DA7B /* ListItemsPresenterTests.m */; };
 		C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28561AA04CC900E3DA7B /* ListItemsPresenter.m */; };
+		C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F285C1AA4585F00E3DA7B /* ListItemsViewControllerTests.m */; };
+		C83F28601AA45BD300E3DA7B /* ListItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F285F1AA45BD300E3DA7B /* ListItemsViewController.m */; };
 		C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */; };
 		C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */; };
 		C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622B11A9AE12800520FE1 /* DataSourceTests.m */; };
@@ -54,6 +56,9 @@
 		C83F28551AA04CC900E3DA7B /* ListItemsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsPresenter.h; sourceTree = "<group>"; };
 		C83F28561AA04CC900E3DA7B /* ListItemsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsPresenter.m; sourceTree = "<group>"; };
 		C83F285A1AA052ED00E3DA7B /* ListItemsPresenterIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItemsPresenterIO.h; sourceTree = "<group>"; };
+		C83F285C1AA4585F00E3DA7B /* ListItemsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsViewControllerTests.m; sourceTree = "<group>"; };
+		C83F285E1AA45BD300E3DA7B /* ListItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsViewController.h; sourceTree = "<group>"; };
+		C83F285F1AA45BD300E3DA7B /* ListItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsViewController.m; sourceTree = "<group>"; };
 		C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepositoryTests.m; sourceTree = "<group>"; };
 		C84622AD1A9AE10D00520FE1 /* JSONDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDataSource.h; sourceTree = "<group>"; };
 		C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDataSource.m; sourceTree = "<group>"; };
@@ -135,6 +140,7 @@
 			children = (
 				C83F28591AA04D7200E3DA7B /* ListItemsTransaction */,
 				C83F28581AA04CD000E3DA7B /* ListItemsPresenter */,
+				C83F28611AA45BDC00E3DA7B /* ListItemsViewController */,
 			);
 			name = ListItems;
 			sourceTree = "<group>";
@@ -199,6 +205,15 @@
 				C83F285A1AA052ED00E3DA7B /* ListItemsPresenterIO.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C83F28611AA45BDC00E3DA7B /* ListItemsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C83F285E1AA45BD300E3DA7B /* ListItemsViewController.h */,
+				C83F285F1AA45BD300E3DA7B /* ListItemsViewController.m */,
+			);
+			name = ListItemsViewController;
 			sourceTree = "<group>";
 		};
 		C84622B01A9AE11300520FE1 /* DataSource */ = {
@@ -345,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				DEAE56251AA352DE00D9C3D2 /* Mocks */,
+				C83F285C1AA4585F00E3DA7B /* ListItemsViewControllerTests.m */,
 			);
 			name = ListItemsViewController;
 			sourceTree = "<group>";
@@ -460,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83F28431A9D924A00E3DA7B /* Transaction.m in Sources */,
+				C83F28601AA45BD300E3DA7B /* ListItemsViewController.m in Sources */,
 				DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */,
 				C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */,
 				DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */,
@@ -482,6 +499,7 @@
 				C83F283F1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m in Sources */,
 				DEAE561F1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m in Sources */,
 				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
+				C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */,
 				C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
