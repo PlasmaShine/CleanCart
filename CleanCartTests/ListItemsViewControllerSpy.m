@@ -12,6 +12,7 @@
 
 
 - (void)refreshUIWithData:(NSArray *)dataModel {
+    self.receivedItems = dataModel;
     self.didReceiveRefreshUIMessage = YES;
 }
 

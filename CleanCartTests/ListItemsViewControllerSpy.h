@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ListItemsPresenterIO.h"
+#import "ListItemsViewController.h"
 
-@interface ListItemsViewControllerSpy : NSObject <ListItemsPresenterResponse>
+@interface ListItemsViewControllerSpy : ListItemsViewController <ListItemsPresenterResponse>
 
+@property (nonatomic, strong) NSArray *receivedItems;
 @property (nonatomic, assign) BOOL didReceiveRefreshUIMessage;
 
 @end
