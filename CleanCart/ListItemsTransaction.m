@@ -7,7 +7,7 @@
 //
 
 #import "ListItemsTransaction.h"
-#import "DisplayItem.h"
+#import "DisplayListItem.h"
 #import "Item.h"
 
 @interface ListItemsTransaction()
@@ -35,12 +35,10 @@
     NSMutableArray *displayArray = [NSMutableArray array];
     for (NSInteger i=0; i<items.count; i++) {
         Item *currentItem = items[i];
-        DisplayItem *dispItem = [[DisplayItem alloc] init];
-        dispItem.itemId = currentItem.itemId;
-        dispItem.itemName = currentItem.itemName;
-        dispItem.itemDescription = currentItem.itemDescription;
+        DisplayListItem *dispItem = [[DisplayListItem alloc] init];
+        dispItem.itemId = [currentItem.itemId copy];
+        dispItem.itemName = [currentItem.itemName copy];
         dispItem.itemPrice = currentItem.itemPrice;
-        dispItem.itemStock = currentItem.itemStock;
         [displayArray addObject:dispItem];
     }
     [self.delegate didReceiveItems:displayArray];

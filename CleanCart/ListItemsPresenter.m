@@ -15,7 +15,7 @@
 }
 
 - (void)didReceiveItems:(NSArray *)items {
-    [self.delegate refreshUI];
+    [self.delegate refreshUIWithData:items];
 }
 
 @end

@@ -12,7 +12,7 @@
 #import "ListItemsTransactionIO.h"
 #import "Item.h"
 #import "ListItemsPresenterSpy.h"
-#import "DisplayItem.h"
+#import "DisplayListItem.h"
 
 @interface ListItemsTransactionTest : XCTestCase
 
@@ -50,12 +50,10 @@
     return [[NSArray alloc] initWithObjects:item, nil];
 }
 
-- (void)_assertItem:(Item *)item isEqualToDisplayItem:(DisplayItem *)displayItem {
+- (void)_assertItem:(Item *)item isEqualToDisplayItem:(DisplayListItem *)displayItem {
     XCTAssertEqualObjects(displayItem.itemId, item.itemId, @"Should have the same item ID");
     XCTAssertEqualObjects(displayItem.itemName, item.itemName, @"Should have the same item name");
     XCTAssertEqual(displayItem.itemPrice, item.itemPrice, @"Should have the same item price");
-    XCTAssertEqual(displayItem.itemStock, item.itemStock, @"Should have the same item stock");
-    XCTAssertEqualObjects(displayItem.itemDescription, item.itemDescription, @"Should have the same item description");
 }
 
 #pragma mark - Tests
@@ -72,7 +70,7 @@
 - (void)testItemsAreSentToPresenterAsDisplayItems {
     XCTAssertEqual(self.presenterSpy.receivedItems.count, self.items.count, @"Number of items in the presenter should be the same as the number of items in the interactor");
     for (NSInteger i = 0; i<self.items.count; i++) {
-        XCTAssertTrue([self.presenterSpy.receivedItems[i] isKindOfClass:[DisplayItem class]], @"Items in the presenter should be of DisplayItem type");
+        XCTAssertTrue([self.presenterSpy.receivedItems[i] isKindOfClass:[DisplayListItem class]], @"Items in the presenter should be of DisplayItem type");
         [self _assertItem:self.items[i] isEqualToDisplayItem:self.presenterSpy.receivedItems[i]];
     }
 }

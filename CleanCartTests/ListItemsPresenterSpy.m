@@ -14,4 +14,5 @@
     self.receivedItems = items;
     self.didReceiveItemsFromTransaction = YES;
 }
+
 @end

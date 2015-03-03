@@ -11,7 +11,7 @@
 @implementation ListItemsViewControllerSpy
 
 
-- (void)refreshUI {
+- (void)refreshUIWithData:(NSArray *)dataModel {
     self.didReceiveRefreshUIMessage = YES;
 }
 

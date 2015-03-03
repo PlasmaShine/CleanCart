@@ -14,6 +14,6 @@
 
 @protocol ListItemsPresenterResponse <NSObject>
 
-- (void)refreshUI;
+- (void)refreshUIWithData:(NSArray *) dataModel;
 
 @end

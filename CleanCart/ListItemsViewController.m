@@ -43,6 +43,12 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
+#pragma mark - ListItemsPresenterResponse
+
+- (void)refreshUIWithData:(NSArray *)dataModel {
+    [self.collectionView reloadData];
+}
+
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

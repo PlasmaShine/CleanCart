@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 #import "ListitemsViewController.h"
+#import <UIKit/UIKit.h>
+#import "ListItemsPresenterIO.h"
 
 @interface ListItemsViewControllerTests : XCTestCase
 
@@ -27,7 +29,7 @@
 
 - (void)testViewControllerConformsToProperProtocols {
     ListItemsViewController *sut = [[ListItemsViewController alloc] init];
-    
+    XCTAssertTrue([sut conformsToProtocol:@protocol(ListItemsPresenterResponse)], @"ViewController should conform to the proper protocol");
 }
 
 - (void)testLoadingTheViewSendsViewLoadMessageToPresenter {

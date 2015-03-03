@@ -29,7 +29,7 @@
 		DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE561A1A9B71B700D9C3D2 /* Item.m */; };
 		DEAE561F1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE561E1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m */; };
 		DEAE56231AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56221AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m */; };
-		DEAE56281AA35A4900D9C3D2 /* DisplayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56271AA35A4900D9C3D2 /* DisplayItem.m */; };
+		DEAE56281AA35A4900D9C3D2 /* DisplayListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56271AA35A4900D9C3D2 /* DisplayListItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +85,8 @@
 		DEAE561E1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsPresenterSpy.m; sourceTree = "<group>"; };
 		DEAE56211AA352CC00D9C3D2 /* ListItemsViewControllerSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsViewControllerSpy.h; sourceTree = "<group>"; };
 		DEAE56221AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsViewControllerSpy.m; sourceTree = "<group>"; };
-		DEAE56261AA35A4900D9C3D2 /* DisplayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayItem.h; sourceTree = "<group>"; };
-		DEAE56271AA35A4900D9C3D2 /* DisplayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayItem.m; sourceTree = "<group>"; };
+		DEAE56261AA35A4900D9C3D2 /* DisplayListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayListItem.h; sourceTree = "<group>"; };
+		DEAE56271AA35A4900D9C3D2 /* DisplayListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayListItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				C83F28441A9D924E00E3DA7B /* Transaction */,
-				DEAE56261AA35A4900D9C3D2 /* DisplayItem.h */,
-				DEAE56271AA35A4900D9C3D2 /* DisplayItem.m */,
+				DEAE56261AA35A4900D9C3D2 /* DisplayListItem.h */,
+				DEAE56271AA35A4900D9C3D2 /* DisplayListItem.m */,
 			);
 			name = BaseClasses;
 			sourceTree = "<group>";
@@ -480,7 +480,7 @@
 				DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */,
 				C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */,
 				DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */,
-				DEAE56281AA35A4900D9C3D2 /* DisplayItem.m in Sources */,
+				DEAE56281AA35A4900D9C3D2 /* DisplayListItem.m in Sources */,
 				C83F28481A9D927C00E3DA7B /* ListItemsTransaction.m in Sources */,
 				C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */,
 				C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */,

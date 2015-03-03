@@ -13,6 +13,7 @@
 #import "ListItemsPresenterIO.h"
 #import "ListItemsTransactionSpy.h"
 #import "ListItemsViewControllerSpy.h"
+#import "DisplayListItem.h"
 
 @interface ListItemsPresenterTests : XCTestCase
 
@@ -51,6 +52,11 @@
     self.sut.delegate = viewControllerSpy;
     [self.sut didReceiveItems:[NSArray array]];
     XCTAssertTrue(viewControllerSpy.didReceiveRefreshUIMessage, @"Receiving new objects from the iteractor should have called refreshUI");
+}
+
+- (void)testPresenterSendsReceivedDataAsArrayOfSections {
+    DisplayListItem *displayItem = [[DisplayListItem alloc] init];
+    
 }
 
 @end
