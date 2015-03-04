@@ -12,5 +12,6 @@
 
 @property (nonatomic, assign) BOOL didReceiveItemsFromTransaction;
 @property (nonatomic, strong) NSArray *receivedItems;
+@property (nonatomic, assign) BOOL didReceiveLoadViewMessage;
 
 @end

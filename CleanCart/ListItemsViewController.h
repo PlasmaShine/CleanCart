@@ -11,4 +11,8 @@
 
 @interface ListItemsViewController : UICollectionViewController <ListItemsPresenterResponse>
 
+@property (weak, nonatomic) IBOutlet UIButton *cartButton;
+
+@property (nonatomic, strong) id<ListItemsPresenterRequest> eventHandler;
+
 @end

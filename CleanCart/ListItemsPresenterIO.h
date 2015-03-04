@@ -8,7 +8,7 @@
 
 @protocol ListItemsPresenterRequest <NSObject>
 
-- (void)fetchItems;
+- (void)fetchData;
 
 @end
 

@@ -15,4 +15,8 @@
     self.didReceiveItemsFromTransaction = YES;
 }
 
+- (void)fetchData {
+    self.didReceiveLoadViewMessage = YES;
+}
+
 @end

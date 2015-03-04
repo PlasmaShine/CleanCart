@@ -11,7 +11,7 @@
 
 @implementation ListItemsPresenter
 
-- (void)fetchItems {
+- (void)fetchData {
     [self.listItemsTransaction execute];
 }
 

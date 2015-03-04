@@ -10,22 +10,16 @@
 
 @interface ListItemsViewController ()
 
+- (IBAction)cartButtonPressed:(id)sender;
+
 @end
 
 @implementation ListItemsViewController
 
-static NSString * const reuseIdentifier = @"Cell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.eventHandler fetchData];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,11 +57,11 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
     
-    return cell;
+    return nil;
 }
 
 #pragma mark <UICollectionViewDelegate>
@@ -100,5 +94,9 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+#pragma mark - Cart button pressed event
 
+- (IBAction)cartButtonPressed:(id)sender {
+
+}
 @end

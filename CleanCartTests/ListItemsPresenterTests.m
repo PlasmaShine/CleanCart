@@ -67,7 +67,7 @@
 - (void)testFetchItemsSignalCallsListItemsTransaction {
     ListItemsTransactionSpy *listItemsTransactionSpy = [[ListItemsTransactionSpy alloc] init];
     self.sut.listItemsTransaction = listItemsTransactionSpy;
-    [self.sut fetchItems];
+    [self.sut fetchData];
     XCTAssertTrue(listItemsTransactionSpy.didReceiveExecuteMessage, @"Presenter should have called execute on ListItemsTransaction");
 }
 
