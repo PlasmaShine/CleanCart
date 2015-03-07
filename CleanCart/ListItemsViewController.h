@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ListItemsPresenterIO.h"
+#import "ListItemsCellEventHandlerIO.h"
 
-@interface ListItemsViewController : UICollectionViewController <ListItemsPresenterResponse>
+@interface ListItemsViewController : UICollectionViewController <ListItemsPresenterResponse, ListItemsCellEventHandlerRequest>
 
 @property (weak, nonatomic) IBOutlet UIButton *cartButton;
 

@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) NSString *itemId;
 @property (nonatomic, copy) NSString *itemName;
-@property (nonatomic, assign) NSInteger itemPrice;
+@property (nonatomic, copy) NSString *itemPrice;
+@property (nonatomic, copy) NSString *itemStock;
 
 @end

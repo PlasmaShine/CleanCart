@@ -9,6 +9,9 @@
 @protocol ListItemsPresenterRequest <NSObject>
 
 - (void)fetchData;
+- (void)cartButtonTapped;
+- (void)didSelectItemWithId:(NSString *)itemId;
+- (void)addToCartItemWithId:(NSString *)itemId;
 
 @end
 

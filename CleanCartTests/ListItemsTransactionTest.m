@@ -35,6 +35,10 @@
 }
 
 - (void)tearDown {
+    self.repoSpy = nil;
+    self.sut = nil;
+    self.items = nil;
+    self.presenterSpy = nil;
     [super tearDown];
 }
 
@@ -50,12 +54,6 @@
     return [[NSArray alloc] initWithObjects:item, nil];
 }
 
-- (void)_assertItem:(Item *)item isEqualToDisplayItem:(DisplayListItem *)displayItem {
-    XCTAssertEqualObjects(displayItem.itemId, item.itemId, @"Should have the same item ID");
-    XCTAssertEqualObjects(displayItem.itemName, item.itemName, @"Should have the same item name");
-    XCTAssertEqual(displayItem.itemPrice, item.itemPrice, @"Should have the same item price");
-}
-
 #pragma mark - Tests
 
 - (void)testCallingExecuteOnTransactionSendsMessageToRepository {
@@ -67,12 +65,8 @@
     XCTAssertTrue(self.presenterSpy.didReceiveItemsFromTransaction, @"Should have received items from transaction");
 }
 
-- (void)testItemsAreSentToPresenterAsDisplayItems {
+- (void)testItemsAreSentToPresenter {
     XCTAssertEqual(self.presenterSpy.receivedItems.count, self.items.count, @"Number of items in the presenter should be the same as the number of items in the interactor");
-    for (NSInteger i = 0; i<self.items.count; i++) {
-        XCTAssertTrue([self.presenterSpy.receivedItems[i] isKindOfClass:[DisplayListItem class]], @"Items in the presenter should be of DisplayItem type");
-        [self _assertItem:self.items[i] isEqualToDisplayItem:self.presenterSpy.receivedItems[i]];
-    }
 }
 
 

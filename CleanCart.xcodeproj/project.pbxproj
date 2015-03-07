@@ -15,6 +15,9 @@
 		C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28561AA04CC900E3DA7B /* ListItemsPresenter.m */; };
 		C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F285C1AA4585F00E3DA7B /* ListItemsViewControllerTests.m */; };
 		C83F28601AA45BD300E3DA7B /* ListItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F285F1AA45BD300E3DA7B /* ListItemsViewController.m */; };
+		C83F28641AA7C06700E3DA7B /* ListItemsCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28631AA7C06700E3DA7B /* ListItemsCollectionCell.m */; };
+		C83F28691AA8A03E00E3DA7B /* ListItemsCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28681AA8A03E00E3DA7B /* ListItemsCellTest.m */; };
+		C84399C81AA9926D0084C73D /* ListItemsCellDelegateSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399C71AA9926D0084C73D /* ListItemsCellDelegateSpy.m */; };
 		C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */; };
 		C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */; };
 		C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622B11A9AE12800520FE1 /* DataSourceTests.m */; };
@@ -60,6 +63,13 @@
 		C83F285C1AA4585F00E3DA7B /* ListItemsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsViewControllerTests.m; sourceTree = "<group>"; };
 		C83F285E1AA45BD300E3DA7B /* ListItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsViewController.h; sourceTree = "<group>"; };
 		C83F285F1AA45BD300E3DA7B /* ListItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsViewController.m; sourceTree = "<group>"; };
+		C83F28621AA7C06700E3DA7B /* ListItemsCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsCollectionCell.h; sourceTree = "<group>"; };
+		C83F28631AA7C06700E3DA7B /* ListItemsCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsCollectionCell.m; sourceTree = "<group>"; };
+		C83F28661AA89A0700E3DA7B /* ListItemsCellEventHandlerIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItemsCellEventHandlerIO.h; sourceTree = "<group>"; };
+		C83F28681AA8A03E00E3DA7B /* ListItemsCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsCellTest.m; sourceTree = "<group>"; };
+		C84399C61AA9926D0084C73D /* ListItemsCellDelegateSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsCellDelegateSpy.h; sourceTree = "<group>"; };
+		C84399C71AA9926D0084C73D /* ListItemsCellDelegateSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsCellDelegateSpy.m; sourceTree = "<group>"; };
+		C84399C91AA993B50084C73D /* ListItemsCollectionCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItemsCollectionCellDelegate.h; sourceTree = "<group>"; };
 		C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepositoryTests.m; sourceTree = "<group>"; };
 		C84622AD1A9AE10D00520FE1 /* JSONDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDataSource.h; sourceTree = "<group>"; };
 		C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDataSource.m; sourceTree = "<group>"; };
@@ -215,10 +225,31 @@
 		C83F28611AA45BDC00E3DA7B /* ListItemsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C83F28671AA89A0C00E3DA7B /* Protocols */,
+				C83F28651AA7C06B00E3DA7B /* Cells */,
 				C83F285E1AA45BD300E3DA7B /* ListItemsViewController.h */,
 				C83F285F1AA45BD300E3DA7B /* ListItemsViewController.m */,
 			);
 			name = ListItemsViewController;
+			sourceTree = "<group>";
+		};
+		C83F28651AA7C06B00E3DA7B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C83F28621AA7C06700E3DA7B /* ListItemsCollectionCell.h */,
+				C83F28631AA7C06700E3DA7B /* ListItemsCollectionCell.m */,
+			);
+			name = Cells;
+			path = CleanCartTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		C83F28671AA89A0C00E3DA7B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C83F28661AA89A0700E3DA7B /* ListItemsCellEventHandlerIO.h */,
+				C84399C91AA993B50084C73D /* ListItemsCollectionCellDelegate.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		C84622B01A9AE11300520FE1 /* DataSource */ = {
@@ -366,6 +397,7 @@
 			children = (
 				DEAE56251AA352DE00D9C3D2 /* Mocks */,
 				C83F285C1AA4585F00E3DA7B /* ListItemsViewControllerTests.m */,
+				C83F28681AA8A03E00E3DA7B /* ListItemsCellTest.m */,
 			);
 			name = ListItemsViewController;
 			sourceTree = "<group>";
@@ -375,6 +407,8 @@
 			children = (
 				DEAE56211AA352CC00D9C3D2 /* ListItemsViewControllerSpy.h */,
 				DEAE56221AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m */,
+				C84399C61AA9926D0084C73D /* ListItemsCellDelegateSpy.h */,
+				C84399C71AA9926D0084C73D /* ListItemsCellDelegateSpy.m */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -502,10 +536,13 @@
 				C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */,
 				C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */,
 				C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */,
+				C83F28641AA7C06700E3DA7B /* ListItemsCollectionCell.m in Sources */,
 				C83F283F1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m in Sources */,
 				DEAE561F1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m in Sources */,
 				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
 				C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */,
+				C83F28691AA8A03E00E3DA7B /* ListItemsCellTest.m in Sources */,
+				C84399C81AA9926D0084C73D /* ListItemsCellDelegateSpy.m in Sources */,
 				C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

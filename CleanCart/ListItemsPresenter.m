@@ -11,8 +11,22 @@
 
 @implementation ListItemsPresenter
 
+#pragma mark - ListItemsPresenterIO
+
 - (void)fetchData {
     [self.listItemsTransaction execute];
+}
+
+- (void)cartButtonTapped {
+    
+}
+
+- (void)didSelectItemWithId:(NSString *)itemId {
+    
+}
+
+- (void)addToCartItemWithId:(NSString *)itemId {
+    
 }
 
 #pragma mark - ListItemsTranscationResponse

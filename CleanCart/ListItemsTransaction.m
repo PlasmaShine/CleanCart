@@ -32,16 +32,7 @@
 #pragma mark - ItemRepositoryResponse
 
 - (void)didReceiveItems:(NSArray *)items {
-    NSMutableArray *displayArray = [NSMutableArray array];
-    for (NSInteger i=0; i<items.count; i++) {
-        Item *currentItem = items[i];
-        DisplayListItem *dispItem = [[DisplayListItem alloc] init];
-        dispItem.itemId = [currentItem.itemId copy];
-        dispItem.itemName = [currentItem.itemName copy];
-        dispItem.itemPrice = currentItem.itemPrice;
-        [displayArray addObject:dispItem];
-    }
-    [self.delegate didReceiveItems:displayArray];
+    [self.delegate didReceiveItems:items];
 }
 
 @end

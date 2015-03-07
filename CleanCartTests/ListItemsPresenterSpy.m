@@ -19,4 +19,17 @@
     self.didReceiveLoadViewMessage = YES;
 }
 
+- (void)cartButtonTapped {
+    self.didReceiveCartTappedMessage = YES;
+}
+
+- (void)didSelectItemWithId:(NSString *)itemId {
+    self.didReceiveCellSelectedMessage = YES;
+    self.selectedItemId = itemId;
+}
+
+- (void)addToCartItemWithId:(NSString *)itemId {
+    self.didReceiveAddToCartMessage = YES;
+    self.addToCartId = itemId;
+}
 @end
