@@ -7,11 +7,12 @@
 //
 
 #import "ListItemsCollectionCell.h"
+
 @interface ListItemsCollectionCell()
 
 - (IBAction)addTocartTapped:(id)sender;
 
-@end;
+@end
 
 @implementation ListItemsCollectionCell
 

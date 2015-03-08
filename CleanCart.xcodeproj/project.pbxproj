@@ -34,6 +34,19 @@
 		DEAE56231AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56221AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m */; };
 		DEAE56281AA35A4900D9C3D2 /* DisplayListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56271AA35A4900D9C3D2 /* DisplayListItem.m */; };
 		DEAE562B1AA5E7A900D9C3D2 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE562A1AA5E7A900D9C3D2 /* Section.m */; };
+		DEAE562D1AAC115300D9C3D2 /* AppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE562C1AAC115300D9C3D2 /* AppDelegateTests.m */; };
+		DEAE56311AAC171500D9C3D2 /* NavigatorFactorySpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56301AAC171500D9C3D2 /* NavigatorFactorySpy.m */; };
+		DEAE56361AAC176000D9C3D2 /* NavigatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56351AAC176000D9C3D2 /* NavigatorFactory.m */; };
+		DEAE563B1AAC1A4C00D9C3D2 /* Navigator.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE563A1AAC1A4C00D9C3D2 /* Navigator.m */; };
+		DEAE56411AAC2EED00D9C3D2 /* NavigatorSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56401AAC2EED00D9C3D2 /* NavigatorSpy.m */; };
+		DEAE56451AAC392E00D9C3D2 /* ListItemsNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56441AAC392E00D9C3D2 /* ListItemsNavigator.m */; };
+		DEAE56481AAC3E0300D9C3D2 /* NavigatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56471AAC3E0300D9C3D2 /* NavigatorTests.m */; };
+		DEAE564C1AAC691E00D9C3D2 /* TransactionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE564B1AAC691E00D9C3D2 /* TransactionFactory.m */; };
+		DEAE56511AAC754700D9C3D2 /* SpyTransactionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56501AAC754700D9C3D2 /* SpyTransactionFactory.m */; };
+		DEAE56551AAC775800D9C3D2 /* TransactionFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56541AAC775800D9C3D2 /* TransactionFactoryTests.m */; };
+		DEAE56591AAC814A00D9C3D2 /* DataSourceSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56581AAC814A00D9C3D2 /* DataSourceSpy.m */; };
+		DEAE565C1AAC875E00D9C3D2 /* NavigatorFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE565B1AAC875E00D9C3D2 /* NavigatorFactoryTests.m */; };
+		DEAE565D1AAC95AC00D9C3D2 /* ListItemsCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28631AA7C06700E3DA7B /* ListItemsCollectionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +113,28 @@
 		DEAE56271AA35A4900D9C3D2 /* DisplayListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayListItem.m; sourceTree = "<group>"; };
 		DEAE56291AA5E7A900D9C3D2 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
 		DEAE562A1AA5E7A900D9C3D2 /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		DEAE562C1AAC115300D9C3D2 /* AppDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateTests.m; sourceTree = "<group>"; };
+		DEAE562F1AAC171500D9C3D2 /* NavigatorFactorySpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigatorFactorySpy.h; sourceTree = "<group>"; };
+		DEAE56301AAC171500D9C3D2 /* NavigatorFactorySpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigatorFactorySpy.m; sourceTree = "<group>"; };
+		DEAE56341AAC176000D9C3D2 /* NavigatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigatorFactory.h; sourceTree = "<group>"; };
+		DEAE56351AAC176000D9C3D2 /* NavigatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigatorFactory.m; sourceTree = "<group>"; };
+		DEAE56381AAC183600D9C3D2 /* NavigationMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationMessage.h; sourceTree = "<group>"; };
+		DEAE56391AAC1A4C00D9C3D2 /* Navigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Navigator.h; sourceTree = "<group>"; };
+		DEAE563A1AAC1A4C00D9C3D2 /* Navigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Navigator.m; sourceTree = "<group>"; };
+		DEAE563F1AAC2EED00D9C3D2 /* NavigatorSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigatorSpy.h; sourceTree = "<group>"; };
+		DEAE56401AAC2EED00D9C3D2 /* NavigatorSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigatorSpy.m; sourceTree = "<group>"; };
+		DEAE56431AAC392E00D9C3D2 /* ListItemsNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsNavigator.h; sourceTree = "<group>"; };
+		DEAE56441AAC392E00D9C3D2 /* ListItemsNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsNavigator.m; sourceTree = "<group>"; };
+		DEAE56471AAC3E0300D9C3D2 /* NavigatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigatorTests.m; sourceTree = "<group>"; };
+		DEAE564A1AAC691E00D9C3D2 /* TransactionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionFactory.h; sourceTree = "<group>"; };
+		DEAE564B1AAC691E00D9C3D2 /* TransactionFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionFactory.m; sourceTree = "<group>"; };
+		DEAE564E1AAC6C2E00D9C3D2 /* TransactionIdentifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionIdentifier.h; sourceTree = "<group>"; };
+		DEAE564F1AAC754700D9C3D2 /* SpyTransactionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpyTransactionFactory.h; sourceTree = "<group>"; };
+		DEAE56501AAC754700D9C3D2 /* SpyTransactionFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpyTransactionFactory.m; sourceTree = "<group>"; };
+		DEAE56541AAC775800D9C3D2 /* TransactionFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionFactoryTests.m; sourceTree = "<group>"; };
+		DEAE56571AAC814A00D9C3D2 /* DataSourceSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceSpy.h; sourceTree = "<group>"; };
+		DEAE56581AAC814A00D9C3D2 /* DataSourceSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceSpy.m; sourceTree = "<group>"; };
+		DEAE565B1AAC875E00D9C3D2 /* NavigatorFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigatorFactoryTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +167,10 @@
 		C83F28441A9D924E00E3DA7B /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE564E1AAC6C2E00D9C3D2 /* TransactionIdentifier.h */,
 				C83F28411A9D924A00E3DA7B /* Transaction.h */,
 				C83F28421A9D924A00E3DA7B /* Transaction.m */,
+				DEAE564D1AAC692600D9C3D2 /* TransactionFactory */,
 			);
 			name = Transaction;
 			sourceTree = "<group>";
@@ -142,10 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				C83F28441A9D924E00E3DA7B /* Transaction */,
+				DEAE563D1AAC1BA200D9C3D2 /* Navigation */,
 				DEAE56261AA35A4900D9C3D2 /* DisplayListItem.h */,
 				DEAE56271AA35A4900D9C3D2 /* DisplayListItem.m */,
-				DEAE56291AA5E7A900D9C3D2 /* Section.h */,
-				DEAE562A1AA5E7A900D9C3D2 /* Section.m */,
+				DEAE563E1AAC1BDC00D9C3D2 /* Section */,
 			);
 			name = BaseClasses;
 			sourceTree = "<group>";
@@ -154,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				C83F28591AA04D7200E3DA7B /* ListItemsTransaction */,
+				DEAE56461AAC393400D9C3D2 /* Navigator */,
 				C83F28581AA04CD000E3DA7B /* ListItemsPresenter */,
 				C83F28611AA45BDC00E3DA7B /* ListItemsViewController */,
 			);
@@ -265,6 +303,7 @@
 		C84622B31A9AE12E00520FE1 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE565A1AAC814E00D9C3D2 /* Mocks */,
 				C84622B11A9AE12800520FE1 /* DataSourceTests.m */,
 			);
 			name = DataSource;
@@ -356,11 +395,13 @@
 		DE119D5F1A997FC700FEEBCB /* CleanCartTests */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE562E1AAC115800D9C3D2 /* AppDelegate */,
 				C84622B31A9AE12E00520FE1 /* DataSource */,
 				C84622B41A9AE13A00520FE1 /* ItemRepository */,
-				C83F28401A9D8E0200E3DA7B /* ListItemsTransaction */,
-				C83F28541AA047C700E3DA7B /* ListItemsPresenter */,
-				DEAE56241AA352D300D9C3D2 /* ListItemsViewController */,
+				DEAE56421AAC2EF000D9C3D2 /* Navigator */,
+				DEAE56331AAC172A00D9C3D2 /* NavigatorFactory */,
+				DEAE56531AAC773E00D9C3D2 /* TransactionFactory */,
+				DEAE56561AAC778800D9C3D2 /* ListItems */,
 			);
 			path = CleanCartTests;
 			sourceTree = "<group>";
@@ -409,6 +450,142 @@
 				DEAE56221AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m */,
 				C84399C61AA9926D0084C73D /* ListItemsCellDelegateSpy.h */,
 				C84399C71AA9926D0084C73D /* ListItemsCellDelegateSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		DEAE562E1AAC115800D9C3D2 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE562C1AAC115300D9C3D2 /* AppDelegateTests.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DEAE56321AAC172100D9C3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE562F1AAC171500D9C3D2 /* NavigatorFactorySpy.h */,
+				DEAE56301AAC171500D9C3D2 /* NavigatorFactorySpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		DEAE56331AAC172A00D9C3D2 /* NavigatorFactory */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56321AAC172100D9C3D2 /* Mocks */,
+				DEAE565B1AAC875E00D9C3D2 /* NavigatorFactoryTests.m */,
+			);
+			name = NavigatorFactory;
+			sourceTree = "<group>";
+		};
+		DEAE56371AAC176500D9C3D2 /* NavigatorFactory */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56341AAC176000D9C3D2 /* NavigatorFactory.h */,
+				DEAE56351AAC176000D9C3D2 /* NavigatorFactory.m */,
+			);
+			name = NavigatorFactory;
+			sourceTree = "<group>";
+		};
+		DEAE563C1AAC1A5100D9C3D2 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56391AAC1A4C00D9C3D2 /* Navigator.h */,
+				DEAE563A1AAC1A4C00D9C3D2 /* Navigator.m */,
+			);
+			name = Navigator;
+			sourceTree = "<group>";
+		};
+		DEAE563D1AAC1BA200D9C3D2 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56381AAC183600D9C3D2 /* NavigationMessage.h */,
+				DEAE56371AAC176500D9C3D2 /* NavigatorFactory */,
+				DEAE563C1AAC1A5100D9C3D2 /* Navigator */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		DEAE563E1AAC1BDC00D9C3D2 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56291AA5E7A900D9C3D2 /* Section.h */,
+				DEAE562A1AA5E7A900D9C3D2 /* Section.m */,
+			);
+			name = Section;
+			sourceTree = "<group>";
+		};
+		DEAE56421AAC2EF000D9C3D2 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56491AAC3E0700D9C3D2 /* Mocks */,
+				DEAE56471AAC3E0300D9C3D2 /* NavigatorTests.m */,
+			);
+			name = Navigator;
+			sourceTree = "<group>";
+		};
+		DEAE56461AAC393400D9C3D2 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56431AAC392E00D9C3D2 /* ListItemsNavigator.h */,
+				DEAE56441AAC392E00D9C3D2 /* ListItemsNavigator.m */,
+			);
+			name = Navigator;
+			sourceTree = "<group>";
+		};
+		DEAE56491AAC3E0700D9C3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE563F1AAC2EED00D9C3D2 /* NavigatorSpy.h */,
+				DEAE56401AAC2EED00D9C3D2 /* NavigatorSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		DEAE564D1AAC692600D9C3D2 /* TransactionFactory */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE564A1AAC691E00D9C3D2 /* TransactionFactory.h */,
+				DEAE564B1AAC691E00D9C3D2 /* TransactionFactory.m */,
+			);
+			name = TransactionFactory;
+			sourceTree = "<group>";
+		};
+		DEAE56521AAC754E00D9C3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE564F1AAC754700D9C3D2 /* SpyTransactionFactory.h */,
+				DEAE56501AAC754700D9C3D2 /* SpyTransactionFactory.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		DEAE56531AAC773E00D9C3D2 /* TransactionFactory */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56521AAC754E00D9C3D2 /* Mocks */,
+				DEAE56541AAC775800D9C3D2 /* TransactionFactoryTests.m */,
+			);
+			name = TransactionFactory;
+			sourceTree = "<group>";
+		};
+		DEAE56561AAC778800D9C3D2 /* ListItems */ = {
+			isa = PBXGroup;
+			children = (
+				C83F28401A9D8E0200E3DA7B /* ListItemsTransaction */,
+				C83F28541AA047C700E3DA7B /* ListItemsPresenter */,
+				DEAE56241AA352D300D9C3D2 /* ListItemsViewController */,
+			);
+			name = ListItems;
+			sourceTree = "<group>";
+		};
+		DEAE565A1AAC814E00D9C3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56571AAC814A00D9C3D2 /* DataSourceSpy.h */,
+				DEAE56581AAC814A00D9C3D2 /* DataSourceSpy.m */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -514,13 +691,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAE565D1AAC95AC00D9C3D2 /* ListItemsCollectionCell.m in Sources */,
+				DEAE56451AAC392E00D9C3D2 /* ListItemsNavigator.m in Sources */,
 				C83F28431A9D924A00E3DA7B /* Transaction.m in Sources */,
 				C83F28601AA45BD300E3DA7B /* ListItemsViewController.m in Sources */,
 				DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */,
 				C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */,
+				DEAE56361AAC176000D9C3D2 /* NavigatorFactory.m in Sources */,
 				DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */,
 				DEAE56281AA35A4900D9C3D2 /* DisplayListItem.m in Sources */,
+				DEAE563B1AAC1A4C00D9C3D2 /* Navigator.m in Sources */,
 				C83F28481A9D927C00E3DA7B /* ListItemsTransaction.m in Sources */,
+				DEAE564C1AAC691E00D9C3D2 /* TransactionFactory.m in Sources */,
 				C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */,
 				DEAE562B1AA5E7A900D9C3D2 /* Section.m in Sources */,
 				C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */,
@@ -535,14 +717,22 @@
 				DEAE56231AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m in Sources */,
 				C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */,
 				C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */,
+				DEAE56311AAC171500D9C3D2 /* NavigatorFactorySpy.m in Sources */,
 				C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */,
+				DEAE56551AAC775800D9C3D2 /* TransactionFactoryTests.m in Sources */,
 				C83F28641AA7C06700E3DA7B /* ListItemsCollectionCell.m in Sources */,
 				C83F283F1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m in Sources */,
+				DEAE565C1AAC875E00D9C3D2 /* NavigatorFactoryTests.m in Sources */,
+				DEAE562D1AAC115300D9C3D2 /* AppDelegateTests.m in Sources */,
+				DEAE56591AAC814A00D9C3D2 /* DataSourceSpy.m in Sources */,
 				DEAE561F1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m in Sources */,
+				DEAE56481AAC3E0300D9C3D2 /* NavigatorTests.m in Sources */,
 				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
 				C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */,
 				C83F28691AA8A03E00E3DA7B /* ListItemsCellTest.m in Sources */,
 				C84399C81AA9926D0084C73D /* ListItemsCellDelegateSpy.m in Sources */,
+				DEAE56411AAC2EED00D9C3D2 /* NavigatorSpy.m in Sources */,
+				DEAE56511AAC754700D9C3D2 /* SpyTransactionFactory.m in Sources */,
 				C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

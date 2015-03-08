@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NavigatorFactory.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) NavigatorFactory *navigatorFactory;
 
 @end
 

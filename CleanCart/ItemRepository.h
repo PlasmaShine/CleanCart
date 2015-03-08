@@ -12,8 +12,10 @@
 
 @interface ItemRepository : NSObject <DataSourceResponse>
 
+@property (nonatomic, strong) id<DataSourceRequest> dataSource;
 @property (nonatomic, strong) id<ItemRepositoryResponse> delegate;
 
+- (void)fetchItems;
 - (NSArray *)allItems;
 
 @end

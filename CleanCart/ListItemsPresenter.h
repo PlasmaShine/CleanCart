@@ -10,10 +10,13 @@
 #import "ListItemsTransactionIO.h"
 #import "ListItemsPresenterIO.h"
 #import "Transaction.h"
+#import "Navigator.h"
+#import "TransactionFactory.h"
 
 @interface ListItemsPresenter : NSObject <ListItemsTransactionResponse, ListItemsPresenterRequest>
 
-@property (nonatomic, strong) Transaction* listItemsTransaction;
+@property (nonatomic, strong) Navigator *navigator;
+@property (nonatomic, strong) TransactionFactory *transactionFactory;
 @property (nonatomic, weak) id<ListItemsPresenterResponse> delegate;
 
 @end

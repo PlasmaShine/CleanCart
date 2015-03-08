@@ -27,7 +27,8 @@
 - (void)setUp {
     [super setUp];
     self.repoSpy = [[ItemRepositorySpy alloc] init];
-    self.sut = [[ListItemsTransaction alloc] initWithRepository:self.repoSpy];
+    self.sut = [[ListItemsTransaction alloc] init];
+    self.sut.repository = self.repoSpy;
     self.items = [self _createItemArray];
     self.presenterSpy = [[ListItemsPresenterSpy alloc] init];
     self.sut.delegate = self.presenterSpy;

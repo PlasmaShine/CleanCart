@@ -8,7 +8,7 @@
 
 #import "ListItemsViewController.h"
 #import "Section.h"
-#import "ListitemsCollectionCell.h"
+#import "ListItemsCollectionCell.h"
 
 @interface ListItemsViewController ()
 
@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //[self.collectionView registerClass:[ListItemsCollectionCell class] forCellWithReuseIdentifier:@"ListItemsCollectionCell"];
     [self.eventHandler fetchData];
     
 }
@@ -50,7 +51,7 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ListItemsCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ListItemsCollectionCell" forIndexPath:indexPath];
+    ListItemsCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ListItemsCollectionCell"forIndexPath:indexPath];
     Section *section = self.displayData[indexPath.section];
     cell.item = section.items[indexPath.row];
     return cell;

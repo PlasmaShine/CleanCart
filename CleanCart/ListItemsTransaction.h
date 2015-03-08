@@ -14,7 +14,6 @@
 @interface ListItemsTransaction : Transaction <ItemRepositoryResponse>
 
 @property (nonatomic, weak) id<ListItemsTransactionResponse> delegate;
-
-- (instancetype)initWithRepository:(ItemRepository *)repository;
+@property (nonatomic, strong) ItemRepository *repository;
 
 @end

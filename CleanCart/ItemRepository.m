@@ -16,9 +16,16 @@
 
 @implementation ItemRepository
 
+- (void)fetchItems {
+    [self.dataSource fetchItems];
+}
+
 #pragma mark - ItemRepositoryRequestMethods
 
 - (NSArray *)allItems {
+    if (self.items.count == 0) {
+        [self.dataSource fetchItems];
+    }
     return self.items;
 }
 

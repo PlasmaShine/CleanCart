@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "NavigationMessage.h"
+#import "Navigator.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.navigatorFactory = [[NavigatorFactory alloc] init];
+    Navigator *navigator = [self.navigatorFactory navigatorForMessage:NavigationMessageRoot];
+    self.window.rootViewController = navigator.rootViewController;
     return YES;
 }
 

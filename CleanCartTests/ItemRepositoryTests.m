@@ -10,6 +10,7 @@
 #import "Item.h"
 #import "ItemRepository.h"
 #import "ListItemsTransactionSpy.h"
+#import "DataSourceSpy.h"
 
 @interface ItemRepositoryTests : XCTestCase
 
@@ -41,6 +42,13 @@
 }
 
 #pragma mark - Tests
+
+- (void)testCallingFetchItemsOnItemRepositoryTransmitsTheCallToDataSource {
+    DataSourceSpy *dataSpy = [[DataSourceSpy alloc] init];
+    self.sut.dataSource = dataSpy;
+    [self.sut fetchItems];
+    XCTAssertTrue(dataSpy.didReceiveFetchItemsMessage, @"Should have called fetch Items on the data source");
+}
 
 - (void)testItemRepositoryReturnsCorrectItems {
     [self.sut didReceiveItems:self.items];

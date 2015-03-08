@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="319.5" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pp-Oa-nqH">
@@ -123,8 +123,8 @@
                                 <connections>
                                     <outlet property="addToCartButton" destination="5NL-qo-ELN" id="SB9-Gi-eGs"/>
                                     <outlet property="itemName" destination="6pp-Oa-nqH" id="9iB-Mc-Cfg"/>
-                                    <outlet property="itemPrice" destination="pmq-rq-eLy" id="Pa9-qt-e8h"/>
-                                    <outlet property="itemStock" destination="LtH-AJ-8rv" id="iwX-pI-oBF"/>
+                                    <outlet property="itemPrice" destination="pmq-rq-eLy" id="kiX-js-B2a"/>
+                                    <outlet property="itemStock" destination="LtH-AJ-8rv" id="wJE-rY-JpB"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

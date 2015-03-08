@@ -10,20 +10,8 @@
 #import "DisplayListItem.h"
 #import "Item.h"
 
-@interface ListItemsTransaction()
-
-@property(nonatomic, strong) ItemRepository *repository;
-
-@end
-
 @implementation ListItemsTransaction
 
-- (instancetype)initWithRepository:(id)repository {
-    if (self = [super init]) {
-        self.repository = repository;
-    }
-    return self;
-}
 
 - (void)execute {
     [self.repository allItems];
