@@ -34,7 +34,7 @@
     JSONDataSource *dataSource = [[JSONDataSource alloc] init];
     itemRepo.dataSource = dataSource;
     dataSource.delegate = itemRepo;
-    transaction.repository = itemRepo;
+    transaction.itemRepository = itemRepo;
     itemRepo.delegate = transaction;
     transaction.delegate = (id<ListItemsTransactionResponse>)caller;
     return transaction;

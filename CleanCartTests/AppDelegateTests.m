@@ -32,7 +32,7 @@
     [super tearDown];
 }
 
-#pragma mark - Tests
+#pragma mark - Tests -
 
 - (void)testAppDelegateInitializationCallsNaviGatorFactoryWithRootMessage {
     NavigatorFactorySpy *factorySpy = [[NavigatorFactorySpy alloc] init];

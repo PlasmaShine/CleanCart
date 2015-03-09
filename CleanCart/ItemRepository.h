@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DataSourceIO.h"
 #import "ItemRepositoryIO.h"
+#import "Item.h"
 
 @interface ItemRepository : NSObject <DataSourceResponse>
 
@@ -17,5 +18,6 @@
 
 - (void)fetchItems;
 - (NSArray *)allItems;
+- (Item *)itemForId:(NSString *)itemId;
 
 @end

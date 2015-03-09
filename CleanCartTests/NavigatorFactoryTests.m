@@ -30,7 +30,7 @@
     [super tearDown];
 }
 
-#pragma mark - Tests
+#pragma mark - Tests -
 
 - (void)testListItemsNavigatorIsCorrectlySetUp {
     ListItemsNavigator *navigator = (ListItemsNavigator *)[self.sut navigatorForMessage:NavigationMessageRoot];
@@ -46,4 +46,19 @@
     XCTAssertEqualObjects(presenter.navigator, navigator, @"Presenter should have a navigator");
     XCTAssertNotNil(presenter.transactionFactory, @"Presenter should have a transaction factory");
 }
+
+//- (void)testShowItemDetailsIsCorrectlySetUp {
+//    ListItemsNavigator *navigator = (ListItemsNavigator *)[self.sut navigatorForMessage:NavigationMessageShowItemDetails];
+//    UINavigationController *navController = (UINavigationController *)navigator.rootViewController;
+//    ListItemsViewController *listItemsVc = (ListItemsViewController *)navController.viewControllers[0];
+//    ListItemsPresenter *presenter = (ListItemsPresenter *)listItemsVc.eventHandler;
+//    XCTAssertNotNil(navigator.navigatorFactory, @"Navigator factory should not be nil");
+//    XCTAssertNotNil(navigator.rootViewController, @"Root view controller should not be nil");
+//    XCTAssertNotNil(listItemsVc, @"List items view controller should not be nil");
+//    XCTAssertNotNil(listItemsVc.eventHandler, @"Event handler should not be nil");
+//    XCTAssertEqualObjects(listItemsVc.eventHandler, presenter,@"Presenter should be the event handler");
+//    XCTAssertEqualObjects(presenter.delegate, listItemsVc, "View countroller should be the delegate of the presenter");
+//    XCTAssertEqualObjects(presenter.navigator, navigator, @"Presenter should have a navigator");
+//    XCTAssertNotNil(presenter.transactionFactory, @"Presenter should have a transaction factory");
+//}
 @end

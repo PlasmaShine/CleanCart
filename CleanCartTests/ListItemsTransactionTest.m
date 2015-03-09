@@ -43,7 +43,7 @@
     [super tearDown];
 }
 
-#pragma mark - Helper methods
+#pragma mark - Helper methods -
 
 - (NSArray *)_createItemArray {
     Item *item = [[Item alloc] init];
@@ -55,7 +55,7 @@
     return [[NSArray alloc] initWithObjects:item, nil];
 }
 
-#pragma mark - Tests
+#pragma mark - Tests -
 
 - (void)testCallingExecuteOnTransactionSendsMessageToRepository {
     [self.sut execute];

@@ -24,7 +24,7 @@
 
 @implementation DataSourceTests
 
-#pragma mark - Helper methods
+#pragma mark - Helper methods -
 
 - (void)waitFor:(BOOL *)flag timeout:(NSTimeInterval)timeoutSecs {
     NSTimeInterval runningTime = 0;
@@ -45,14 +45,14 @@
     XCTAssertEqual(item.itemStock, expectedStock, @"Incorrect item stock");
 }
 
-#pragma mark - DataSourceResponse
+#pragma mark - DataSourceResponse -
 
 - (void)didReceiveItems:(NSArray *)items {
     self.items  = items;
     self.dataReceived = YES;
 }
 
-#pragma mark - Tests
+#pragma mark - Tests -
 
 - (void)setUp {
     [super setUp];

@@ -27,4 +27,9 @@
     self.didReceiveItemRetrievalMessage = YES;
 }
 
+- (Item *)itemForId:(NSString *)itemId {
+    self.didReceiveItemForIdMessage = YES;
+    self.receivedItemId = itemId;
+    return nil;
+}
 @end

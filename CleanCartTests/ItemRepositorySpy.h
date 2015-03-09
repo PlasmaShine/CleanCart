@@ -13,4 +13,6 @@
 
 @property (nonatomic, assign) BOOL didReceiveAllItemsMessage;
 @property (nonatomic, assign) BOOL didReceiveItemRetrievalMessage;
+@property (nonatomic, assign) BOOL didReceiveItemForIdMessage;
+@property (nonatomic, copy) NSString *receivedItemId;
 @end

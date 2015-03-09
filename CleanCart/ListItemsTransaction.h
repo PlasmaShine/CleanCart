@@ -14,6 +14,6 @@
 @interface ListItemsTransaction : Transaction <ItemRepositoryResponse>
 
 @property (nonatomic, weak) id<ListItemsTransactionResponse> delegate;
-@property (nonatomic, strong) ItemRepository *repository;
+@property (nonatomic, strong) ItemRepository *itemRepository;
 
 @end

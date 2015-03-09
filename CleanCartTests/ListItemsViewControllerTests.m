@@ -59,14 +59,14 @@
     [super tearDown];
 }
 
-#pragma mark - Helper Methods
+#pragma mark - Helper Methods -
 
 - (UICollectionViewCell *)_cellInSection0Row1 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
     return [self.sut collectionView:self.sut.collectionView cellForItemAtIndexPath:indexPath];
 }
 
-#pragma mark - Tests
+#pragma mark - Tests -
 
 - (void)testIfViewControllerIsTheCorrectType {
     XCTAssertTrue([self.sut isKindOfClass:[ListItemsViewController class]],@"Incorrect type of viewController");
@@ -128,6 +128,8 @@
     ListItemsCollectionCell *cell = (ListItemsCollectionCell *)[self _cellInSection0Row1];
     XCTAssertEqualObjects(cell.item, self.item2, @"The cell should be configured for item2");
 }
+
+#pragma mark - Event handling -
 
 - (void)testTappingOnACellSendsTheCellTappedMessageToPresenterWithItemId {
     [self.sut refreshUIWithData:self.testData];

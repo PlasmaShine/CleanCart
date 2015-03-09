@@ -41,7 +41,7 @@
     [super tearDown];
 }
 
-#pragma mark - Tests
+#pragma mark - Tests -
 
 - (void)testCallingFetchItemsOnItemRepositoryTransmitsTheCallToDataSource {
     DataSourceSpy *dataSpy = [[DataSourceSpy alloc] init];
@@ -64,6 +64,19 @@
 - (void)testItemReposidoreDoesNotNotifyDelegateWhenThereAreNoItemsRetrieved {
     [self.sut didReceiveItems:[NSArray array]];
     XCTAssertFalse(self.interactorSpy.didReceiveItemsReceivedMessage, @"Delegate  should NOT have received message from repository");
+}
+
+- (void)testRepositoryReturnsCorrectItemForItemForId {
+    [self.sut didReceiveItems:self.items];
+    Item *firstItem = self.items[0];
+    Item *retrievedItem = [self.sut itemForId:firstItem.itemId];
+    XCTAssertEqualObjects(firstItem, retrievedItem, @"Items should be the same");
+}
+
+- (void)testRepositoryReturnsNilForNonExistingItemId {
+    [self.sut didReceiveItems:self.items];
+    Item *retrievedItem = [self.sut itemForId:@"bla"];
+    XCTAssertNil(retrievedItem, @"Item should be nil");
 }
 
 @end

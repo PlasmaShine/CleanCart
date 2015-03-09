@@ -29,6 +29,16 @@
     return self.items;
 }
 
+- (Item *)itemForId:(NSString *)itemId {
+    for (NSInteger i=0; i<self.items.count; i++) {
+        Item *currentItem = self.items[i];
+        if([currentItem.itemId isEqualToString:itemId]) {
+            return currentItem;
+        }
+    }
+    return nil;
+}
+
 #pragma mark - DataSourceResponse protocol methods
 
 - (void)didReceiveItems:(NSArray *)items {

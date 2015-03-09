@@ -14,7 +14,7 @@
 
 
 - (void)execute {
-    [self.repository allItems];
+    [self.itemRepository allItems];
 }
 
 #pragma mark - ItemRepositoryResponse

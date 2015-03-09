@@ -56,7 +56,7 @@
     self.navigatorSpy = nil;
     [super tearDown];
 }
-#pragma mark - Helpers
+#pragma mark - Helpers -
 
 - (void)_assert:(NSInteger)numberOfSections sectionsForItems:(NSArray *)items {
     XCTAssertEqual(self.viewControllerSpy.receivedItems.count, numberOfSections, @"Incorect number of sections");
@@ -67,7 +67,7 @@
     XCTAssertEqual(section.items.count, numberOfItems, @"Incorrect number of items in section");
 }
 
-#pragma mark - Tests
+#pragma mark - Tests -
 
 - (void)testPresenterConformsToProperProtocols {
     XCTAssertTrue([self.sut conformsToProtocol:@protocol(ListItemsTransactionResponse)], @"");
@@ -133,6 +133,8 @@
     [self _assert:2 itemsForSection:0];
     [self _assert:1 itemsForSection:1];
 }
+
+#pragma mark - Navigation message handling -
 
 - (void)testReceivingCartTappedMessagePasesItOnToTheNavigator {
     [self.sut cartButtonTapped];

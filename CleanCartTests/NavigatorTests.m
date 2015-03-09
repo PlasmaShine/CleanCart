@@ -25,6 +25,8 @@
     [super tearDown];
 }
 
+#pragma mark - Tests -
+
 - (void)testReceivingNavigationMessagePassesItOnToNavigatorFactory {
     Navigator *navigator = [[Navigator alloc] init];
     NavigatorFactorySpy *factorySpy = [[NavigatorFactorySpy alloc] init];

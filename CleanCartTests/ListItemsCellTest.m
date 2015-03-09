@@ -40,7 +40,7 @@
     [super tearDown];
 }
 
-#pragma mark - Helpers
+#pragma mark - Helpers -
 
 - (NSArray *)_createTestData {
     Section *section = [[Section alloc] init];
@@ -53,7 +53,7 @@
     return [NSArray arrayWithObjects:section, nil];
 }
 
-#pragma mark - Tests
+#pragma mark - Tests -
 
 - (void)testCellIsPreoperlyConfiguredWhenSettingAnItem {
     XCTAssertEqualObjects(self.sut.itemName.text, self.item.itemName, @"Cell should have set item name");
