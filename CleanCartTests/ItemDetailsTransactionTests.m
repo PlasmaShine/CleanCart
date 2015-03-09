@@ -10,10 +10,13 @@
 #import "ItemRepositorySpy.h"
 #import "ItemDetailsTransaction.h"
 #import "ItemRepositoryStub.h"
+#import "ItemDetailsPresenterSpy.h"
 
 @interface ItemDetailsTransactionTests : XCTestCase
 
 @property (nonatomic, strong) ItemDetailsTransaction *sut;
+@property (nonatomic, strong) Item *item;
+@property (nonatomic, strong) ItemDetailsPresenterSpy *presenterSpy;
 
 @end
 
@@ -22,19 +25,24 @@
 - (void)setUp {
     [super setUp];
     self.sut = [[ItemDetailsTransaction alloc] init];
+    self.item = [[Item alloc] init];
+    self.item.itemId = @"1";
+    self.presenterSpy = [[ItemDetailsPresenterSpy alloc] init];
+    self.sut.delegate = self.presenterSpy;
 }
 
 - (void)tearDown {
     self.sut = nil;
+    self.item = nil;
     [super tearDown];
 }
 
 #pragma mark - Helper methods -
 
-- (ItemRepositoryStub *)_createStubRepositoryWithItem:(Item *)item {
+- (void)_setUpSutWithStubRepository {
     ItemRepositoryStub *stubRepository = [[ItemRepositoryStub alloc] init];
-    stubRepository.item = item;
-    return stubRepository;
+    stubRepository.item = self.item;
+    self.sut.itemRepository = stubRepository;
 }
 
 #pragma mark - Tests -
@@ -49,14 +57,17 @@
 }
 
 - (void)testGettingItemFromRepositorySendsItToTheDelegate {
-    Item *item = [[Item alloc] init];
-    item.itemId = @"1";
-    ItemRepositoryStub *stubRepository = [self _createStubRepositoryWithItem:item];
-    self.sut.itemRepository = stubRepository;
-    
+    [self _setUpSutWithStubRepository];
+    self.sut.itemId = self.item.itemId;
     [self.sut execute];
-    
+    XCTAssertTrue(self.presenterSpy.didReceiveItem, @"Should have received item from transaction");
+    XCTAssertEqualObjects(self.presenterSpy.receivedItem, self.item, @"Received item should match sent item");
 }
 
+- (void)testItemNotFoundInRepositoryDoeNotCallDelegate {
+    [self _setUpSutWithStubRepository];
+    [self.sut execute];
+    XCTAssertFalse(self.presenterSpy.didReceiveItem, @"Should not have called the delegate");
+}
 
 @end

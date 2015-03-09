@@ -12,5 +12,9 @@
 
 - (void)execute {
     Item *item = [self.itemRepository itemForId:self.itemId];
+    if (item) {
+        [self.delegate presentItem:item];
+    }
 }
+
 @end

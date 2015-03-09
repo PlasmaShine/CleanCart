@@ -8,10 +8,11 @@
 
 #import "Transaction.h"
 #import "ItemRepository.h"
+#import "ItemDetailsTransactionIO.h"
 
 @interface ItemDetailsTransaction : Transaction
 
-//@property (nonatomic, weak) id<ItemDetailsTransactionResponse> delegate;
+@property (nonatomic, weak) id<ItemDetailsTransactionResponse> delegate;
 @property (nonatomic, strong) ItemRepository *itemRepository;
 @property (nonatomic, copy) NSString *itemId;
 

@@ -49,6 +49,14 @@
 		DEAE56591AAC814A00D9C3D2 /* DataSourceSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56581AAC814A00D9C3D2 /* DataSourceSpy.m */; };
 		DEAE565C1AAC875E00D9C3D2 /* NavigatorFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE565B1AAC875E00D9C3D2 /* NavigatorFactoryTests.m */; };
 		DEAE565D1AAC95AC00D9C3D2 /* ListItemsCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28631AA7C06700E3DA7B /* ListItemsCollectionCell.m */; };
+		DEAE56601AADC54900D9C3D2 /* ItemDetailsPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE565F1AADC54900D9C3D2 /* ItemDetailsPresenterSpy.m */; };
+		DEAE56651AADC57500D9C3D2 /* ItemDetailsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56641AADC57500D9C3D2 /* ItemDetailsPresenter.m */; };
+		DEAE566B1AADC71900D9C3D2 /* ItemDetailsPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE566A1AADC71900D9C3D2 /* ItemDetailsPresenterTests.m */; };
+		DEAE566F1AADE2CC00D9C3D2 /* ItemDetailsViewControllerSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE566E1AADE2CC00D9C3D2 /* ItemDetailsViewControllerSpy.m */; };
+		DEAE56741AADE32900D9C3D2 /* ItemDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56731AADE32900D9C3D2 /* ItemDetailsViewController.m */; };
+		DEAE56781AADE67000D9C3D2 /* PresentableItemDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56771AADE67000D9C3D2 /* PresentableItemDetails.m */; };
+		DEAE567A1AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56791AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m */; };
+		DEAE567D1AADEFDA00D9C3D2 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE567C1AADEFDA00D9C3D2 /* Presenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +152,22 @@
 		DEAE56571AAC814A00D9C3D2 /* DataSourceSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceSpy.h; sourceTree = "<group>"; };
 		DEAE56581AAC814A00D9C3D2 /* DataSourceSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceSpy.m; sourceTree = "<group>"; };
 		DEAE565B1AAC875E00D9C3D2 /* NavigatorFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigatorFactoryTests.m; sourceTree = "<group>"; };
+		DEAE565E1AADC54900D9C3D2 /* ItemDetailsPresenterSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsPresenterSpy.h; sourceTree = "<group>"; };
+		DEAE565F1AADC54900D9C3D2 /* ItemDetailsPresenterSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsPresenterSpy.m; sourceTree = "<group>"; };
+		DEAE56631AADC57500D9C3D2 /* ItemDetailsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsPresenter.h; sourceTree = "<group>"; };
+		DEAE56641AADC57500D9C3D2 /* ItemDetailsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsPresenter.m; sourceTree = "<group>"; };
+		DEAE56671AADC65300D9C3D2 /* ItemDetailsPresenterIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemDetailsPresenterIO.h; sourceTree = "<group>"; };
+		DEAE56691AADC6A600D9C3D2 /* ItemDetailsTransactionIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemDetailsTransactionIO.h; sourceTree = "<group>"; };
+		DEAE566A1AADC71900D9C3D2 /* ItemDetailsPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsPresenterTests.m; sourceTree = "<group>"; };
+		DEAE566D1AADE2CC00D9C3D2 /* ItemDetailsViewControllerSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsViewControllerSpy.h; sourceTree = "<group>"; };
+		DEAE566E1AADE2CC00D9C3D2 /* ItemDetailsViewControllerSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewControllerSpy.m; sourceTree = "<group>"; };
+		DEAE56721AADE32900D9C3D2 /* ItemDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsViewController.h; sourceTree = "<group>"; };
+		DEAE56731AADE32900D9C3D2 /* ItemDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewController.m; sourceTree = "<group>"; };
+		DEAE56761AADE67000D9C3D2 /* PresentableItemDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentableItemDetails.h; sourceTree = "<group>"; };
+		DEAE56771AADE67000D9C3D2 /* PresentableItemDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentableItemDetails.m; sourceTree = "<group>"; };
+		DEAE56791AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewControllerTests.m; sourceTree = "<group>"; };
+		DEAE567B1AADEFDA00D9C3D2 /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
+		DEAE567C1AADEFDA00D9C3D2 /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,9 +213,8 @@
 			children = (
 				C83F28441A9D924E00E3DA7B /* Transaction */,
 				DEAE563D1AAC1BA200D9C3D2 /* Navigation */,
-				DEAE56261AA35A4900D9C3D2 /* DisplayListItem.h */,
-				DEAE56271AA35A4900D9C3D2 /* DisplayListItem.m */,
 				DEAE563E1AAC1BDC00D9C3D2 /* Section */,
+				DEAE567E1AADEFDF00D9C3D2 /* Presenter */,
 			);
 			name = BaseClasses;
 			sourceTree = "<group>";
@@ -245,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				C83F285B1AA052F600E3DA7B /* Protocols */,
+				DEAE56261AA35A4900D9C3D2 /* DisplayListItem.h */,
+				DEAE56271AA35A4900D9C3D2 /* DisplayListItem.m */,
 				C83F28551AA04CC900E3DA7B /* ListItemsPresenter.h */,
 				C83F28561AA04CC900E3DA7B /* ListItemsPresenter.m */,
 			);
@@ -320,6 +345,8 @@
 			isa = PBXGroup;
 			children = (
 				C84399D01AAD84E70084C73D /* ItemDetailsTransaction */,
+				DEAE56621AADC55B00D9C3D2 /* ItemDetailsPresenter */,
+				DEAE56701AADE2D400D9C3D2 /* ItemDetailsViewController */,
 			);
 			name = ItemDetails;
 			sourceTree = "<group>";
@@ -327,6 +354,7 @@
 		C84399D51AAD88990084C73D /* ItemDetailsTransaction */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE566C1AADC80700D9C3D2 /* Protocols */,
 				C84399D21AAD88950084C73D /* ItemDetailsTransaction.h */,
 				C84399D31AAD88950084C73D /* ItemDetailsTransaction.m */,
 			);
@@ -337,6 +365,8 @@
 			isa = PBXGroup;
 			children = (
 				C84399D51AAD88990084C73D /* ItemDetailsTransaction */,
+				DEAE56661AADC57C00D9C3D2 /* ItemDetailsPresenter */,
+				DEAE56751AADE32D00D9C3D2 /* ItemDetailsViewController */,
 			);
 			name = ItemDetails;
 			sourceTree = "<group>";
@@ -646,6 +676,88 @@
 			name = Mocks;
 			sourceTree = "<group>";
 		};
+		DEAE56611AADC55500D9C3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE565E1AADC54900D9C3D2 /* ItemDetailsPresenterSpy.h */,
+				DEAE565F1AADC54900D9C3D2 /* ItemDetailsPresenterSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		DEAE56621AADC55B00D9C3D2 /* ItemDetailsPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56611AADC55500D9C3D2 /* Mocks */,
+				DEAE566A1AADC71900D9C3D2 /* ItemDetailsPresenterTests.m */,
+			);
+			name = ItemDetailsPresenter;
+			sourceTree = "<group>";
+		};
+		DEAE56661AADC57C00D9C3D2 /* ItemDetailsPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56681AADC65700D9C3D2 /* Protocols */,
+				DEAE56631AADC57500D9C3D2 /* ItemDetailsPresenter.h */,
+				DEAE56641AADC57500D9C3D2 /* ItemDetailsPresenter.m */,
+				DEAE56761AADE67000D9C3D2 /* PresentableItemDetails.h */,
+				DEAE56771AADE67000D9C3D2 /* PresentableItemDetails.m */,
+			);
+			name = ItemDetailsPresenter;
+			sourceTree = "<group>";
+		};
+		DEAE56681AADC65700D9C3D2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56671AADC65300D9C3D2 /* ItemDetailsPresenterIO.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		DEAE566C1AADC80700D9C3D2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56691AADC6A600D9C3D2 /* ItemDetailsTransactionIO.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		DEAE56701AADE2D400D9C3D2 /* ItemDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56711AADE2E300D9C3D2 /* Mocks */,
+				DEAE56791AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m */,
+			);
+			name = ItemDetailsViewController;
+			sourceTree = "<group>";
+		};
+		DEAE56711AADE2E300D9C3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE566D1AADE2CC00D9C3D2 /* ItemDetailsViewControllerSpy.h */,
+				DEAE566E1AADE2CC00D9C3D2 /* ItemDetailsViewControllerSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		DEAE56751AADE32D00D9C3D2 /* ItemDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56721AADE32900D9C3D2 /* ItemDetailsViewController.h */,
+				DEAE56731AADE32900D9C3D2 /* ItemDetailsViewController.m */,
+			);
+			name = ItemDetailsViewController;
+			sourceTree = "<group>";
+		};
+		DEAE567E1AADEFDF00D9C3D2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE567B1AADEFDA00D9C3D2 /* Presenter.h */,
+				DEAE567C1AADEFDA00D9C3D2 /* Presenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -748,11 +860,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAE565D1AAC95AC00D9C3D2 /* ListItemsCollectionCell.m in Sources */,
+				DEAE56781AADE67000D9C3D2 /* PresentableItemDetails.m in Sources */,
 				C84399D41AAD88950084C73D /* ItemDetailsTransaction.m in Sources */,
 				DEAE56451AAC392E00D9C3D2 /* ListItemsNavigator.m in Sources */,
+				DEAE56741AADE32900D9C3D2 /* ItemDetailsViewController.m in Sources */,
 				C83F28431A9D924A00E3DA7B /* Transaction.m in Sources */,
 				C83F28601AA45BD300E3DA7B /* ListItemsViewController.m in Sources */,
 				DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */,
+				DEAE56651AADC57500D9C3D2 /* ItemDetailsPresenter.m in Sources */,
 				C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */,
 				DEAE56361AAC176000D9C3D2 /* NavigatorFactory.m in Sources */,
 				DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */,
@@ -761,6 +876,7 @@
 				C83F28481A9D927C00E3DA7B /* ListItemsTransaction.m in Sources */,
 				DEAE564C1AAC691E00D9C3D2 /* TransactionFactory.m in Sources */,
 				C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */,
+				DEAE567D1AADEFDA00D9C3D2 /* Presenter.m in Sources */,
 				DEAE562B1AA5E7A900D9C3D2 /* Section.m in Sources */,
 				C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */,
 				DE119D491A997FC700FEEBCB /* main.m in Sources */,
@@ -772,17 +888,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAE56231AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m in Sources */,
+				DEAE566F1AADE2CC00D9C3D2 /* ItemDetailsViewControllerSpy.m in Sources */,
 				C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */,
 				C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */,
 				C84399CC1AAD7DBF0084C73D /* AppDelegateStub.m in Sources */,
 				DEAE56311AAC171500D9C3D2 /* NavigatorFactorySpy.m in Sources */,
+				DEAE566B1AADC71900D9C3D2 /* ItemDetailsPresenterTests.m in Sources */,
 				C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */,
 				DEAE56551AAC775800D9C3D2 /* TransactionFactoryTests.m in Sources */,
 				C84399D91AAD8CFD0084C73D /* ItemRepositoryStub.m in Sources */,
 				DEAE565C1AAC875E00D9C3D2 /* NavigatorFactoryTests.m in Sources */,
+				DEAE56601AADC54900D9C3D2 /* ItemDetailsPresenterSpy.m in Sources */,
 				DEAE562D1AAC115300D9C3D2 /* AppDelegateTests.m in Sources */,
 				DEAE56591AAC814A00D9C3D2 /* DataSourceSpy.m in Sources */,
 				DEAE561F1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m in Sources */,
+				DEAE567A1AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m in Sources */,
 				DEAE56481AAC3E0300D9C3D2 /* NavigatorTests.m in Sources */,
 				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
 				C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */,
