@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "AppDelegate.h"
+#import "AppDelegateStub.h"
 #import "NavigatorFactorySpy.h"
-#import "navigationMessage.h"
+#import "NavigationMessage.h"
 
 @interface AppDelegateTests : XCTestCase
 
-@property (nonatomic, strong) AppDelegate *sut;
+@property (nonatomic, strong) AppDelegateStub *sut;
 
 @end
 
@@ -23,21 +23,24 @@
 - (void)setUp {
     [super setUp];
     UIWindow *window = [[UIWindow alloc] init];
-    self.sut = [[AppDelegate alloc] init];
+    self.sut = [[AppDelegateStub alloc] init];
     self.sut.window = window;
 }
 
 - (void)tearDown {
+    self.sut = nil;
     [super tearDown];
 }
 
-//- (void)testAppDelegateInitializationCallsnaviGatorFactoryWithRootMessage {
-//    NavigatorFactorySpy *factorySpy = [[NavigatorFactorySpy alloc] init];
-//    self.sut.navigatorFactory = factorySpy;
-//    [self.sut application:nil didFinishLaunchingWithOptions:nil];
-//    XCTAssertTrue(factorySpy.didReceiveNavigationMessage, @"Should have received the root message");
-//    XCTAssertEqual(factorySpy.receivedMessage, NavigationMessageRoot, @"Parameter passed to the factory should have been root");
-//}
+#pragma mark - Tests
+
+- (void)testAppDelegateInitializationCallsNaviGatorFactoryWithRootMessage {
+    NavigatorFactorySpy *factorySpy = [[NavigatorFactorySpy alloc] init];
+    self.sut = [[AppDelegateStub alloc] initWithFactory:factorySpy];
+    [self.sut application:nil didFinishLaunchingWithOptions:nil];
+    XCTAssertTrue(factorySpy.didReceiveNavigationMessage, @"Should have received the root message");
+    XCTAssertEqual(factorySpy.receivedMessage, NavigationMessageRoot, @"Parameter passed to the factory should have been root");
+}
 
 - (void)testAppDelegateRootViewControllerIsANavigationController {
     [self.sut application:nil didFinishLaunchingWithOptions:nil];

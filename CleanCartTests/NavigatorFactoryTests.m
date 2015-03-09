@@ -30,6 +30,8 @@
     [super tearDown];
 }
 
+#pragma mark - Tests
+
 - (void)testListItemsNavigatorIsCorrectlySetUp {
     ListItemsNavigator *navigator = (ListItemsNavigator *)[self.sut navigatorForMessage:NavigationMessageRoot];
     UINavigationController *navController = (UINavigationController *)navigator.rootViewController;

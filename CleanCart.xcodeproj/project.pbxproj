@@ -16,6 +16,7 @@
 		C83F28601AA45BD300E3DA7B /* ListItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F285F1AA45BD300E3DA7B /* ListItemsViewController.m */; };
 		C83F28691AA8A03E00E3DA7B /* ListItemsCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28681AA8A03E00E3DA7B /* ListItemsCellTest.m */; };
 		C84399C81AA9926D0084C73D /* ListItemsCellDelegateSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399C71AA9926D0084C73D /* ListItemsCellDelegateSpy.m */; };
+		C84399CC1AAD7DBF0084C73D /* AppDelegateStub.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399CB1AAD7DBF0084C73D /* AppDelegateStub.m */; };
 		C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */; };
 		C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */; };
 		C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622B11A9AE12800520FE1 /* DataSourceTests.m */; };
@@ -81,6 +82,8 @@
 		C84399C61AA9926D0084C73D /* ListItemsCellDelegateSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsCellDelegateSpy.h; sourceTree = "<group>"; };
 		C84399C71AA9926D0084C73D /* ListItemsCellDelegateSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsCellDelegateSpy.m; sourceTree = "<group>"; };
 		C84399C91AA993B50084C73D /* ListItemsCollectionCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItemsCollectionCellDelegate.h; sourceTree = "<group>"; };
+		C84399CA1AAD7DBF0084C73D /* AppDelegateStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateStub.h; sourceTree = "<group>"; };
+		C84399CB1AAD7DBF0084C73D /* AppDelegateStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateStub.m; sourceTree = "<group>"; };
 		C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepositoryTests.m; sourceTree = "<group>"; };
 		C84622AD1A9AE10D00520FE1 /* JSONDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDataSource.h; sourceTree = "<group>"; };
 		C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDataSource.m; sourceTree = "<group>"; };
@@ -288,6 +291,15 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		C84399CD1AAD7DC30084C73D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C84399CA1AAD7DBF0084C73D /* AppDelegateStub.h */,
+				C84399CB1AAD7DBF0084C73D /* AppDelegateStub.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
 		C84622B01A9AE11300520FE1 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +467,7 @@
 		DEAE562E1AAC115800D9C3D2 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				C84399CD1AAD7DC30084C73D /* Mocks */,
 				DEAE562C1AAC115300D9C3D2 /* AppDelegateTests.m */,
 			);
 			name = AppDelegate;
@@ -715,6 +728,7 @@
 				DEAE56231AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m in Sources */,
 				C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */,
 				C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */,
+				C84399CC1AAD7DBF0084C73D /* AppDelegateStub.m in Sources */,
 				DEAE56311AAC171500D9C3D2 /* NavigatorFactorySpy.m in Sources */,
 				C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */,
 				DEAE56551AAC775800D9C3D2 /* TransactionFactoryTests.m in Sources */,

@@ -18,7 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.navigatorFactory = [[NavigatorFactory alloc] init];
+    if(self.navigatorFactory==nil) {
+        self.navigatorFactory = [[NavigatorFactory alloc] init];
+    }
     Navigator *navigator = [self.navigatorFactory navigatorForMessage:NavigationMessageRoot];
     self.window.rootViewController = navigator.rootViewController;
     return YES;
