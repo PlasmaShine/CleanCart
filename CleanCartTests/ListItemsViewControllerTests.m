@@ -61,7 +61,7 @@
 
 #pragma mark - Helper Methods
 
-- (UICollectionViewCell *)_cellInSection1Row2 {
+- (UICollectionViewCell *)_cellInSection0Row1 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
     return [self.sut collectionView:self.sut.collectionView cellForItemAtIndexPath:indexPath];
 }
@@ -117,13 +117,15 @@
 
 - (void)testCellForRowAtIndexPathIsOfTheProperType {
     [self.sut refreshUIWithData:self.testData];
-    UICollectionViewCell *cell = [self _cellInSection1Row2];
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    XCTAssertNotNil(mainBundle);
+    UICollectionViewCell *cell = [self _cellInSection0Row1];
     XCTAssertTrue([cell isKindOfClass:[ListItemsCollectionCell class]], @"The cell should be a ListItemsCollectionCell");
 }
 
 - (void)testReturnedCellIsProperlyConfigured {
     [self.sut refreshUIWithData:self.testData];
-    ListItemsCollectionCell *cell = (ListItemsCollectionCell *)[self _cellInSection1Row2];
+    ListItemsCollectionCell *cell = (ListItemsCollectionCell *)[self _cellInSection0Row1];
     XCTAssertEqualObjects(cell.item, self.item2, @"The cell should be configured for item2");
 }
 

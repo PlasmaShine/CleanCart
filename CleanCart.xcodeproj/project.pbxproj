@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C83F283F1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F283E1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m */; };
 		C83F28431A9D924A00E3DA7B /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28421A9D924A00E3DA7B /* Transaction.m */; };
 		C83F28481A9D927C00E3DA7B /* ListItemsTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28471A9D927C00E3DA7B /* ListItemsTransaction.m */; };
 		C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F284F1A9E847700E3DA7B /* ListItemsTransactionSpy.m */; };
@@ -15,7 +14,6 @@
 		C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28561AA04CC900E3DA7B /* ListItemsPresenter.m */; };
 		C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F285C1AA4585F00E3DA7B /* ListItemsViewControllerTests.m */; };
 		C83F28601AA45BD300E3DA7B /* ListItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F285F1AA45BD300E3DA7B /* ListItemsViewController.m */; };
-		C83F28641AA7C06700E3DA7B /* ListItemsCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28631AA7C06700E3DA7B /* ListItemsCollectionCell.m */; };
 		C83F28691AA8A03E00E3DA7B /* ListItemsCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C83F28681AA8A03E00E3DA7B /* ListItemsCellTest.m */; };
 		C84399C81AA9926D0084C73D /* ListItemsCellDelegateSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399C71AA9926D0084C73D /* ListItemsCellDelegateSpy.m */; };
 		C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */; };
@@ -720,8 +718,6 @@
 				DEAE56311AAC171500D9C3D2 /* NavigatorFactorySpy.m in Sources */,
 				C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */,
 				DEAE56551AAC775800D9C3D2 /* TransactionFactoryTests.m in Sources */,
-				C83F28641AA7C06700E3DA7B /* ListItemsCollectionCell.m in Sources */,
-				C83F283F1A9D8DFD00E3DA7B /* ListItemsTransactionTest.m in Sources */,
 				DEAE565C1AAC875E00D9C3D2 /* NavigatorFactoryTests.m in Sources */,
 				DEAE562D1AAC115300D9C3D2 /* AppDelegateTests.m in Sources */,
 				DEAE56591AAC814A00D9C3D2 /* DataSourceSpy.m in Sources */,

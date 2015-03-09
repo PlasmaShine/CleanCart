@@ -10,6 +10,8 @@
 #import "Section.h"
 #import "NavigationMessage.h"
 #import "TransactionIdentifier.h"
+#import "DisplayListItem.h"
+#import "Item.h"
 
 @implementation ListItemsPresenter
 
@@ -35,6 +37,7 @@
 #pragma mark - ListItemsTranscationResponse
 
 - (void)didReceiveItems:(NSArray *)items {
+    if (items.count == 0) return;
     NSArray *sectionList = [self _sectionListWithTwoItemsPerSectionForArray:items];
     [self.delegate refreshUIWithData:sectionList];
 }
@@ -43,23 +46,33 @@
     NSMutableArray *sectionList = [NSMutableArray array];
     Section *section = nil;
     NSMutableArray *sectionItems = nil;
-//    for (NSInteger i=0; i<items.count; i++) {
-//        if (i%2==0) {
-//            section = [[Section alloc] init];
-//            sectionItems = [NSMutableArray array];
-//        }
-//        [sectionItems addObject:items[i]];
-//        if (i%2!=0) {
-//            section.items = sectionItems;
-//            [sectionList addObject:section];
-//            sectionItems = nil;
-//        }
-//    }
-//    if (sectionItems.count>0) {
-//        section.items = sectionItems;
-//        [sectionList addObject:section];
-//    }
+    for (NSInteger i=0; i<items.count; i++) {
+        if (i%2==0) {
+            section = [[Section alloc] init];
+            sectionItems = [NSMutableArray array];
+        }
+        DisplayListItem *displayItem =  [self _displayListItemFromItem:items[i]];
+        [sectionItems addObject:displayItem];
+        if (i%2!=0) {
+            section.items = sectionItems;
+            [sectionList addObject:section];
+            sectionItems = nil;
+        }
+    }
+    if (sectionItems.count>0) {
+        section.items = sectionItems;
+        [sectionList addObject:section];
+    }
     return sectionList;
+}
+
+- (DisplayListItem *)_displayListItemFromItem:(Item *)item {
+    DisplayListItem *displayItem = [[DisplayListItem alloc] init];
+    displayItem.itemId = [item.itemId copy];
+    displayItem.itemName = [item.itemName copy];
+    displayItem.itemPrice = [NSString stringWithFormat:@"%ld", item.itemPrice];
+    displayItem.itemStock = [NSString stringWithFormat:@"%ld", item.itemStock];
+    return displayItem;
 }
 
 @end
