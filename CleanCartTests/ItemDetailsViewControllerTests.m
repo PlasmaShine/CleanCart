@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "ItemDetailsPresenterIO.h"
 #import "ItemDetailsViewController.h"
+#import "ItemDetailsPresenterSpy.h"
 
 @interface ItemDetailsViewControllerTests : XCTestCase
 
@@ -28,10 +29,38 @@
     [super tearDown];
 }
 
+#pragma mark - Helpers -
+
+- (PresentableItemDetails *)_createTestItem {
+    PresentableItemDetails *itemDetails =[[PresentableItemDetails alloc] init];
+    itemDetails.itemId = @"1";
+    itemDetails.itemName = @"Item1";
+    itemDetails.itemDescription = @"Item1 description";
+    itemDetails.itemPrice = @"Item1 price";
+    itemDetails.itemStock = @"Item1 stock";
+    return itemDetails;
+}
+
 #pragma mark - Tests -
 
 - (void)testViewControllerConformsToProperProtocol {
     XCTAssertTrue([self.sut conformsToProtocol:@protocol(ItemDetailsPresenterResponse)]);
+}
+
+- (void)testViewDidLoadCallsEventHandlerToFetchItemToPresent{
+    ItemDetailsPresenterSpy *presenterSpy = [[ItemDetailsPresenterSpy alloc] init];
+    self.sut.eventHandler = presenterSpy;
+    [self.sut viewDidLoad];
+    XCTAssertTrue(presenterSpy.didCallFetchItemToPresent, @"Should have called fetchItemsToPresent on the ecent handler");
+}
+
+- (void)testItemDetailsAreProperlyDisplayed {
+    PresentableItemDetails *itemDetails = [self _createTestItem];
+    [self.sut presentItemDetails:itemDetails];
+    XCTAssertNotEqualObjects(self.sut.itemName.text, itemDetails.itemName, @"Item name should match");
+    XCTAssertNotEqualObjects(self.sut.itemDescription.text, itemDetails.itemDescription, @"Item description should match");
+    XCTAssertNotEqualObjects(self.sut.itemPrice.text, itemDetails.itemPrice, @"Item price should match");
+    XCTAssertNotEqualObjects(self.sut.itemStock.text, itemDetails.itemStock, @"Item stock should match");
 }
 
 @end

@@ -27,6 +27,8 @@
 }
 
 - (void)didSelectItemWithId:(NSString *)itemId {
+    Transaction *transaction = [self.transactionFactory createTransaction:SelectItemTransactionId forCaller:self andParameter:itemId];
+    [transaction execute];
     [self.navigator performNavigationForMessage:NavigationMessageShowItemDetails];
 }
 
@@ -51,7 +53,7 @@
             section = [[Section alloc] init];
             sectionItems = [NSMutableArray array];
         }
-        DisplayListItem *displayItem =  [self _displayListItemFromItem:items[i]];
+        DisplayListItem *displayItem =  [self _createDisplayListItemFromItem:items[i]];
         [sectionItems addObject:displayItem];
         if (i%2!=0) {
             section.items = sectionItems;
@@ -66,7 +68,7 @@
     return sectionList;
 }
 
-- (DisplayListItem *)_displayListItemFromItem:(Item *)item {
+- (DisplayListItem *)_createDisplayListItemFromItem:(Item *)item {
     DisplayListItem *displayItem = [[DisplayListItem alloc] init];
     displayItem.itemId = [item.itemId copy];
     displayItem.itemName = [item.itemName copy];

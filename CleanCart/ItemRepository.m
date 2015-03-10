@@ -11,6 +11,7 @@
 @interface ItemRepository()
     
 @property (nonatomic, strong) NSArray* items;
+@property (nonatomic, strong) Item* currentlySelectedItem;
 
 @end
 
@@ -37,6 +38,20 @@
         }
     }
     return nil;
+}
+
+- (void)selectItemForId:(NSString *)itemId {
+    for(NSInteger i=0; i<self.items.count; i++) {
+        Item *currentItem = self.items[i];
+        if ([currentItem.itemId isEqualToString:itemId]) {
+            self.currentlySelectedItem = currentItem;
+            break;
+        }
+    }
+}
+
+- (Item *)selectedItem {
+    return self.currentlySelectedItem;
 }
 
 #pragma mark - DataSourceResponse protocol methods

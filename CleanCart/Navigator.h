@@ -18,4 +18,6 @@
 
 - (void)performNavigationForMessage:(NavigationMessage) message;
 
+- (void)presentViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController;
+
 @end

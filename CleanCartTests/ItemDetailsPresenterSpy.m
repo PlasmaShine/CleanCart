@@ -15,4 +15,8 @@
     self.receivedItem = item;
 }
 
+- (void)fetchItemToPresent {
+    self.didCallFetchItemToPresent = YES;
+}
+
 @end

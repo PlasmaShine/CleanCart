@@ -8,6 +8,8 @@
 
 #import "SpyTransactionFactory.h"
 #import "ListItemsTransactionSpy.h"
+#import "ItemDetailsTransactionSpy.h"
+#import "SelectItemTransactionSpy.h"
 
 @implementation SpyTransactionFactory
 
@@ -15,14 +17,23 @@
     switch (transactionId) {
         case ListItemsTransactionId: {
             self.currentTransaction = [[ListItemsTransactionSpy alloc] init];
-            return self.currentTransaction;
+            break;
         }
-
+        case ItemDetailsTransactionId: {
+            self.currentTransaction = [[ItemDetailsTransactionSpy alloc] init];
+            break;
+        }
+        case SelectItemTransactionId: {
+            SelectItemTransactionSpy *transaction = [[SelectItemTransactionSpy alloc] init];
+            transaction.itemId = (NSString *)parameter;
+            self.currentTransaction = transaction;
+            break;
+        }
         default:{
             self.currentTransaction = nil;
-            return nil;
+            break;
         }
     }
-
+    return self.currentTransaction;
 }
 @end

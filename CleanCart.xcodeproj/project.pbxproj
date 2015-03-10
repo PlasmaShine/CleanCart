@@ -20,6 +20,13 @@
 		C84399CF1AAD84DE0084C73D /* ItemDetailsTransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399CE1AAD84DE0084C73D /* ItemDetailsTransactionTests.m */; };
 		C84399D41AAD88950084C73D /* ItemDetailsTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399D31AAD88950084C73D /* ItemDetailsTransaction.m */; };
 		C84399D91AAD8CFD0084C73D /* ItemRepositoryStub.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399D81AAD8CFD0084C73D /* ItemRepositoryStub.m */; };
+		C84399DC1AAE742C0084C73D /* ItemDetailsTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399DB1AAE742C0084C73D /* ItemDetailsTransactionSpy.m */; };
+		C84399E01AAE7FFD0084C73D /* SelectItemTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399DF1AAE7FFD0084C73D /* SelectItemTransaction.m */; };
+		C84399E41AAE80D10084C73D /* SelectItemTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399E31AAE80D10084C73D /* SelectItemTransactionSpy.m */; };
+		C84399E81AAE86640084C73D /* SelectItemTransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399E71AAE86640084C73D /* SelectItemTransactionTests.m */; };
+		C84399EB1AAEBA500084C73D /* ItemDetailsNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399EA1AAEBA500084C73D /* ItemDetailsNavigator.m */; };
+		C84399EE1AAEC2660084C73D /* ListItemNavigatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399ED1AAEC2660084C73D /* ListItemNavigatorTests.m */; };
+		C84399F21AAEC4100084C73D /* SpyNavigatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399F11AAEC4100084C73D /* SpyNavigatorFactory.m */; };
 		C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */; };
 		C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */; };
 		C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622B11A9AE12800520FE1 /* DataSourceTests.m */; };
@@ -100,6 +107,18 @@
 		C84399D31AAD88950084C73D /* ItemDetailsTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsTransaction.m; sourceTree = "<group>"; };
 		C84399D71AAD8CFD0084C73D /* ItemRepositoryStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemRepositoryStub.h; sourceTree = "<group>"; };
 		C84399D81AAD8CFD0084C73D /* ItemRepositoryStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepositoryStub.m; sourceTree = "<group>"; };
+		C84399DA1AAE742C0084C73D /* ItemDetailsTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsTransactionSpy.h; sourceTree = "<group>"; };
+		C84399DB1AAE742C0084C73D /* ItemDetailsTransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsTransactionSpy.m; sourceTree = "<group>"; };
+		C84399DE1AAE7FFD0084C73D /* SelectItemTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectItemTransaction.h; sourceTree = "<group>"; };
+		C84399DF1AAE7FFD0084C73D /* SelectItemTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectItemTransaction.m; sourceTree = "<group>"; };
+		C84399E21AAE80D10084C73D /* SelectItemTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectItemTransactionSpy.h; sourceTree = "<group>"; };
+		C84399E31AAE80D10084C73D /* SelectItemTransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectItemTransactionSpy.m; sourceTree = "<group>"; };
+		C84399E71AAE86640084C73D /* SelectItemTransactionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectItemTransactionTests.m; sourceTree = "<group>"; };
+		C84399E91AAEBA500084C73D /* ItemDetailsNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsNavigator.h; sourceTree = "<group>"; };
+		C84399EA1AAEBA500084C73D /* ItemDetailsNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsNavigator.m; sourceTree = "<group>"; };
+		C84399ED1AAEC2660084C73D /* ListItemNavigatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemNavigatorTests.m; sourceTree = "<group>"; };
+		C84399F01AAEC4100084C73D /* SpyNavigatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpyNavigatorFactory.h; sourceTree = "<group>"; };
+		C84399F11AAEC4100084C73D /* SpyNavigatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpyNavigatorFactory.m; sourceTree = "<group>"; };
 		C84622AB1A9ADF1D00520FE1 /* ItemRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepositoryTests.m; sourceTree = "<group>"; };
 		C84622AD1A9AE10D00520FE1 /* JSONDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDataSource.h; sourceTree = "<group>"; };
 		C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDataSource.m; sourceTree = "<group>"; };
@@ -223,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				C83F28591AA04D7200E3DA7B /* ListItemsTransaction */,
+				C84399E11AAE80040084C73D /* SelectItemTransaction */,
 				DEAE56461AAC393400D9C3D2 /* ListItemsNavigator */,
 				C83F28581AA04CD000E3DA7B /* ListItemsPresenter */,
 				C83F28611AA45BDC00E3DA7B /* ListItemsViewController */,
@@ -336,6 +356,7 @@
 		C84399D01AAD84E70084C73D /* ItemDetailsTransaction */ = {
 			isa = PBXGroup;
 			children = (
+				C84399DD1AAE74300084C73D /* Mocks */,
 				C84399CE1AAD84DE0084C73D /* ItemDetailsTransactionTests.m */,
 			);
 			name = ItemDetailsTransaction;
@@ -365,10 +386,64 @@
 			isa = PBXGroup;
 			children = (
 				C84399D51AAD88990084C73D /* ItemDetailsTransaction */,
+				C84399EC1AAEBA550084C73D /* ItemDetailsNavigator */,
 				DEAE56661AADC57C00D9C3D2 /* ItemDetailsPresenter */,
 				DEAE56751AADE32D00D9C3D2 /* ItemDetailsViewController */,
 			);
 			name = ItemDetails;
+			sourceTree = "<group>";
+		};
+		C84399DD1AAE74300084C73D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C84399DA1AAE742C0084C73D /* ItemDetailsTransactionSpy.h */,
+				C84399DB1AAE742C0084C73D /* ItemDetailsTransactionSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		C84399E11AAE80040084C73D /* SelectItemTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				C84399DE1AAE7FFD0084C73D /* SelectItemTransaction.h */,
+				C84399DF1AAE7FFD0084C73D /* SelectItemTransaction.m */,
+			);
+			name = SelectItemTransaction;
+			sourceTree = "<group>";
+		};
+		C84399E51AAE80D70084C73D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C84399E21AAE80D10084C73D /* SelectItemTransactionSpy.h */,
+				C84399E31AAE80D10084C73D /* SelectItemTransactionSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		C84399E61AAE80DD0084C73D /* SelectItemTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				C84399E51AAE80D70084C73D /* Mocks */,
+				C84399E71AAE86640084C73D /* SelectItemTransactionTests.m */,
+			);
+			name = SelectItemTransaction;
+			sourceTree = "<group>";
+		};
+		C84399EC1AAEBA550084C73D /* ItemDetailsNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				C84399E91AAEBA500084C73D /* ItemDetailsNavigator.h */,
+				C84399EA1AAEBA500084C73D /* ItemDetailsNavigator.m */,
+			);
+			name = ItemDetailsNavigator;
+			sourceTree = "<group>";
+		};
+		C84399EF1AAEC26D0084C73D /* ListItemsNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				C84399ED1AAEC2660084C73D /* ListItemNavigatorTests.m */,
+			);
+			name = ListItemsNavigator;
 			sourceTree = "<group>";
 		};
 		C84622B01A9AE11300520FE1 /* DataSource */ = {
@@ -553,6 +628,8 @@
 			children = (
 				DEAE562F1AAC171500D9C3D2 /* NavigatorFactorySpy.h */,
 				DEAE56301AAC171500D9C3D2 /* NavigatorFactorySpy.m */,
+				C84399F01AAEC4100084C73D /* SpyNavigatorFactory.h */,
+				C84399F11AAEC4100084C73D /* SpyNavigatorFactory.m */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -661,8 +738,10 @@
 			isa = PBXGroup;
 			children = (
 				C83F28401A9D8E0200E3DA7B /* ListItemsTransaction */,
+				C84399E61AAE80DD0084C73D /* SelectItemTransaction */,
 				C83F28541AA047C700E3DA7B /* ListItemsPresenter */,
 				DEAE56241AA352D300D9C3D2 /* ListItemsViewController */,
+				C84399EF1AAEC26D0084C73D /* ListItemsNavigator */,
 			);
 			name = ListItems;
 			sourceTree = "<group>";
@@ -861,6 +940,7 @@
 			files = (
 				DEAE565D1AAC95AC00D9C3D2 /* ListItemsCollectionCell.m in Sources */,
 				DEAE56781AADE67000D9C3D2 /* PresentableItemDetails.m in Sources */,
+				C84399EB1AAEBA500084C73D /* ItemDetailsNavigator.m in Sources */,
 				C84399D41AAD88950084C73D /* ItemDetailsTransaction.m in Sources */,
 				DEAE56451AAC392E00D9C3D2 /* ListItemsNavigator.m in Sources */,
 				DEAE56741AADE32900D9C3D2 /* ItemDetailsViewController.m in Sources */,
@@ -874,6 +954,7 @@
 				DEAE56281AA35A4900D9C3D2 /* DisplayListItem.m in Sources */,
 				DEAE563B1AAC1A4C00D9C3D2 /* Navigator.m in Sources */,
 				C83F28481A9D927C00E3DA7B /* ListItemsTransaction.m in Sources */,
+				C84399E01AAE7FFD0084C73D /* SelectItemTransaction.m in Sources */,
 				DEAE564C1AAC691E00D9C3D2 /* TransactionFactory.m in Sources */,
 				C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */,
 				DEAE567D1AADEFDA00D9C3D2 /* Presenter.m in Sources */,
@@ -906,12 +987,17 @@
 				DEAE56481AAC3E0300D9C3D2 /* NavigatorTests.m in Sources */,
 				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
 				C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */,
+				C84399F21AAEC4100084C73D /* SpyNavigatorFactory.m in Sources */,
 				C83F28691AA8A03E00E3DA7B /* ListItemsCellTest.m in Sources */,
 				C84399C81AA9926D0084C73D /* ListItemsCellDelegateSpy.m in Sources */,
+				C84399EE1AAEC2660084C73D /* ListItemNavigatorTests.m in Sources */,
 				DEAE56411AAC2EED00D9C3D2 /* NavigatorSpy.m in Sources */,
 				DEAE56511AAC754700D9C3D2 /* SpyTransactionFactory.m in Sources */,
 				C84399CF1AAD84DE0084C73D /* ItemDetailsTransactionTests.m in Sources */,
+				C84399E41AAE80D10084C73D /* SelectItemTransactionSpy.m in Sources */,
 				C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */,
+				C84399DC1AAE742C0084C73D /* ItemDetailsTransactionSpy.m in Sources */,
+				C84399E81AAE86640084C73D /* SelectItemTransactionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

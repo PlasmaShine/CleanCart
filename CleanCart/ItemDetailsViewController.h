@@ -11,4 +11,10 @@
 
 @interface ItemDetailsViewController : UIViewController <ItemDetailsPresenterResponse>;
 
+@property (nonatomic, strong) id<ItemDetailsPresenterRequest> eventHandler;
+@property (weak, nonatomic) IBOutlet UILabel *itemName;
+@property (weak, nonatomic) IBOutlet UILabel *itemDescription;
+@property (weak, nonatomic) IBOutlet UILabel *itemPrice;
+@property (weak, nonatomic) IBOutlet UILabel *itemStock;
+
 @end

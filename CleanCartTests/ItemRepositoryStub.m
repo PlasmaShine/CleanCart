@@ -17,4 +17,8 @@
     return nil;
 }
 
+- (Item *)selectedItem {
+    return self.item;
+}
+
 @end

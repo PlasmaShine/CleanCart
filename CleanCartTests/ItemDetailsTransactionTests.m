@@ -39,33 +39,30 @@
 
 #pragma mark - Helper methods -
 
-- (void)_setUpSutWithStubRepository {
+- (void)_setUpSutWithStubRepositoryWithItem:(Item *)item {
     ItemRepositoryStub *stubRepository = [[ItemRepositoryStub alloc] init];
-    stubRepository.item = self.item;
+    stubRepository.item = item;
     self.sut.itemRepository = stubRepository;
 }
 
 #pragma mark - Tests -
 
-- (void)testCallingExecuteCallsItemRepositoryWithItemId {
+- (void)testCallingExecuteCallsItemRepositoryForSelectedItem {
     ItemRepositorySpy *spyRepository = [[ItemRepositorySpy alloc] init];
-    self.sut.itemId = @"1";
     self.sut.itemRepository = spyRepository;
     [self.sut execute];
-    XCTAssertTrue(spyRepository.didReceiveItemForIdMessage, @"Should have received item with ID message");
-    XCTAssertEqualObjects(spyRepository.receivedItemId, self.sut.itemId, @"Received item Id should match the one sent by transaction");
+    XCTAssertTrue(spyRepository.didReceiveSelectedItemMessage, @"Should have received item with ID message");
 }
 
 - (void)testGettingItemFromRepositorySendsItToTheDelegate {
-    [self _setUpSutWithStubRepository];
-    self.sut.itemId = self.item.itemId;
+    [self _setUpSutWithStubRepositoryWithItem:self.item];
     [self.sut execute];
     XCTAssertTrue(self.presenterSpy.didReceiveItem, @"Should have received item from transaction");
     XCTAssertEqualObjects(self.presenterSpy.receivedItem, self.item, @"Received item should match sent item");
 }
 
 - (void)testItemNotFoundInRepositoryDoeNotCallDelegate {
-    [self _setUpSutWithStubRepository];
+    [self _setUpSutWithStubRepositoryWithItem:nil];
     [self.sut execute];
     XCTAssertFalse(self.presenterSpy.didReceiveItem, @"Should not have called the delegate");
 }

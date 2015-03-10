@@ -13,4 +13,6 @@
 
 @property (nonatomic, assign) NavigationMessage receivedMessage;
 
+@property (nonatomic, assign) BOOL didReceivePresentViewControllerMessage;
+
 @end

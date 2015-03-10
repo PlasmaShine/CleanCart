@@ -14,6 +14,5 @@
 
 @property (nonatomic, weak) id<ItemDetailsTransactionResponse> delegate;
 @property (nonatomic, strong) ItemRepository *itemRepository;
-@property (nonatomic, copy) NSString *itemId;
 
 @end

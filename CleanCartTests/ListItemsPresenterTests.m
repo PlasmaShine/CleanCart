@@ -19,6 +19,7 @@
 #import "NavigatorSpy.h"
 #import "SpyTransactionFactory.h"
 #import "Item.h"
+#import "SelectItemTransactionSpy.h"
 
 @interface ListItemsPresenterTests : XCTestCase
 
@@ -28,6 +29,8 @@
 @property (nonatomic, strong) Item *item1;
 @property (nonatomic, strong) Item *item2;
 @property (nonatomic, strong) Item *item3;
+@property (nonatomic, strong) SpyTransactionFactory *spyFactory;
+
 
 @end
 
@@ -37,9 +40,11 @@
     [super setUp];
     self.sut = [[ListItemsPresenter alloc] init];
     self.viewControllerSpy = [[ListItemsViewControllerSpy alloc] init];
+    self.spyFactory = [[SpyTransactionFactory alloc] init];
     self.navigatorSpy = [[NavigatorSpy alloc] init];
     self.sut.navigator = self.navigatorSpy;
     self.sut.delegate = self.viewControllerSpy;
+    self.sut.transactionFactory = self.spyFactory;
     self.item1 = [[Item alloc] init];
     self.item1.itemId = @"1";
     self.item1.itemName = @"Item 1 name";
@@ -75,10 +80,8 @@
 }
 
 - (void)testFetchItemsSignalCallsListItemsTransaction {
-    SpyTransactionFactory *spyFactory = [[SpyTransactionFactory alloc] init];
-    self.sut.transactionFactory = spyFactory;
     [self.sut fetchData];
-    ListItemsTransactionSpy *listItemsTransactionSpy = (ListItemsTransactionSpy *)spyFactory.currentTransaction;
+    ListItemsTransactionSpy *listItemsTransactionSpy = (ListItemsTransactionSpy *)self.spyFactory.currentTransaction;
     XCTAssertTrue(listItemsTransactionSpy.didReceiveExecuteMessage, @"Presenter should have called execute on ListItemsTransaction");
 }
 
@@ -139,6 +142,14 @@
 - (void)testReceivingCartTappedMessagePasesItOnToTheNavigator {
     [self.sut cartButtonTapped];
     XCTAssertEqual(self.navigatorSpy.receivedMessage, NavigationMessageShowCart, @"Should have received show cart message");
+}
+
+- (void)testReceivingItemTappedMessageCallsExecuteOnSelectItemTransaction {
+    [self.sut didSelectItemWithId:@"1"];
+    XCTAssertTrue([self.spyFactory.currentTransaction isKindOfClass:[SelectItemTransaction class]]);
+    SelectItemTransactionSpy *transaction = (SelectItemTransactionSpy *)self.spyFactory.currentTransaction;
+    XCTAssertEqualObjects(transaction.itemId, @"1", @"Item ID should have been passed to the transaction");
+    XCTAssertTrue(transaction.didCallExecute , @"Should have called execute on the transaction");
 }
 
 - (void)testReceivingItemTappedMessagePasesItOnToTheNavigator {

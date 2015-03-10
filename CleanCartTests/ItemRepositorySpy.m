@@ -21,7 +21,6 @@
     self.didReceiveAllItemsMessage = YES;
     return [NSArray array];
 }
-    
 
 - (void)didReceiveItems:(NSArray *)items {
     self.didReceiveItemRetrievalMessage = YES;
@@ -32,4 +31,15 @@
     self.receivedItemId = itemId;
     return nil;
 }
+
+- (void)selectItemForId:(NSString *)itemId {
+    self.receivedItemId = itemId;
+    self.didReceiveSelectItemMessage = YES;
+}
+
+- (Item *)selectedItem {
+    self.didReceiveSelectedItemMessage = YES;
+    return nil;
+}
+
 @end

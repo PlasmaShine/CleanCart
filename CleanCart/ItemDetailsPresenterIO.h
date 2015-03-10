@@ -10,6 +10,8 @@
 
 @protocol ItemDetailsPresenterRequest <NSObject>
 
+- (void)fetchItemToPresent;
+
 @end
 
 @protocol ItemDetailsPresenterResponse <NSObject>

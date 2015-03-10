@@ -10,6 +10,12 @@
 
 @implementation ItemDetailsViewController
 
+-(void)viewDidLoad {
+    [self.eventHandler fetchItemToPresent];
+}
+
+#pragma mark - ItemDetailsPresenterResponse -
+
 - (void)presentItemDetails:(PresentableItemDetails *)itemDetails {
 
 }

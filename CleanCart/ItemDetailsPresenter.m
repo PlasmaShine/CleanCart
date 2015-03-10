@@ -7,6 +7,7 @@
 //
 
 #import "ItemDetailsPresenter.h"
+#import "Transaction.h"
 
 @implementation ItemDetailsPresenter
 
@@ -24,6 +25,13 @@
     itemDetails.itemPrice = [NSString stringWithFormat:@"%ld", item.itemPrice];
     itemDetails.itemStock = [NSString stringWithFormat:@"%ld", item.itemStock];
     [self.delegate presentItemDetails:itemDetails];
+}
+
+#pragma mark - ItemDetailsPresenterRequest -
+
+- (void)fetchItemToPresent {
+    Transaction *transaction = [self.transactionFactory createTransaction:ItemDetailsTransactionId forCaller:self andParameter:nil];
+    [transaction execute];
 }
 
 @end

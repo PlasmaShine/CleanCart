@@ -14,5 +14,7 @@
 @property (nonatomic, assign) BOOL didReceiveAllItemsMessage;
 @property (nonatomic, assign) BOOL didReceiveItemRetrievalMessage;
 @property (nonatomic, assign) BOOL didReceiveItemForIdMessage;
+@property (nonatomic, assign) BOOL didReceiveSelectItemMessage;
+@property (nonatomic, assign) BOOL didReceiveSelectedItemMessage;
 @property (nonatomic, copy) NSString *receivedItemId;
 @end

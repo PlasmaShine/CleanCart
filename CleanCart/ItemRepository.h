@@ -19,5 +19,7 @@
 - (void)fetchItems;
 - (NSArray *)allItems;
 - (Item *)itemForId:(NSString *)itemId;
+- (void)selectItemForId:(NSString *)itemId;
+- (Item *)selectedItem;
 
 @end

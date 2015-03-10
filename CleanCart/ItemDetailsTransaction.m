@@ -11,7 +11,7 @@
 @implementation ItemDetailsTransaction
 
 - (void)execute {
-    Item *item = [self.itemRepository itemForId:self.itemId];
+    Item *item = [self.itemRepository selectedItem];
     if (item) {
         [self.delegate presentItem:item];
     }

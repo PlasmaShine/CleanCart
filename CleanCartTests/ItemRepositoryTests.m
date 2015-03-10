@@ -79,4 +79,16 @@
     XCTAssertNil(retrievedItem, @"Item should be nil");
 }
 
+- (void)testRepositorySelectsCorrectItemForValidId {
+    [self.sut didReceiveItems:self.items];
+    [self.sut selectItemForId:@"1"];
+    XCTAssertEqualObjects([self.sut selectedItem], self.items[0],@"Should have selected the first item");
+}
+
+- (void)testRepositoryReturnsNilWhenSelectingAnItemWithInvalidId {
+    [self.sut didReceiveItems:self.items];
+    [self.sut selectItemForId:@"Blah"];
+    XCTAssertNil([self.sut selectedItem], @"The selected item should be nil");
+}
+
 @end

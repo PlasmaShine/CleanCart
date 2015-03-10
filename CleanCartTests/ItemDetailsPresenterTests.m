@@ -11,6 +11,7 @@
 #import "ItemDetailsTransactionIO.h"
 #import "ItemDetailsViewControllerSpy.h"
 #import "SpyTransactionFactory.h"
+#import "ItemDetailsTransactionSpy.h"
 
 @interface ItemDetailsPresenterTests : XCTestCase
 
@@ -30,6 +31,18 @@
     [super tearDown];
 }
 
+#pragma mark - Helpers -
+
+- (Item *)_createTestItem {
+    Item *item = [[Item alloc] init];
+    item.itemId = @"1";
+    item.itemName = @"Item name";
+    item.itemPrice = 1200;
+    item.itemStock = 3;
+    item.itemDescription = @"Item description";
+    return item;
+}
+
 #pragma mark - Tests -
 
 - (void)testPresenterConformsToProperPrtocols {
@@ -38,12 +51,7 @@
 }
 
 - (void)testItemReceivedFromTransactionIsSentToViewControllerAsPresentableItemDetail {
-    Item *item = [[Item alloc] init];
-    item.itemId = @"1";
-    item.itemName = @"Item name";
-    item.itemPrice = 1200;
-    item.itemStock = 3;
-    item.itemDescription = @"Item description";
+    Item *item = [self _createTestItem];
     ItemDetailsViewControllerSpy *viewControllerSpy = [[ItemDetailsViewControllerSpy alloc] init];
     self.sut.delegate = viewControllerSpy;
     [self.sut presentItem:item];
@@ -54,9 +62,13 @@
     XCTAssertEqualObjects(item.itemDescription, viewControllerSpy.receivedItem.itemDescription, @"Item descriptions should be the same");
 }
 
-- (void)testReceivingFetchItemDetailsCallsTransactionFactory {
+- (void)testReceivingFetchItemDetailsCallsTransaction {
     SpyTransactionFactory *spyFactory = [[SpyTransactionFactory alloc] init];
     self.sut.transactionFactory = spyFactory;
+    [self.sut fetchItemToPresent];
+    XCTAssertTrue([spyFactory.currentTransaction isKindOfClass:[ItemDetailsTransaction class]]);
+    ItemDetailsTransactionSpy *transactionSpy = (ItemDetailsTransactionSpy *)spyFactory.currentTransaction;
+    XCTAssertTrue(transactionSpy.didCallExecute, @"Should have called execute on the transaction");
 }
 
 @end

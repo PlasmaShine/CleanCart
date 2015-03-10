@@ -11,6 +11,7 @@
 
 @interface ItemDetailsPresenterSpy : ItemDetailsPresenter
 
+@property (nonatomic, assign) BOOL didCallFetchItemToPresent;
 @property (nonatomic, assign) BOOL didReceiveItem;
 @property (nonatomic, strong) Item *receivedItem;
 
