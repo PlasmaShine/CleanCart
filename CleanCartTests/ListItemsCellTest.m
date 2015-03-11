@@ -49,6 +49,7 @@
     self.item.itemName = @"Item 2";
     self.item.itemPrice = [NSString stringWithFormat:@"%d", 4000];
     self.item.itemStock = [NSString stringWithFormat:@"%d",34];
+    self.item.enabled = YES;
     section.items = [NSArray arrayWithObjects:self.item, nil];
     return [NSArray arrayWithObjects:section, nil];
 }
@@ -59,6 +60,7 @@
     XCTAssertEqualObjects(self.sut.itemName.text, self.item.itemName, @"Cell should have set item name");
     XCTAssertEqualObjects(self.sut.itemPrice.text, self.item.itemPrice, @"Cell should have set item price");
     XCTAssertEqualObjects(self.sut.itemStock.text, self.item.itemStock, @"Cell should have set item stock");
+    XCTAssertEqual(self.sut.addToCartButton.enabled, self.item.enabled, @"Add to cart button shold be enabled");
 }
 
 - (void)testTappingOnAddToCartMethodSendsMessageToDelegate {

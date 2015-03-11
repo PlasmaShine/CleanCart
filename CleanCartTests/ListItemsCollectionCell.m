@@ -21,6 +21,7 @@
     self.itemName.text = item.itemName;
     self.itemPrice.text = item.itemPrice;
     self.itemStock.text = item.itemStock;
+    self.addToCartButton.enabled = self.item.enabled;
 }
 
 - (IBAction)addTocartTapped:(id)sender {

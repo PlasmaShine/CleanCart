@@ -74,6 +74,7 @@
     presentableItem.itemName = [item.itemName copy];
     presentableItem.itemPrice = [NSString stringWithFormat:@"%ld", item.itemPrice];
     presentableItem.itemStock = [NSString stringWithFormat:@"%ld", item.itemStock];
+    presentableItem.enabled = item.itemStock > 0 ? YES : NO;
     return presentableItem;
 }
 

@@ -14,5 +14,6 @@
 @property (nonatomic, copy) NSString *itemName;
 @property (nonatomic, copy) NSString *itemPrice;
 @property (nonatomic, copy) NSString *itemStock;
+@property (nonatomic, assign) BOOL enabled;
 
 @end
