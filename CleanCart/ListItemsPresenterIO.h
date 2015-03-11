@@ -12,6 +12,8 @@
 - (void)cartButtonTapped;
 - (void)didSelectItemWithId:(NSString *)itemId;
 - (void)addToCartItemWithId:(NSString *)itemId;
+- (void)viewWillAppear;
+- (void)viewWillDisappear;
 
 @end
 

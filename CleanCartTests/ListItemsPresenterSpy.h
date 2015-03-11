@@ -18,5 +18,9 @@
 @property (nonatomic, copy) NSString *selectedItemId;
 @property (nonatomic, assign) BOOL didReceiveAddToCartMessage;
 @property (nonatomic, copy) NSString *addToCartId;
+@property (nonatomic, assign) BOOL didReceiveViewWillAppearMessage;
+@property (nonatomic, assign) BOOL didReceiveViewWillDisappearMessage;
+@property (nonatomic, assign) BOOL didReceiveNumberOfItemsInCart;
+@property (nonatomic, assign) NSUInteger numberOfItemsInCart;
 
 @end

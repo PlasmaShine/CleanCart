@@ -15,6 +15,16 @@
     [self.eventHandler fetchItemToPresent];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.eventHandler viewWillAppear];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.eventHandler viewWillDisappear];
+    [super viewWillDisappear:animated];
+}
+
 #pragma mark - ItemDetailsPresenterResponse -
 
 - (void)presentItemDetails:(PresentableItemDetails *)itemDetails {

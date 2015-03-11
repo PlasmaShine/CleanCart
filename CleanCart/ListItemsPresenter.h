@@ -13,8 +13,9 @@
 #import "Navigator.h"
 #import "TransactionFactory.h"
 #import "Presenter.h"
+#import "NumberOfItemsInCartTransactionIO.h"
 
-@interface ListItemsPresenter : Presenter <ListItemsTransactionResponse, ListItemsPresenterRequest>
+@interface ListItemsPresenter : Presenter <ListItemsTransactionResponse, ListItemsPresenterRequest, NumberOfItemsInCartTransactionResponse>
 
 @property (nonatomic, weak) id<ListItemsPresenterResponse> delegate;
 

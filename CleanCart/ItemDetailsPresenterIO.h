@@ -11,6 +11,8 @@
 @protocol ItemDetailsPresenterRequest <NSObject>
 
 - (void)fetchItemToPresent;
+- (void)viewWillAppear;
+- (void)viewWillDisappear;
 
 @end
 

@@ -14,5 +14,6 @@
 @property (nonatomic, assign) BOOL didCallFetchItemToPresent;
 @property (nonatomic, assign) BOOL didReceiveItem;
 @property (nonatomic, strong) Item *receivedItem;
-
+@property (nonatomic, assign) BOOL didReceiveViewWillAppearMessage;
+@property (nonatomic, assign) BOOL didReceiveViewWillDisappearMessage;
 @end

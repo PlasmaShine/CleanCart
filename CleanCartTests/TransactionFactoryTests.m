@@ -13,6 +13,7 @@
 #import "ItemDetailsTransaction.h"
 #import "ItemDetailsPresenterSpy.h"
 #import "SelectItemTransaction.h"
+#import "NumberOfItemsInCartTransaction.h"
 
 @interface TransactionFactoryTests : XCTestCase
 
@@ -79,6 +80,19 @@
     XCTAssertEqualObjects(transaction.delegate, caller, @"Transaction delegate should be set to the caller");
     XCTAssertNotNil(transaction.itemRepository.dataSource, @"Data source should not be nil");
     XCTAssertEqualObjects(transaction.itemRepository.dataSource.delegate, transaction.itemRepository, @"The repository should be the delegate for the data source");
+}
+
+#pragma mark - NumberOfItemsInCartTransaction -
+
+- (void)testCreatingNumberOfItemsInCartTransactionWithoutConformingCallerThrowsException {
+    XCTAssertThrows([self.sut createTransaction:NumberOfItemsInCartTransactionId forCaller:nil andParameter:nil], @"Should have thrown exception for nonconforming caller");
+}
+
+- (void)testNumberOfItemsInCartTransactionIsProperlyConfigured {
+    ListItemsPresenterSpy *caller = [[ListItemsPresenterSpy alloc] init];
+    NumberOfItemsInCartTransaction *transaction = (NumberOfItemsInCartTransaction *)[self.sut createTransaction:NumberOfItemsInCartTransactionId forCaller:caller andParameter:nil];
+    XCTAssertNotNil(transaction.cart,@"Cart should not be nil");
+    XCTAssertEqualObjects(transaction.delegate, caller, @"Transaction delegate should be set to the caller");
 }
 
 @end

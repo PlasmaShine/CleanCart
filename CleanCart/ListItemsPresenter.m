@@ -78,4 +78,10 @@
     return presentableItem;
 }
 
+#pragma mark - NumberOfItemsInCartTransaction response -
+
+- (void)numberOfItemsCurrentlyInCart:(NSInteger)number {
+    
+}
+
 @end

@@ -15,4 +15,7 @@
 @property (nonatomic, strong) Navigator *navigator;
 @property (nonatomic, strong) TransactionFactory *transactionFactory;
 
+- (void)viewWillAppear;
+- (void)viewWillDisappear;
+
 @end

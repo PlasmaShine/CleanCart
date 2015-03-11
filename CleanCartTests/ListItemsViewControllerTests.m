@@ -145,4 +145,14 @@
     XCTAssertEqualObjects(self.presenterSpy.addToCartId, @"1", @"The correct item ID should have been sent to presenter");
 }
 
+- (void)testViewWillAppearSendsMessageToEventHandler {
+    [self.sut viewWillAppear:YES];
+    XCTAssertTrue(self.presenterSpy.didReceiveViewWillAppearMessage, @"Event handler should have received viewWillAppear message");
+}
+
+- (void)testViewWillDisappearSendsMessageToEventHandler {
+    [self.sut viewWillDisappear:YES];
+    XCTAssertTrue(self.presenterSpy.didReceiveViewWillDisappearMessage, @"Event handler should have received viewWillAppear message");
+}
+
 @end

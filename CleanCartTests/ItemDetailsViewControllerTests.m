@@ -64,4 +64,18 @@
     XCTAssertEqualObjects(self.sut.itemStock.text, itemDetails.itemStock, @"Item stock should match");
 }
 
+- (void)testViewWillAppearSendsMessageToEventHandler {
+    ItemDetailsPresenterSpy *presenterSpy = [[ItemDetailsPresenterSpy alloc] init];
+    self.sut.eventHandler = presenterSpy;
+    [self.sut viewWillAppear:YES];
+    XCTAssertTrue(presenterSpy.didReceiveViewWillAppearMessage, @"Event handler should have received viewWillAppear message");
+}
+
+- (void)testViewWillDisappearSendsMessageToEventHandler {
+    ItemDetailsPresenterSpy *presenterSpy = [[ItemDetailsPresenterSpy alloc] init];
+    self.sut.eventHandler = presenterSpy;
+    [self.sut viewWillDisappear:YES];
+    XCTAssertTrue(presenterSpy.didReceiveViewWillDisappearMessage, @"Event handler should have received viewWillAppear message");
+}
+
 @end

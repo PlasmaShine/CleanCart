@@ -10,4 +10,12 @@
 
 @implementation Presenter
 
+- (void)viewWillAppear {
+    
+}
+
+- (void)viewWillDisappear {
+    
+}
+
 @end

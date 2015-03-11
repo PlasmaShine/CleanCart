@@ -14,10 +14,13 @@
 #import "ItemDetailsTransactionIO.h"
 #import "ItemDetailsTransaction.h"
 #import "SelectItemTransaction.h"
+#import "NumberOfItemsInCartTransactionIO.h"
+#import "NumberOfItemsInCartTransaction.h"
 
 @interface TransactionFactory()
 
 @property (nonatomic, strong) ItemRepository *itemRepository;
+@property (nonatomic, strong) Cart *cart;
 
 @end
 
@@ -29,6 +32,7 @@
         JSONDataSource *dataSource = [[JSONDataSource alloc] init];
         self.itemRepository.dataSource = dataSource;
         dataSource.delegate = self.itemRepository;
+        self.cart = [[Cart alloc] init];
     }
     return self;
 }
@@ -39,9 +43,10 @@
             return [self _createListItemsTransactionForCaller:caller andParameter:parameter];
         case SelectItemTransactionId:
             return [self _createSelectItemTransactionForCaller:caller andParameter:parameter];
-        case ItemDetailsTransactionId: {
+        case ItemDetailsTransactionId:
             return [self _createItemDetailsTransactionForCaller:caller andParameter:parameter];
-        }
+        case NumberOfItemsInCartTransactionId:
+            return [self _createNumberOfItemsInCartTransactionForCaller:caller andParameter:parameter];
         default:
             return nil;
     }
@@ -78,5 +83,15 @@
     return transaction;
 }
 
+- (Transaction *)_createNumberOfItemsInCartTransactionForCaller:(NSObject *)caller andParameter:(NSObject *)parameter  {
+    if (![caller conformsToProtocol:@protocol(NumberOfItemsInCartTransactionResponse)]) {
+        NSException *exception = [NSException exceptionWithName:@"Invalid caller" reason:@"Caller does not conform to the NumberOfItemsInCartTransactionResponse protocol" userInfo:nil];
+        [exception raise];
+    }
+    NumberOfItemsInCartTransaction *transaction = [[NumberOfItemsInCartTransaction alloc] init];
+    transaction.cart = self.cart;
+    transaction.delegate = (id<NumberOfItemsInCartTransactionResponse>)caller;
+    return transaction;
+}
 
 @end

@@ -19,4 +19,12 @@
     self.didCallFetchItemToPresent = YES;
 }
 
+- (void)viewWillAppear {
+    self.didReceiveViewWillAppearMessage = YES;
+}
+
+- (void)viewWillDisappear {
+    self.didReceiveViewWillDisappearMessage = YES;
+}
+
 @end

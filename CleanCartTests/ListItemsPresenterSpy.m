@@ -32,4 +32,18 @@
     self.didReceiveAddToCartMessage = YES;
     self.addToCartId = itemId;
 }
+
+- (void)viewWillAppear {
+    self.didReceiveViewWillAppearMessage = YES;
+}
+
+- (void)viewWillDisappear {
+    self.didReceiveViewWillDisappearMessage = YES;
+}
+
+- (void)numberOfItemsCurrentlyInCart:(NSInteger)number {
+    self.didReceiveNumberOfItemsInCart = YES;
+    self.numberOfItemsInCart = number;
+}
+
 @end

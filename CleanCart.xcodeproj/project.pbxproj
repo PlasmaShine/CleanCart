@@ -34,6 +34,11 @@
 		C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622BC1A9AECFB00520FE1 /* ItemRepository.m */; };
 		C84622C01A9AED8100520FE1 /* ItemList.json in Resources */ = {isa = PBXBuildFile; fileRef = C84622BF1A9AED8100520FE1 /* ItemList.json */; };
 		C888711E1AB0184800256F57 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C888711D1AB0184800256F57 /* DataSource.m */; };
+		C88871291AB020F800256F57 /* CartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C88871281AB020F800256F57 /* CartTests.m */; };
+		C888712D1AB0240900256F57 /* Cart.m in Sources */ = {isa = PBXBuildFile; fileRef = C888712C1AB0240900256F57 /* Cart.m */; };
+		C88871301AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C888712F1AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m */; };
+		C88871331AB0366A00256F57 /* NumberOfItemsInCartTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C88871321AB0366A00256F57 /* NumberOfItemsInCartTransaction.m */; };
+		C88871391AB0385700256F57 /* CartSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C88871381AB0385700256F57 /* CartSpy.m */; };
 		DE119D491A997FC700FEEBCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D481A997FC700FEEBCB /* main.m */; };
 		DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D4B1A997FC700FEEBCB /* AppDelegate.m */; };
 		DE119D521A997FC700FEEBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE119D501A997FC700FEEBCB /* Main.storyboard */; };
@@ -132,6 +137,15 @@
 		C84622BF1A9AED8100520FE1 /* ItemList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ItemList.json; sourceTree = "<group>"; };
 		C888711C1AB0184800256F57 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		C888711D1AB0184800256F57 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		C88871281AB020F800256F57 /* CartTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTests.m; sourceTree = "<group>"; };
+		C888712B1AB0240900256F57 /* Cart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cart.h; sourceTree = "<group>"; };
+		C888712C1AB0240900256F57 /* Cart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cart.m; sourceTree = "<group>"; };
+		C888712F1AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOfItemsInCartTransactionTests.m; sourceTree = "<group>"; };
+		C88871311AB0366A00256F57 /* NumberOfItemsInCartTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOfItemsInCartTransaction.h; sourceTree = "<group>"; };
+		C88871321AB0366A00256F57 /* NumberOfItemsInCartTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOfItemsInCartTransaction.m; sourceTree = "<group>"; };
+		C88871351AB036EB00256F57 /* NumberOfItemsInCartTransactionIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberOfItemsInCartTransactionIO.h; sourceTree = "<group>"; };
+		C88871371AB0385700256F57 /* CartSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartSpy.h; sourceTree = "<group>"; };
+		C88871381AB0385700256F57 /* CartSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartSpy.m; sourceTree = "<group>"; };
 		DE119D431A997FC700FEEBCB /* CleanCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE119D471A997FC700FEEBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE119D481A997FC700FEEBCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -222,10 +236,8 @@
 		C83F28441A9D924E00E3DA7B /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
-				DEAE564E1AAC6C2E00D9C3D2 /* TransactionIdentifier.h */,
 				C83F28411A9D924A00E3DA7B /* Transaction.h */,
 				C83F28421A9D924A00E3DA7B /* Transaction.m */,
-				DEAE564D1AAC692600D9C3D2 /* TransactionFactory */,
 			);
 			name = Transaction;
 			sourceTree = "<group>";
@@ -233,10 +245,12 @@
 		C83F28451A9D925600E3DA7B /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
-				C83F28441A9D924E00E3DA7B /* Transaction */,
-				DEAE563D1AAC1BA200D9C3D2 /* Navigation */,
 				DEAE563E1AAC1BDC00D9C3D2 /* Section */,
 				DEAE567E1AADEFDF00D9C3D2 /* Presenter */,
+				DEAE564D1AAC692600D9C3D2 /* TransactionFactory */,
+				C83F28441A9D924E00E3DA7B /* Transaction */,
+				DEAE56371AAC176500D9C3D2 /* NavigatorFactory */,
+				DEAE563C1AAC1A5100D9C3D2 /* Navigator */,
 			);
 			name = BaseClasses;
 			sourceTree = "<group>";
@@ -244,9 +258,6 @@
 		C83F28491A9D928500E3DA7B /* ListItems */ = {
 			isa = PBXGroup;
 			children = (
-				C83F28591AA04D7200E3DA7B /* ListItemsTransaction */,
-				C84399E11AAE80040084C73D /* SelectItemTransaction */,
-				DEAE56461AAC393400D9C3D2 /* ListItemsNavigator */,
 				C83F28581AA04CD000E3DA7B /* ListItemsPresenter */,
 				C83F28611AA45BDC00E3DA7B /* ListItemsViewController */,
 			);
@@ -291,8 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				C83F285B1AA052F600E3DA7B /* Protocols */,
-				DEAE56261AA35A4900D9C3D2 /* PresentableListItem.h */,
-				DEAE56271AA35A4900D9C3D2 /* PresentableListItem.m */,
+				C88871231AB01F9B00256F57 /* PresentableListItem */,
 				C83F28551AA04CC900E3DA7B /* ListItemsPresenter.h */,
 				C83F28561AA04CC900E3DA7B /* ListItemsPresenter.m */,
 			);
@@ -368,7 +378,6 @@
 		C84399D11AAD84F70084C73D /* ItemDetails */ = {
 			isa = PBXGroup;
 			children = (
-				C84399D01AAD84E70084C73D /* ItemDetailsTransaction */,
 				DEAE56621AADC55B00D9C3D2 /* ItemDetailsPresenter */,
 				DEAE56701AADE2D400D9C3D2 /* ItemDetailsViewController */,
 			);
@@ -388,8 +397,6 @@
 		C84399D61AAD88A40084C73D /* ItemDetails */ = {
 			isa = PBXGroup;
 			children = (
-				C84399D51AAD88990084C73D /* ItemDetailsTransaction */,
-				C84399EC1AAEBA550084C73D /* ItemDetailsNavigator */,
 				DEAE56661AADC57C00D9C3D2 /* ItemDetailsPresenter */,
 				DEAE56751AADE32D00D9C3D2 /* ItemDetailsViewController */,
 			);
@@ -524,6 +531,132 @@
 			name = JSONDataSource;
 			sourceTree = "<group>";
 		};
+		C88871211AB01F1900256F57 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				C83F28591AA04D7200E3DA7B /* ListItemsTransaction */,
+				C84399E11AAE80040084C73D /* SelectItemTransaction */,
+				C84399D51AAD88990084C73D /* ItemDetailsTransaction */,
+				C88871341AB0367100256F57 /* NumberOfItemsInCartTransaction */,
+			);
+			name = Transactions;
+			sourceTree = "<group>";
+		};
+		C88871221AB01F2D00256F57 /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56461AAC393400D9C3D2 /* ListItemsNavigator */,
+				C84399EC1AAEBA550084C73D /* ItemDetailsNavigator */,
+			);
+			name = Navigators;
+			sourceTree = "<group>";
+		};
+		C88871231AB01F9B00256F57 /* PresentableListItem */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56261AA35A4900D9C3D2 /* PresentableListItem.h */,
+				DEAE56271AA35A4900D9C3D2 /* PresentableListItem.m */,
+			);
+			name = PresentableListItem;
+			sourceTree = "<group>";
+		};
+		C88871241AB0200C00256F57 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				C83F28401A9D8E0200E3DA7B /* ListItemsTransaction */,
+				C84399E61AAE80DD0084C73D /* SelectItemTransaction */,
+				C84399D01AAD84E70084C73D /* ItemDetailsTransaction */,
+				C888713B1AB03E8000256F57 /* NumberOfItemsInCartTransaction */,
+			);
+			name = Transactions;
+			sourceTree = "<group>";
+		};
+		C88871251AB0203700256F57 /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				C84399EF1AAEC26D0084C73D /* ListItemsNavigator */,
+			);
+			name = Navigators;
+			sourceTree = "<group>";
+		};
+		C88871261AB0208600256F57 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C84622B01A9AE11300520FE1 /* DataSource */,
+				C84622BE1A9AED0100520FE1 /* ItemRepository */,
+				DEAE561C1A9B71BD00D9C3D2 /* Item */,
+				C83F28451A9D925600E3DA7B /* BaseClasses */,
+				C888712E1AB0241400256F57 /* Cart */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		C88871271AB0209B00256F57 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C84622B31A9AE12E00520FE1 /* DataSource */,
+				C84622B41A9AE13A00520FE1 /* ItemRepository */,
+				DEAE56421AAC2EF000D9C3D2 /* Navigator */,
+				DEAE56331AAC172A00D9C3D2 /* NavigatorFactory */,
+				DEAE56531AAC773E00D9C3D2 /* TransactionFactory */,
+				C888712A1AB0238900256F57 /* Cart */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		C888712A1AB0238900256F57 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				C888713A1AB0385B00256F57 /* Mocks */,
+				C88871281AB020F800256F57 /* CartTests.m */,
+			);
+			name = Cart;
+			sourceTree = "<group>";
+		};
+		C888712E1AB0241400256F57 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				C888712B1AB0240900256F57 /* Cart.h */,
+				C888712C1AB0240900256F57 /* Cart.m */,
+			);
+			name = Cart;
+			sourceTree = "<group>";
+		};
+		C88871341AB0367100256F57 /* NumberOfItemsInCartTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				C88871361AB036EF00256F57 /* Protocols */,
+				C88871311AB0366A00256F57 /* NumberOfItemsInCartTransaction.h */,
+				C88871321AB0366A00256F57 /* NumberOfItemsInCartTransaction.m */,
+			);
+			name = NumberOfItemsInCartTransaction;
+			sourceTree = "<group>";
+		};
+		C88871361AB036EF00256F57 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C88871351AB036EB00256F57 /* NumberOfItemsInCartTransactionIO.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C888713A1AB0385B00256F57 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C88871371AB0385700256F57 /* CartSpy.h */,
+				C88871381AB0385700256F57 /* CartSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		C888713B1AB03E8000256F57 /* NumberOfItemsInCartTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				C888712F1AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m */,
+			);
+			name = NumberOfItemsInCartTransaction;
+			sourceTree = "<group>";
+		};
 		DE119D3A1A997FC700FEEBCB = {
 			isa = PBXGroup;
 			children = (
@@ -553,10 +686,9 @@
 				DE119D531A997FC700FEEBCB /* Images.xcassets */,
 				DE119D551A997FC700FEEBCB /* LaunchScreen.xib */,
 				DE119D461A997FC700FEEBCB /* Supporting Files */,
-				C84622B01A9AE11300520FE1 /* DataSource */,
-				C84622BE1A9AED0100520FE1 /* ItemRepository */,
-				DEAE561C1A9B71BD00D9C3D2 /* Item */,
-				C83F28451A9D925600E3DA7B /* BaseClasses */,
+				C88871261AB0208600256F57 /* Entities */,
+				C88871211AB01F1900256F57 /* Transactions */,
+				C88871221AB01F2D00256F57 /* Navigators */,
 				C83F28491A9D928500E3DA7B /* ListItems */,
 				C84399D61AAD88A40084C73D /* ItemDetails */,
 			);
@@ -576,11 +708,9 @@
 			isa = PBXGroup;
 			children = (
 				DEAE562E1AAC115800D9C3D2 /* AppDelegate */,
-				C84622B31A9AE12E00520FE1 /* DataSource */,
-				C84622B41A9AE13A00520FE1 /* ItemRepository */,
-				DEAE56421AAC2EF000D9C3D2 /* Navigator */,
-				DEAE56331AAC172A00D9C3D2 /* NavigatorFactory */,
-				DEAE56531AAC773E00D9C3D2 /* TransactionFactory */,
+				C88871271AB0209B00256F57 /* Entities */,
+				C88871241AB0200C00256F57 /* Transactions */,
+				C88871251AB0203700256F57 /* Navigators */,
 				DEAE56561AAC778800D9C3D2 /* ListItems */,
 				C84399D11AAD84F70084C73D /* ItemDetails */,
 			);
@@ -667,6 +797,7 @@
 		DEAE56371AAC176500D9C3D2 /* NavigatorFactory */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE56381AAC183600D9C3D2 /* NavigationMessage.h */,
 				DEAE56341AAC176000D9C3D2 /* NavigatorFactory.h */,
 				DEAE56351AAC176000D9C3D2 /* NavigatorFactory.m */,
 			);
@@ -680,16 +811,6 @@
 				DEAE563A1AAC1A4C00D9C3D2 /* Navigator.m */,
 			);
 			name = Navigator;
-			sourceTree = "<group>";
-		};
-		DEAE563D1AAC1BA200D9C3D2 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				DEAE56381AAC183600D9C3D2 /* NavigationMessage.h */,
-				DEAE56371AAC176500D9C3D2 /* NavigatorFactory */,
-				DEAE563C1AAC1A5100D9C3D2 /* Navigator */,
-			);
-			name = Navigation;
 			sourceTree = "<group>";
 		};
 		DEAE563E1AAC1BDC00D9C3D2 /* Section */ = {
@@ -731,6 +852,7 @@
 		DEAE564D1AAC692600D9C3D2 /* TransactionFactory */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE564E1AAC6C2E00D9C3D2 /* TransactionIdentifier.h */,
 				DEAE564A1AAC691E00D9C3D2 /* TransactionFactory.h */,
 				DEAE564B1AAC691E00D9C3D2 /* TransactionFactory.m */,
 			);
@@ -758,11 +880,8 @@
 		DEAE56561AAC778800D9C3D2 /* ListItems */ = {
 			isa = PBXGroup;
 			children = (
-				C83F28401A9D8E0200E3DA7B /* ListItemsTransaction */,
-				C84399E61AAE80DD0084C73D /* SelectItemTransaction */,
 				C83F28541AA047C700E3DA7B /* ListItemsPresenter */,
 				DEAE56241AA352D300D9C3D2 /* ListItemsViewController */,
-				C84399EF1AAEC26D0084C73D /* ListItemsNavigator */,
 			);
 			name = ListItems;
 			sourceTree = "<group>";
@@ -969,6 +1088,7 @@
 				C83F28431A9D924A00E3DA7B /* Transaction.m in Sources */,
 				C83F28601AA45BD300E3DA7B /* ListItemsViewController.m in Sources */,
 				DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */,
+				C88871331AB0366A00256F57 /* NumberOfItemsInCartTransaction.m in Sources */,
 				DEAE56651AADC57500D9C3D2 /* ItemDetailsPresenter.m in Sources */,
 				C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */,
 				DEAE56361AAC176000D9C3D2 /* NavigatorFactory.m in Sources */,
@@ -979,6 +1099,7 @@
 				C84399E01AAE7FFD0084C73D /* SelectItemTransaction.m in Sources */,
 				DEAE564C1AAC691E00D9C3D2 /* TransactionFactory.m in Sources */,
 				C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */,
+				C888712D1AB0240900256F57 /* Cart.m in Sources */,
 				DEAE567D1AADEFDA00D9C3D2 /* Presenter.m in Sources */,
 				DEAE562B1AA5E7A900D9C3D2 /* Section.m in Sources */,
 				C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */,
@@ -992,6 +1113,8 @@
 			files = (
 				DEAE56231AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m in Sources */,
 				DEAE566F1AADE2CC00D9C3D2 /* ItemDetailsViewControllerSpy.m in Sources */,
+				C88871391AB0385700256F57 /* CartSpy.m in Sources */,
+				C88871291AB020F800256F57 /* CartTests.m in Sources */,
 				C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */,
 				C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */,
 				C84399CC1AAD7DBF0084C73D /* AppDelegateStub.m in Sources */,
@@ -1006,6 +1129,7 @@
 				DEAE56591AAC814A00D9C3D2 /* DataSourceSpy.m in Sources */,
 				DEAE561F1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m in Sources */,
 				DEAE567A1AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m in Sources */,
+				C88871301AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m in Sources */,
 				DEAE56481AAC3E0300D9C3D2 /* NavigatorTests.m in Sources */,
 				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
 				C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */,

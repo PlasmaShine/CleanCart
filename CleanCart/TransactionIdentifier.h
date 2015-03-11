@@ -10,4 +10,5 @@ typedef NS_ENUM(NSUInteger, TransactionIdentifier) {
     ListItemsTransactionId,
     ItemDetailsTransactionId,
     SelectItemTransactionId,
+    NumberOfItemsInCartTransactionId,
 };
