@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DisplayListItem.h"
+#import "PresentableListItem.h"
 #import "ListItemsCollectionCellDelegate.h"
 
 @interface ListItemsCollectionCell : UICollectionViewCell
 
-@property (nonatomic, strong) DisplayListItem *item;
+@property (nonatomic, strong) PresentableListItem *item;
 @property (weak, nonatomic) IBOutlet UIButton *addToCartButton;
 @property (weak, nonatomic) IBOutlet UILabel *itemName;
 @property (weak, nonatomic) IBOutlet UILabel *itemPrice;

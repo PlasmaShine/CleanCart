@@ -1,5 +1,5 @@
 //
-//  DisplayListItem.h
+//  PresentableListItem.h
 //  CleanCart
 //
 //  Created by Nemes Norbert on 3/1/15.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DisplayListItem : NSObject
+@interface PresentableListItem : NSObject
 
 @property (nonatomic, copy) NSString *itemId;
 @property (nonatomic, copy) NSString *itemName;

@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataSourceIO.h"
+#import "DataSource.h"
 
-@interface DataSourceSpy : NSObject <DataSourceRequest>
+@interface DataSourceSpy : DataSource
 
 @property (nonatomic, assign) BOOL didReceiveFetchItemsMessage;
 

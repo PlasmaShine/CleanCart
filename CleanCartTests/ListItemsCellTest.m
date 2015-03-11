@@ -9,14 +9,14 @@
 #import <XCTest/XCTest.h>
 #import "ListItemsCollectionCell.h"
 #import "ListItemsViewController.h"
-#import "DisplayListItem.h"
+#import "PresentableListItem.h"
 #import "Section.h"
 #import "ListItemsCellDelegateSpy.h"
 
 @interface ListItemsCellTest : XCTestCase
 
 @property (nonatomic, strong) ListItemsCollectionCell *sut;
-@property (nonatomic, strong) DisplayListItem *item;
+@property (nonatomic, strong) PresentableListItem *item;
 @property (nonatomic, strong) ListItemsCellDelegateSpy *cellDelegateSpy;
 
 @end
@@ -44,7 +44,7 @@
 
 - (NSArray *)_createTestData {
     Section *section = [[Section alloc] init];
-    self.item = [[DisplayListItem alloc] init];
+    self.item = [[PresentableListItem alloc] init];
     self.item.itemId = @"1";
     self.item.itemName = @"Item 2";
     self.item.itemPrice = [NSString stringWithFormat:@"%d", 4000];

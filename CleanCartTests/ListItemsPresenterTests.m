@@ -13,7 +13,7 @@
 #import "ListItemsPresenterIO.h"
 #import "ListItemsTransactionSpy.h"
 #import "ListItemsViewControllerSpy.h"
-#import "DisplayListItem.h"
+#import "PresentableListItem.h"
 #import "Section.h"
 #import "NavigationMessage.h"
 #import "NavigatorSpy.h"
@@ -105,14 +105,14 @@
     XCTAssertTrue([self.viewControllerSpy.receivedItems[0] isKindOfClass:[Section class]], @"Presenter should have sent items to UI as a section array");
 }
 
-- (void)testEachSectionContainsOnlyDisplayItems {
+- (void)testEachSectionContainsOnlyPresentableItems {
     NSArray *itemArray = [[NSArray alloc] initWithObjects:self.item1, nil];
     [self.sut didReceiveItems:itemArray];
     Section *section = self.viewControllerSpy.receivedItems[0];
-    XCTAssertTrue([section.items[0] isKindOfClass:[DisplayListItem class]]);
-    DisplayListItem *displayItem = section.items[0];
-    XCTAssertEqualObjects(self.item1.itemId, displayItem.itemId, @"Items should have the same item Id");
-    XCTAssertEqualObjects(self.item1.itemName, displayItem.itemName, @"Items should have the same item name");
+    XCTAssertTrue([section.items[0] isKindOfClass:[PresentableListItem class]]);
+    PresentableListItem *presentableItem = section.items[0];
+    XCTAssertEqualObjects(self.item1.itemId, presentableItem.itemId, @"Items should have the same item Id");
+    XCTAssertEqualObjects(self.item1.itemName, presentableItem.itemName, @"Items should have the same item name");
 }
 
 - (void)testOneItemHasOnlyOneSection {

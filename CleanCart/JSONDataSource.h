@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataSourceIO.h"
+#import "DataSource.h"
 
-@interface JSONDataSource : NSObject <DataSourceRequest>
+@interface JSONDataSource : DataSource
 
 @end

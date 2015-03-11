@@ -67,10 +67,6 @@
     [super tearDown];
 }
 
-- (void)testDataSourceConformsToDataSourceRequestProtocol {
-    XCTAssertTrue([JSONDataSource.class conformsToProtocol:@protocol(DataSourceRequest)], @"Data source should conform to DataSourceRequestProtocol");
-}
-
 - (void)testWhenItemsAreReceivedMessageIsSentToDelegate {
     ItemRepositorySpy *repo = [[ItemRepositorySpy alloc] init];
     self.sut.delegate = repo;

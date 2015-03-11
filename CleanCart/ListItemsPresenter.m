@@ -10,7 +10,7 @@
 #import "Section.h"
 #import "NavigationMessage.h"
 #import "TransactionIdentifier.h"
-#import "DisplayListItem.h"
+#import "PresentableListItem.h"
 #import "Item.h"
 
 @implementation ListItemsPresenter
@@ -53,8 +53,8 @@
             section = [[Section alloc] init];
             sectionItems = [NSMutableArray array];
         }
-        DisplayListItem *displayItem =  [self _createDisplayListItemFromItem:items[i]];
-        [sectionItems addObject:displayItem];
+        PresentableListItem *presentableItem =  [self _createDisplayListItemFromItem:items[i]];
+        [sectionItems addObject:presentableItem];
         if (i%2!=0) {
             section.items = sectionItems;
             [sectionList addObject:section];
@@ -68,13 +68,13 @@
     return sectionList;
 }
 
-- (DisplayListItem *)_createDisplayListItemFromItem:(Item *)item {
-    DisplayListItem *displayItem = [[DisplayListItem alloc] init];
-    displayItem.itemId = [item.itemId copy];
-    displayItem.itemName = [item.itemName copy];
-    displayItem.itemPrice = [NSString stringWithFormat:@"%ld", item.itemPrice];
-    displayItem.itemStock = [NSString stringWithFormat:@"%ld", item.itemStock];
-    return displayItem;
+- (PresentableListItem *)_createDisplayListItemFromItem:(Item *)item {
+    PresentableListItem *presentableItem = [[PresentableListItem alloc] init];
+    presentableItem.itemId = [item.itemId copy];
+    presentableItem.itemName = [item.itemName copy];
+    presentableItem.itemPrice = [NSString stringWithFormat:@"%ld", item.itemPrice];
+    presentableItem.itemStock = [NSString stringWithFormat:@"%ld", item.itemStock];
+    return presentableItem;
 }
 
 @end

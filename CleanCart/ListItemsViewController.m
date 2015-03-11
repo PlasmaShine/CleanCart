@@ -58,7 +58,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     Section *section = self.displayData[indexPath.section];
-    DisplayListItem *item = section.items[indexPath.row];
+    PresentableListItem *item = section.items[indexPath.row];
     [self.eventHandler didSelectItemWithId:(item.itemId)];
 }
 

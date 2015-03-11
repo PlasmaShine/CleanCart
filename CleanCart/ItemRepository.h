@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataSourceIO.h"
+#import "DataSource.h"
 #import "ItemRepositoryIO.h"
 #import "Item.h"
 
 @interface ItemRepository : NSObject <DataSourceResponse>
 
-@property (nonatomic, strong) id<DataSourceRequest> dataSource;
+@property (nonatomic, strong) DataSource *dataSource;
 @property (nonatomic, strong) id<ItemRepositoryResponse> delegate;
 
 - (void)fetchItems;

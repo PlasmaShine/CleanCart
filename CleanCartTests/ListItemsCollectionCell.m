@@ -16,7 +16,7 @@
 
 @implementation ListItemsCollectionCell
 
-- (void)setItem:(DisplayListItem *)item {
+- (void)setItem:(PresentableListItem *)item {
     _item = item;
     self.itemName.text = item.itemName;
     self.itemPrice.text = item.itemPrice;

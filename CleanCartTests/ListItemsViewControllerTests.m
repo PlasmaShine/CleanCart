@@ -13,7 +13,7 @@
 #import "ListItemsPresenterSpy.h"
 #import <objc/runtime.h>
 #import "Section.h"
-#import "DisplayListItem.h"
+#import "PresentableListItem.h"
 #import "ListItemsCollectionCell.h"
 #import "ListItemsCellEventHandlerIO.h"
 
@@ -22,7 +22,7 @@
 @property (nonatomic, strong) ListItemsViewController *sut;
 @property (nonatomic, strong) ListItemsPresenterSpy *presenterSpy;
 @property (nonatomic, strong) NSArray* testData;
-@property (nonatomic, strong) DisplayListItem* item2;
+@property (nonatomic, strong) PresentableListItem* item2;
 
 @end
 
@@ -39,13 +39,13 @@
 - (void)_createTestData {
     Section *section1 = [[Section alloc] init];
     Section *section2 = [[Section alloc] init];
-    DisplayListItem *item1 = [[DisplayListItem alloc] init];
-    self.item2 = [[DisplayListItem alloc] init];
+    PresentableListItem *item1 = [[PresentableListItem alloc] init];
+    self.item2 = [[PresentableListItem alloc] init];
     self.item2.itemId = @"1";
     self.item2.itemName = @"Item 2";
     self.item2.itemPrice = @"4000";
     self.item2.itemStock = @"34";
-    DisplayListItem *item3 = [[DisplayListItem alloc] init];
+    PresentableListItem *item3 = [[PresentableListItem alloc] init];
     section1.items = [[NSArray alloc] initWithObjects:item1, self.item2, nil];
     section2.items = [[NSArray alloc] initWithObjects:item3, nil];
     self.testData = [[NSArray alloc] initWithObjects:section1, section2, nil];

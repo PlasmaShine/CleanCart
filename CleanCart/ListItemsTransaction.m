@@ -7,7 +7,7 @@
 //
 
 #import "ListItemsTransaction.h"
-#import "DisplayListItem.h"
+#import "PresentableListItem.h"
 #import "Item.h"
 
 @implementation ListItemsTransaction

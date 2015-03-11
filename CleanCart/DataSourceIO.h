@@ -12,11 +12,3 @@
 
 @end
 
-@protocol DataSourceRequest <NSObject>
-
-@property (nonatomic, weak) id<DataSourceResponse> delegate;
-
-- (void)fetchItems;
-
-@end
-
