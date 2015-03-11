@@ -20,6 +20,7 @@
 #import "SpyTransactionFactory.h"
 #import "Item.h"
 #import "SelectItemTransactionSpy.h"
+#import "NumberOfItemsInCartTransactionSpy.h"
 
 @interface ListItemsPresenterTests : XCTestCase
 
@@ -30,7 +31,6 @@
 @property (nonatomic, strong) Item *item2;
 @property (nonatomic, strong) Item *item3;
 @property (nonatomic, strong) SpyTransactionFactory *spyFactory;
-
 
 @end
 
@@ -45,6 +45,22 @@
     self.sut.navigator = self.navigatorSpy;
     self.sut.delegate = self.viewControllerSpy;
     self.sut.transactionFactory = self.spyFactory;
+    [self _createTestData];
+}
+
+- (void)tearDown {
+    self.viewControllerSpy = nil;
+    self.navigatorSpy = nil;
+    self.spyFactory = nil;
+    self.item1 = nil;
+    self.item2 = nil;
+    self.item3 = nil;
+    self.sut = nil;
+    [super tearDown];
+}
+#pragma mark - Helpers -
+
+- (void)_createTestData {
     self.item1 = [[Item alloc] init];
     self.item1.itemId = @"1";
     self.item1.itemName = @"Item 1 name";
@@ -54,14 +70,6 @@
     self.item2 = [[Item alloc] init];
     self.item3 = [[Item alloc] init];
 }
-
-- (void)tearDown {
-    self.sut.delegate = nil;
-    self.sut = nil;
-    self.navigatorSpy = nil;
-    [super tearDown];
-}
-#pragma mark - Helpers -
 
 - (void)_assert:(NSInteger)numberOfSections sectionsForItems:(NSArray *)items {
     XCTAssertEqual(self.viewControllerSpy.receivedItems.count, numberOfSections, @"Incorect number of sections");
@@ -85,18 +93,31 @@
     XCTAssertTrue(listItemsTransactionSpy.didReceiveExecuteMessage, @"Presenter should have called execute on ListItemsTransaction");
 }
 
+- (void)testViewWillAppearCallsNumberOfItemsInCartTransaction {
+    [self.sut viewWillAppear];
+    NumberOfItemsInCartTransactionSpy *numberOfItemsTransactionSpy = (NumberOfItemsInCartTransactionSpy *)self.spyFactory.currentTransaction;
+    XCTAssertTrue(numberOfItemsTransactionSpy.didCallExecute, @"Presenter should have called execute on NumberOfItemsInCartTransaction");
+}
+
+- (void)testReceivingAddToCartCallsNumberOfItemsInCartTransaction {
+    [self.sut addToCartItemWithId:nil];
+    NumberOfItemsInCartTransactionSpy *numberOfItemsTransactionSpy = (NumberOfItemsInCartTransactionSpy *)self.spyFactory.currentTransaction;
+    XCTAssertTrue(numberOfItemsTransactionSpy.didCallExecute, @"Presenter should have called execute on NumberOfItemsInCartTransaction");
+}
+
+- (void)testReceivingNumberOfItemsInCartPassesItOnToTheViewController {
+    [self.sut numberOfItemsCurrentlyInCart:2];
+    XCTAssertTrue(self.viewControllerSpy.didReceiveNumberOfItemsInCartMessage, @"Receiving the number of items in the cart should have passed it on to the UI");
+}
+
 - (void)testReceivingItemsFromTransactionCallsUIRefresh {
-    ListItemsViewControllerSpy *viewControllerSpy = [[ListItemsViewControllerSpy alloc] init];
-    self.sut.delegate = viewControllerSpy;
     [self.sut didReceiveItems:[NSArray arrayWithObject:self.item1]];
-    XCTAssertTrue(viewControllerSpy.didReceiveRefreshUIMessage, @"Receiving new objects from the iteractor should have called refreshUI");
+    XCTAssertTrue(self.viewControllerSpy.didReceiveRefreshUIMessage, @"Receiving new objects from the iteractor should have called refreshUI");
 }
 
 - (void)testReceivingEmptyArrayFromTransactionDoesNotCallUIRefresh {
-    ListItemsViewControllerSpy *viewControllerSpy = [[ListItemsViewControllerSpy alloc] init];
-    self.sut.delegate = viewControllerSpy;
     [self.sut didReceiveItems:[NSArray array]];
-    XCTAssertFalse(viewControllerSpy.didReceiveRefreshUIMessage, @"Receiving empty object array from the iteractor should not have called refreshUI");
+    XCTAssertFalse(self.viewControllerSpy.didReceiveRefreshUIMessage, @"Receiving empty object array from the iteractor should not have called refreshUI");
 }
 
 - (void)testPresenterSendsReceivedDataAsArrayOfSections {

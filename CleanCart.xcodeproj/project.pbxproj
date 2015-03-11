@@ -70,6 +70,7 @@
 		DEAE56781AADE67000D9C3D2 /* PresentableItemDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56771AADE67000D9C3D2 /* PresentableItemDetails.m */; };
 		DEAE567A1AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56791AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m */; };
 		DEAE567D1AADEFDA00D9C3D2 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE567C1AADEFDA00D9C3D2 /* Presenter.m */; };
+		DEAE56851AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56841AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +205,8 @@
 		DEAE56791AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewControllerTests.m; sourceTree = "<group>"; };
 		DEAE567B1AADEFDA00D9C3D2 /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
 		DEAE567C1AADEFDA00D9C3D2 /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
+		DEAE56831AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOfItemsInCartTransactionSpy.h; sourceTree = "<group>"; };
+		DEAE56841AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOfItemsInCartTransactionSpy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,11 +248,10 @@
 		C83F28451A9D925600E3DA7B /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE561C1A9B71BD00D9C3D2 /* Item */,
 				DEAE563E1AAC1BDC00D9C3D2 /* Section */,
 				DEAE567E1AADEFDF00D9C3D2 /* Presenter */,
-				DEAE564D1AAC692600D9C3D2 /* TransactionFactory */,
 				C83F28441A9D924E00E3DA7B /* Transaction */,
-				DEAE56371AAC176500D9C3D2 /* NavigatorFactory */,
 				DEAE563C1AAC1A5100D9C3D2 /* Navigator */,
 			);
 			name = BaseClasses;
@@ -574,6 +576,7 @@
 		C88871251AB0203700256F57 /* Navigators */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE56421AAC2EF000D9C3D2 /* Navigator */,
 				C84399EF1AAEC26D0084C73D /* ListItemsNavigator */,
 			);
 			name = Navigators;
@@ -582,10 +585,7 @@
 		C88871261AB0208600256F57 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				C84622B01A9AE11300520FE1 /* DataSource */,
 				C84622BE1A9AED0100520FE1 /* ItemRepository */,
-				DEAE561C1A9B71BD00D9C3D2 /* Item */,
-				C83F28451A9D925600E3DA7B /* BaseClasses */,
 				C888712E1AB0241400256F57 /* Cart */,
 			);
 			name = Entities;
@@ -594,11 +594,7 @@
 		C88871271AB0209B00256F57 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				C84622B31A9AE12E00520FE1 /* DataSource */,
 				C84622B41A9AE13A00520FE1 /* ItemRepository */,
-				DEAE56421AAC2EF000D9C3D2 /* Navigator */,
-				DEAE56331AAC172A00D9C3D2 /* NavigatorFactory */,
-				DEAE56531AAC773E00D9C3D2 /* TransactionFactory */,
 				C888712A1AB0238900256F57 /* Cart */,
 			);
 			name = Entities;
@@ -652,6 +648,7 @@
 		C888713B1AB03E8000256F57 /* NumberOfItemsInCartTransaction */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE56861AB064DC00D9C3D2 /* Mocks */,
 				C888712F1AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m */,
 			);
 			name = NumberOfItemsInCartTransaction;
@@ -685,12 +682,15 @@
 				DE119D501A997FC700FEEBCB /* Main.storyboard */,
 				DE119D531A997FC700FEEBCB /* Images.xcassets */,
 				DE119D551A997FC700FEEBCB /* LaunchScreen.xib */,
-				DE119D461A997FC700FEEBCB /* Supporting Files */,
+				DEAE56801AB0640600D9C3D2 /* Factories */,
+				C83F28451A9D925600E3DA7B /* BaseClasses */,
+				DEAE567F1AB063CB00D9C3D2 /* Gateways */,
 				C88871261AB0208600256F57 /* Entities */,
 				C88871211AB01F1900256F57 /* Transactions */,
 				C88871221AB01F2D00256F57 /* Navigators */,
 				C83F28491A9D928500E3DA7B /* ListItems */,
 				C84399D61AAD88A40084C73D /* ItemDetails */,
+				DE119D461A997FC700FEEBCB /* Supporting Files */,
 			);
 			path = CleanCart;
 			sourceTree = "<group>";
@@ -708,6 +708,8 @@
 			isa = PBXGroup;
 			children = (
 				DEAE562E1AAC115800D9C3D2 /* AppDelegate */,
+				DEAE56811AB0643A00D9C3D2 /* Factories */,
+				DEAE56821AB0645100D9C3D2 /* Gateways */,
 				C88871271AB0209B00256F57 /* Entities */,
 				C88871241AB0200C00256F57 /* Transactions */,
 				C88871251AB0203700256F57 /* Navigators */,
@@ -977,6 +979,49 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
+		DEAE567F1AB063CB00D9C3D2 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				C84622B01A9AE11300520FE1 /* DataSource */,
+			);
+			name = Gateways;
+			sourceTree = "<group>";
+		};
+		DEAE56801AB0640600D9C3D2 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE564D1AAC692600D9C3D2 /* TransactionFactory */,
+				DEAE56371AAC176500D9C3D2 /* NavigatorFactory */,
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
+		DEAE56811AB0643A00D9C3D2 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56331AAC172A00D9C3D2 /* NavigatorFactory */,
+				DEAE56531AAC773E00D9C3D2 /* TransactionFactory */,
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
+		DEAE56821AB0645100D9C3D2 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				C84622B31A9AE12E00520FE1 /* DataSource */,
+			);
+			name = Gateways;
+			sourceTree = "<group>";
+		};
+		DEAE56861AB064DC00D9C3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56831AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.h */,
+				DEAE56841AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1142,6 +1187,7 @@
 				C84399CF1AAD84DE0084C73D /* ItemDetailsTransactionTests.m in Sources */,
 				C84399E41AAE80D10084C73D /* SelectItemTransactionSpy.m in Sources */,
 				C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */,
+				DEAE56851AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m in Sources */,
 				C84399DC1AAE742C0084C73D /* ItemDetailsTransactionSpy.m in Sources */,
 				C84399E81AAE86640084C73D /* SelectItemTransactionTests.m in Sources */,
 			);

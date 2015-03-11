@@ -10,6 +10,7 @@
 #import "ListItemsTransactionSpy.h"
 #import "ItemDetailsTransactionSpy.h"
 #import "SelectItemTransactionSpy.h"
+#import "NumberOfItemsInCartTransactionSpy.h"
 
 @implementation SpyTransactionFactory
 
@@ -26,6 +27,11 @@
         case SelectItemTransactionId: {
             SelectItemTransactionSpy *transaction = [[SelectItemTransactionSpy alloc] init];
             transaction.itemId = (NSString *)parameter;
+            self.currentTransaction = transaction;
+            break;
+        }
+        case NumberOfItemsInCartTransactionId: {
+            NumberOfItemsInCartTransactionSpy *transaction = [[NumberOfItemsInCartTransactionSpy alloc] init];
             self.currentTransaction = transaction;
             break;
         }

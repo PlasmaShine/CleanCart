@@ -14,5 +14,6 @@
 
 @property (nonatomic, strong) NSArray *receivedItems;
 @property (nonatomic, assign) BOOL didReceiveRefreshUIMessage;
+@property (nonatomic, assign) BOOL didReceiveNumberOfItemsInCartMessage;
 
 @end

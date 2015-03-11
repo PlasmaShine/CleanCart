@@ -20,5 +20,6 @@
 @protocol ListItemsPresenterResponse <NSObject>
 
 - (void)refreshUIWithData:(NSArray *) dataModel;
+- (void)numberOfItemsCurrentlyInCart:(NSString *) number;
 
 @end

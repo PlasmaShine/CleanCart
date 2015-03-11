@@ -32,8 +32,17 @@
     [self.navigator performNavigationForMessage:NavigationMessageShowItemDetails];
 }
 
+- (void)viewWillAppear {
+    [self _executeNumberOfItemsInCartTransaction];
+}
+
+- (void)_executeNumberOfItemsInCartTransaction {
+    Transaction *transaction = [self.transactionFactory createTransaction:NumberOfItemsInCartTransactionId forCaller:self andParameter:nil];
+    [transaction execute];
+}
+
 - (void)addToCartItemWithId:(NSString *)itemId {
-    
+    [self _executeNumberOfItemsInCartTransaction];
 }
 
 #pragma mark - ListItemsTranscationResponse
@@ -81,7 +90,8 @@
 #pragma mark - NumberOfItemsInCartTransaction response -
 
 - (void)numberOfItemsCurrentlyInCart:(NSInteger)number {
-    
+    NSString *strNumber = [NSString stringWithFormat:@"( %ld )",number];
+    [self.delegate numberOfItemsCurrentlyInCart:strNumber];
 }
 
 @end

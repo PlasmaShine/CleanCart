@@ -47,6 +47,10 @@
     [self.collectionView reloadData];
 }
 
+- (void)numberOfItemsCurrentlyInCart:(NSString *)number {
+    self.cartButton.titleLabel.text = number;
+}
+
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

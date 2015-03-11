@@ -129,6 +129,11 @@
     XCTAssertEqualObjects(cell.item, self.item2, @"The cell should be configured for item2");
 }
 
+- (void)testReceivingNumberOfItemsInTheCartUpdateCartButtonTitle {
+    [self.sut numberOfItemsCurrentlyInCart:@"1"];
+    XCTAssertEqualObjects(@"1", self.sut.cartButton.titleLabel.text, @"The cart button lable should have been updated");
+}
+
 #pragma mark - Event handling -
 
 - (void)testTappingOnACellSendsTheCellTappedMessageToPresenterWithItemId {

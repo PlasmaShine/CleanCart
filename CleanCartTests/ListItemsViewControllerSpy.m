@@ -16,4 +16,8 @@
     self.didReceiveRefreshUIMessage = YES;
 }
 
+- (void)numberOfItemsCurrentlyInCart:(NSString *)number {
+    self.didReceiveNumberOfItemsInCartMessage = YES;
+}
+
 @end
