@@ -32,7 +32,7 @@
 
 #pragma mark - Tests -
 
-- (void)testReceivingItemDetailsNavigationMessagePresentationMethodIsCalledOnItemdetailsNavigator {
+- (void)testReceivingItemDetailsNavigationMessagePresentationMethodIsCalledOnItemDetailsNavigator {
     SpyNavigatorFactory *spyFactory = [[SpyNavigatorFactory alloc] init];
     self.sut.navigatorFactory = spyFactory;
     [self.sut performNavigationForMessage:NavigationMessageShowItemDetails];

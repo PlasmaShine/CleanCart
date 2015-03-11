@@ -22,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //[self.collectionView registerClass:[ListItemsCollectionCell class] forCellWithReuseIdentifier:@"ListItemsCollectionCell"];
     [self.eventHandler fetchData];
     
 }

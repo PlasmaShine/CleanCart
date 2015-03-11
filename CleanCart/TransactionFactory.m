@@ -11,13 +11,37 @@
 #import "ItemRepository.h"
 #import "JSONDataSource.h"
 #import "ListItemsTransaction.h"
+#import "ItemDetailsTransactionIO.h"
+#import "ItemDetailsTransaction.h"
+#import "SelectItemTransaction.h"
+
+@interface TransactionFactory()
+
+@property (nonatomic, strong) ItemRepository *itemRepository;
+
+@end
 
 @implementation TransactionFactory
+
+- (instancetype)init {
+    if (self = [super init]) {
+        self.itemRepository = [[ItemRepository alloc] init];
+        JSONDataSource *dataSource = [[JSONDataSource alloc] init];
+        self.itemRepository.dataSource = dataSource;
+        dataSource.delegate = self.itemRepository;
+    }
+    return self;
+}
 
 - (Transaction *)createTransaction:(TransactionIdentifier)transactionId forCaller:(NSObject *)caller andParameter:(NSObject *)parameter {
     switch (transactionId) {
         case ListItemsTransactionId:
             return [self _createListItemsTransactionForCaller:caller andParameter:parameter];
+        case SelectItemTransactionId:
+            return [self _createSelectItemTransactionForCaller:caller andParameter:parameter];
+        case ItemDetailsTransactionId: {
+            return [self _createItemDetailsTransactionForCaller:caller andParameter:parameter];
+        }
         default:
             return nil;
     }
@@ -30,14 +54,29 @@
         [exception raise];
     }
     ListItemsTransaction *transaction = [[ListItemsTransaction alloc] init];
-    ItemRepository *itemRepo = [[ItemRepository alloc] init];
-    JSONDataSource *dataSource = [[JSONDataSource alloc] init];
-    itemRepo.dataSource = dataSource;
-    dataSource.delegate = itemRepo;
-    transaction.itemRepository = itemRepo;
-    itemRepo.delegate = transaction;
+    transaction.itemRepository = self.itemRepository;
+    self.itemRepository.delegate = transaction;
     transaction.delegate = (id<ListItemsTransactionResponse>)caller;
     return transaction;
 }
+
+- (Transaction *)_createSelectItemTransactionForCaller:(NSObject *)caller andParameter:(NSObject *)parameter {
+    SelectItemTransaction *transaction = [[SelectItemTransaction alloc] init];
+    transaction.itemRepository = self.itemRepository;
+    transaction.itemId = (NSString *)parameter;
+    return transaction;
+}
+
+- (Transaction *)_createItemDetailsTransactionForCaller:(NSObject *)caller andParameter:(NSObject *)parameter {
+    if (![caller conformsToProtocol:@protocol(ItemDetailsTransactionResponse)]) {
+        NSException *exception = [NSException exceptionWithName:@"Invalid caller" reason:@"Caller does not conform to the ItemDetailsTransactionResponse protocol" userInfo:nil];
+        [exception raise];
+    }
+    ItemDetailsTransaction *transaction = [[ItemDetailsTransaction alloc] init];
+    transaction.itemRepository = self.itemRepository;
+    transaction.delegate = (id<ItemDetailsTransactionResponse>)caller;
+    return transaction;
+}
+
 
 @end

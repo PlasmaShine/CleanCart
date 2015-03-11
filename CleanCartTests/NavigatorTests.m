@@ -32,7 +32,9 @@
     NavigatorFactorySpy *factorySpy = [[NavigatorFactorySpy alloc] init];
     navigator.navigatorFactory = factorySpy;
     [navigator performNavigationForMessage:NavigationMessageNone];
-    XCTAssertEqual(factorySpy.receivedMessage, NavigationMessageNone, @"Should have received correct NavigationMessageNone");
+    XCTAssertTrue(factorySpy.didReceiveNavigationMessage, @"Should have received navigation message");
+    [navigator performNavigationForMessage:NavigationMessageRoot];
+    XCTAssertEqual(factorySpy.receivedMessage, NavigationMessageRoot, @"Should have received correct NavigationMessageRoot");
 }
 
 @end

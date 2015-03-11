@@ -11,11 +11,11 @@
 @implementation Navigator
 
 - (void)performNavigationForMessage:(NavigationMessage)message {
-
+    Navigator *navigator = [self.navigatorFactory navigatorForMessage:message];
+    [navigator presentViewFromViewController:self.rootViewController];
 }
 
-- (void)presentViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController {
-    
+- (void)presentViewFromViewController:(UIViewController *)fromViewController {
 }
 
 @end

@@ -10,6 +10,9 @@
 #import "TransactionFactory.h"
 #import "ListItemsPresenterSpy.h"
 #import "ListItemsTransaction.h"
+#import "ItemDetailsTransaction.h"
+#import "ItemDetailsPresenterSpy.h"
+#import "SelectItemTransaction.h"
 
 @interface TransactionFactoryTests : XCTestCase
 
@@ -29,7 +32,7 @@
 #pragma mark - ListItemsTransaction -
 
 - (void)testCreatingListItemsTransactionWithoutConformingCallerThrowsException {
-    XCTAssertThrows([self.sut createTransaction:ListItemsTransactionId forCaller:nil andParameter:nil], @"SHould have thrown exception for nonconforming caller");
+    XCTAssertThrows([self.sut createTransaction:ListItemsTransactionId forCaller:nil andParameter:nil], @"Should have thrown exception for nonconforming caller");
 }
 
 - (void)testListItemsTransactionIsProperlyConfigured {
@@ -38,6 +41,42 @@
     XCTAssertNotNil(transaction.itemRepository,@"Repository should not be nil");
     XCTAssertEqualObjects(transaction.delegate, caller, @"Transaction delegate should be set to the caller");
     XCTAssertEqualObjects(transaction.itemRepository.delegate, transaction, @"Transaction should be the delegate for the item repository");
+    XCTAssertNotNil(transaction.itemRepository.dataSource, @"Data source should not be nil");
+    XCTAssertEqualObjects(transaction.itemRepository.dataSource.delegate, transaction.itemRepository, @"The repository should be the delegate for the data source");
+}
+
+#pragma mark - SelectItemTransaction -
+
+- (void)testSelectItemTransactionThrowsExceptionWhenPaparameterIsNotString {
+    ListItemsPresenterSpy *caller = [[ListItemsPresenterSpy alloc] init];
+    XCTAssertThrows([self.sut createTransaction:SelectItemTransactionId forCaller:caller andParameter:[[NSObject alloc] init]], @"Should have thrown exception for non-string parameter");
+}
+
+- (void)testSelectItemTransactionDoesNotThrowExceptionWhenPaparameterIsNil {
+    ListItemsPresenterSpy *caller = [[ListItemsPresenterSpy alloc] init];
+    XCTAssertNoThrow([self.sut createTransaction:SelectItemTransactionId forCaller:caller andParameter:nil], @"Should not have thrown exception for non-string parameter");
+}
+
+- (void)testSelectItemTransactionIsProperlyConfigured {
+    ListItemsPresenterSpy *caller = [[ListItemsPresenterSpy alloc] init];
+    SelectItemTransaction *transaction = (SelectItemTransaction *)[self.sut createTransaction:SelectItemTransactionId forCaller:caller andParameter:@"1"];
+    XCTAssertNotNil(transaction.itemRepository,@"Repository should not be nil");
+    XCTAssertNotNil(transaction.itemRepository.dataSource, @"Data source should not be nil");
+    XCTAssertEqualObjects(transaction.itemRepository.dataSource.delegate, transaction.itemRepository, @"The repository should be the delegate for the data source");
+    XCTAssertEqualObjects(transaction.itemId, @"1", @"Item ID should be set");
+}
+
+#pragma mark - ItemDetailsTransaction -
+
+- (void)testCreatingItemDetailsTransactionWithoutConformingCallerThrowsException {
+    XCTAssertThrows([self.sut createTransaction:ItemDetailsTransactionId forCaller:nil andParameter:nil], @"Should have thrown exception for nonconforming caller");
+}
+
+- (void)testItemDetailsTransactionIsProperlyConfigured {
+    ItemDetailsPresenterSpy *caller = [[ItemDetailsPresenterSpy alloc] init];
+    ItemDetailsTransaction *transaction = (ItemDetailsTransaction *)[self.sut createTransaction:ItemDetailsTransactionId forCaller:caller andParameter:nil];
+    XCTAssertNotNil(transaction.itemRepository,@"Repository should not be nil");
+    XCTAssertEqualObjects(transaction.delegate, caller, @"Transaction delegate should be set to the caller");
     XCTAssertNotNil(transaction.itemRepository.dataSource, @"Data source should not be nil");
     XCTAssertEqualObjects(transaction.itemRepository.dataSource.delegate, transaction.itemRepository, @"The repository should be the delegate for the data source");
 }

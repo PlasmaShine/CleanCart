@@ -17,7 +17,6 @@
 @property (nonatomic, strong) NavigatorFactory *navigatorFactory;
 
 - (void)performNavigationForMessage:(NavigationMessage) message;
-
-- (void)presentViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController;
+- (void)presentViewFromViewController:(UIViewController *)fromViewController;
 
 @end

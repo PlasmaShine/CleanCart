@@ -21,7 +21,8 @@
 
 - (void)setUp {
     [super setUp];
-    self.sut = [[ItemDetailsViewController alloc] init];
+    self.sut = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ItemDetailsViewController"];
+    [self.sut.view layoutIfNeeded];
 }
 
 - (void)tearDown {
@@ -57,10 +58,10 @@
 - (void)testItemDetailsAreProperlyDisplayed {
     PresentableItemDetails *itemDetails = [self _createTestItem];
     [self.sut presentItemDetails:itemDetails];
-    XCTAssertNotEqualObjects(self.sut.itemName.text, itemDetails.itemName, @"Item name should match");
-    XCTAssertNotEqualObjects(self.sut.itemDescription.text, itemDetails.itemDescription, @"Item description should match");
-    XCTAssertNotEqualObjects(self.sut.itemPrice.text, itemDetails.itemPrice, @"Item price should match");
-    XCTAssertNotEqualObjects(self.sut.itemStock.text, itemDetails.itemStock, @"Item stock should match");
+    XCTAssertEqualObjects(self.sut.itemName.text, itemDetails.itemName, @"Item name should match");
+    XCTAssertEqualObjects(self.sut.itemDescription.text, itemDetails.itemDescription, @"Item description should match");
+    XCTAssertEqualObjects(self.sut.itemPrice.text, itemDetails.itemPrice, @"Item price should match");
+    XCTAssertEqualObjects(self.sut.itemStock.text, itemDetails.itemStock, @"Item stock should match");
 }
 
 @end

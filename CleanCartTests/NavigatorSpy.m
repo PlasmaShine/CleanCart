@@ -14,7 +14,7 @@
     self.receivedMessage = message;
 }
 
-- (void)presentViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController {
+- (void)presentViewFromViewController:(UIViewController *)fromViewController {
     self.didReceivePresentViewControllerMessage = YES;
 }
 
