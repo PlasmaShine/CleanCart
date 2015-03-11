@@ -48,7 +48,7 @@
 }
 
 - (void)numberOfItemsCurrentlyInCart:(NSString *)number {
-    self.cartButton.titleLabel.text = number;
+    [self.cartButton setTitle:[number copy] forState:UIControlStateNormal];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -67,6 +67,7 @@
     ListItemsCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ListItemsCollectionCell"forIndexPath:indexPath];
     Section *section = self.displayData[indexPath.section];
     cell.item = section.items[indexPath.row];
+    cell.delegate = self;
     return cell;
 }
 
@@ -84,7 +85,7 @@
 
 #pragma mark - ListItemsCellEventHandler methods
 
-- (void)didTapAddToCartForItemId:(NSString *)itemID {
+- (void)didTapAddToCartForItemWithId:(NSString *)itemID {
     [self.eventHandler addToCartItemWithId:itemID];
 }
 

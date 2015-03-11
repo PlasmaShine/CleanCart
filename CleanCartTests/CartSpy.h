@@ -11,5 +11,7 @@
 @interface CartSpy : Cart
 
 @property (nonatomic, assign) BOOL didReceiveItemsInCartMessage;
+@property (nonatomic, assign) BOOL didReceiveAddToCartMessage;
+@property (nonatomic, strong) Item *itemAddedToCart;
 
 @end

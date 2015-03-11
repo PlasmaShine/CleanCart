@@ -25,6 +25,6 @@
 }
 
 - (IBAction)addTocartTapped:(id)sender {
-    [self.delegate addToCartTappedForItemWithId:self.item.itemId];
+    [self.delegate didTapAddToCartForItemWithId:self.item.itemId];
 }
 @end

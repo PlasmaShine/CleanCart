@@ -16,6 +16,7 @@
 #import "SelectItemTransaction.h"
 #import "NumberOfItemsInCartTransactionIO.h"
 #import "NumberOfItemsInCartTransaction.h"
+#import "AddToCartTransaction.h"
 
 @interface TransactionFactory()
 
@@ -47,6 +48,8 @@
             return [self _createItemDetailsTransactionForCaller:caller andParameter:parameter];
         case NumberOfItemsInCartTransactionId:
             return [self _createNumberOfItemsInCartTransactionForCaller:caller andParameter:parameter];
+        case AddToCartTransactionId:
+            return [self _createAddToCartTransactionForCaller:caller andParameter:parameter];
         default:
             return nil;
     }
@@ -91,6 +94,14 @@
     NumberOfItemsInCartTransaction *transaction = [[NumberOfItemsInCartTransaction alloc] init];
     transaction.cart = self.cart;
     transaction.delegate = (id<NumberOfItemsInCartTransactionResponse>)caller;
+    return transaction;
+}
+
+- (Transaction *)_createAddToCartTransactionForCaller:(NSObject *)caller andParameter:(NSObject *)parameter {
+    AddToCartTransaction *transaction = [[AddToCartTransaction alloc] init];
+    transaction.itemRepository = self.itemRepository;
+    transaction.cart = self.cart;
+    transaction.itemId = (NSString *)parameter;
     return transaction;
 }
 

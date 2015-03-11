@@ -8,6 +8,6 @@
 
 @protocol ListItemsCollectionCellDelegate <NSObject>
 
-- (void)addToCartTappedForItemWithId:(NSString *)itemId;
+- (void)didTapAddToCartForItemWithId:(NSString *)itemId;
 
 @end

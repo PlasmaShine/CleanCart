@@ -10,7 +10,7 @@
 
 @implementation ListItemsCellDelegateSpy
 
-- (void)addToCartTappedForItemWithId:(NSString *)itemId {
+- (void)didTapAddToCartForItemWithId:(NSString *)itemId {
     self.didReceiveAddToCartMessage = YES;
     self.receivedItemId = itemId;
 }

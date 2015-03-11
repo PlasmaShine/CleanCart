@@ -15,4 +15,10 @@
     return [super itemsInCart];
 }
 
+- (void)addItemToCart:(Item *)item {
+    [super addItemToCart:item];
+    self.didReceiveAddToCartMessage = YES;
+    self.itemAddedToCart = item;
+}
+
 @end

@@ -71,6 +71,9 @@
 		DEAE567A1AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56791AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m */; };
 		DEAE567D1AADEFDA00D9C3D2 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE567C1AADEFDA00D9C3D2 /* Presenter.m */; };
 		DEAE56851AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56841AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m */; };
+		DEAE56881AB07ACC00D9C3D2 /* AddToCartTransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56871AB07ACC00D9C3D2 /* AddToCartTransactionTests.m */; };
+		DEAE568C1AB07B6000D9C3D2 /* AddToCartTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE568B1AB07B6000D9C3D2 /* AddToCartTransaction.m */; };
+		DEAE56901AB0841100D9C3D2 /* AddToCartTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE568F1AB0841100D9C3D2 /* AddToCartTransactionSpy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +105,6 @@
 		C83F285F1AA45BD300E3DA7B /* ListItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsViewController.m; sourceTree = "<group>"; };
 		C83F28621AA7C06700E3DA7B /* ListItemsCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsCollectionCell.h; sourceTree = "<group>"; };
 		C83F28631AA7C06700E3DA7B /* ListItemsCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsCollectionCell.m; sourceTree = "<group>"; };
-		C83F28661AA89A0700E3DA7B /* ListItemsCellEventHandlerIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItemsCellEventHandlerIO.h; sourceTree = "<group>"; };
 		C83F28681AA8A03E00E3DA7B /* ListItemsCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsCellTest.m; sourceTree = "<group>"; };
 		C84399C61AA9926D0084C73D /* ListItemsCellDelegateSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsCellDelegateSpy.h; sourceTree = "<group>"; };
 		C84399C71AA9926D0084C73D /* ListItemsCellDelegateSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsCellDelegateSpy.m; sourceTree = "<group>"; };
@@ -207,6 +209,11 @@
 		DEAE567C1AADEFDA00D9C3D2 /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
 		DEAE56831AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOfItemsInCartTransactionSpy.h; sourceTree = "<group>"; };
 		DEAE56841AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOfItemsInCartTransactionSpy.m; sourceTree = "<group>"; };
+		DEAE56871AB07ACC00D9C3D2 /* AddToCartTransactionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartTransactionTests.m; sourceTree = "<group>"; };
+		DEAE568A1AB07B6000D9C3D2 /* AddToCartTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToCartTransaction.h; sourceTree = "<group>"; };
+		DEAE568B1AB07B6000D9C3D2 /* AddToCartTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartTransaction.m; sourceTree = "<group>"; };
+		DEAE568E1AB0841100D9C3D2 /* AddToCartTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToCartTransactionSpy.h; sourceTree = "<group>"; };
+		DEAE568F1AB0841100D9C3D2 /* AddToCartTransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartTransactionSpy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,7 +360,6 @@
 		C83F28671AA89A0C00E3DA7B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C83F28661AA89A0700E3DA7B /* ListItemsCellEventHandlerIO.h */,
 				C84399C91AA993B50084C73D /* ListItemsCollectionCellDelegate.h */,
 			);
 			name = Protocols;
@@ -540,6 +546,7 @@
 				C84399E11AAE80040084C73D /* SelectItemTransaction */,
 				C84399D51AAD88990084C73D /* ItemDetailsTransaction */,
 				C88871341AB0367100256F57 /* NumberOfItemsInCartTransaction */,
+				DEAE568D1AB07B6600D9C3D2 /* AddToCartTransaction */,
 			);
 			name = Transactions;
 			sourceTree = "<group>";
@@ -569,6 +576,7 @@
 				C84399E61AAE80DD0084C73D /* SelectItemTransaction */,
 				C84399D01AAD84E70084C73D /* ItemDetailsTransaction */,
 				C888713B1AB03E8000256F57 /* NumberOfItemsInCartTransaction */,
+				DEAE56891AB07AD000D9C3D2 /* AddToCartTransaction */,
 			);
 			name = Transactions;
 			sourceTree = "<group>";
@@ -1022,6 +1030,33 @@
 			name = Mocks;
 			sourceTree = "<group>";
 		};
+		DEAE56891AB07AD000D9C3D2 /* AddToCartTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56911AB0841600D9C3D2 /* Mocks */,
+				DEAE56871AB07ACC00D9C3D2 /* AddToCartTransactionTests.m */,
+			);
+			name = AddToCartTransaction;
+			sourceTree = "<group>";
+		};
+		DEAE568D1AB07B6600D9C3D2 /* AddToCartTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE568A1AB07B6000D9C3D2 /* AddToCartTransaction.h */,
+				DEAE568B1AB07B6000D9C3D2 /* AddToCartTransaction.m */,
+			);
+			name = AddToCartTransaction;
+			sourceTree = "<group>";
+		};
+		DEAE56911AB0841600D9C3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE568E1AB0841100D9C3D2 /* AddToCartTransactionSpy.h */,
+				DEAE568F1AB0841100D9C3D2 /* AddToCartTransactionSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1126,6 +1161,7 @@
 				DEAE565D1AAC95AC00D9C3D2 /* ListItemsCollectionCell.m in Sources */,
 				DEAE56781AADE67000D9C3D2 /* PresentableItemDetails.m in Sources */,
 				C888711E1AB0184800256F57 /* DataSource.m in Sources */,
+				DEAE568C1AB07B6000D9C3D2 /* AddToCartTransaction.m in Sources */,
 				C84399EB1AAEBA500084C73D /* ItemDetailsNavigator.m in Sources */,
 				C84399D41AAD88950084C73D /* ItemDetailsTransaction.m in Sources */,
 				DEAE56451AAC392E00D9C3D2 /* ListItemsNavigator.m in Sources */,
@@ -1168,6 +1204,7 @@
 				C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */,
 				DEAE56551AAC775800D9C3D2 /* TransactionFactoryTests.m in Sources */,
 				C84399D91AAD8CFD0084C73D /* ItemRepositoryStub.m in Sources */,
+				DEAE56901AB0841100D9C3D2 /* AddToCartTransactionSpy.m in Sources */,
 				DEAE565C1AAC875E00D9C3D2 /* NavigatorFactoryTests.m in Sources */,
 				DEAE56601AADC54900D9C3D2 /* ItemDetailsPresenterSpy.m in Sources */,
 				DEAE562D1AAC115300D9C3D2 /* AppDelegateTests.m in Sources */,
@@ -1177,6 +1214,7 @@
 				C88871301AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m in Sources */,
 				DEAE56481AAC3E0300D9C3D2 /* NavigatorTests.m in Sources */,
 				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
+				DEAE56881AB07ACC00D9C3D2 /* AddToCartTransactionTests.m in Sources */,
 				C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */,
 				C84399F21AAEC4100084C73D /* SpyNavigatorFactory.m in Sources */,
 				C83F28691AA8A03E00E3DA7B /* ListItemsCellTest.m in Sources */,

@@ -46,6 +46,6 @@
     [self.cartSpy addItemToCart:item];
     [self.sut execute];
     XCTAssertTrue(self.presenterSpy.didReceiveNumberOfItemsInCart, @"Should have received number of items in cart");
-    XCTAssertEqual(self.presenterSpy.numberOfItemsInCart,1, @"There should be 1 utem in the cart");
+    XCTAssertEqual(self.presenterSpy.numberOfItemsInCart,1, @"There should be 1 item in the cart");
 }
 @end

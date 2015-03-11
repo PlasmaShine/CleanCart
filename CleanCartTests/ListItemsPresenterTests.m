@@ -21,6 +21,7 @@
 #import "Item.h"
 #import "SelectItemTransactionSpy.h"
 #import "NumberOfItemsInCartTransactionSpy.h"
+#import "AddToCartTransactionSpy.h"
 
 @interface ListItemsPresenterTests : XCTestCase
 
@@ -93,23 +94,6 @@
     XCTAssertTrue(listItemsTransactionSpy.didReceiveExecuteMessage, @"Presenter should have called execute on ListItemsTransaction");
 }
 
-- (void)testViewWillAppearCallsNumberOfItemsInCartTransaction {
-    [self.sut viewWillAppear];
-    NumberOfItemsInCartTransactionSpy *numberOfItemsTransactionSpy = (NumberOfItemsInCartTransactionSpy *)self.spyFactory.currentTransaction;
-    XCTAssertTrue(numberOfItemsTransactionSpy.didCallExecute, @"Presenter should have called execute on NumberOfItemsInCartTransaction");
-}
-
-- (void)testReceivingAddToCartCallsNumberOfItemsInCartTransaction {
-    [self.sut addToCartItemWithId:nil];
-    NumberOfItemsInCartTransactionSpy *numberOfItemsTransactionSpy = (NumberOfItemsInCartTransactionSpy *)self.spyFactory.currentTransaction;
-    XCTAssertTrue(numberOfItemsTransactionSpy.didCallExecute, @"Presenter should have called execute on NumberOfItemsInCartTransaction");
-}
-
-- (void)testReceivingNumberOfItemsInCartPassesItOnToTheViewController {
-    [self.sut numberOfItemsCurrentlyInCart:2];
-    XCTAssertTrue(self.viewControllerSpy.didReceiveNumberOfItemsInCartMessage, @"Receiving the number of items in the cart should have passed it on to the UI");
-}
-
 - (void)testReceivingItemsFromTransactionCallsUIRefresh {
     [self.sut didReceiveItems:[NSArray arrayWithObject:self.item1]];
     XCTAssertTrue(self.viewControllerSpy.didReceiveRefreshUIMessage, @"Receiving new objects from the iteractor should have called refreshUI");
@@ -157,6 +141,28 @@
     [self _assert:2 itemsForSection:0];
     [self _assert:1 itemsForSection:1];
 }
+
+#pragma mark - Number of items in cart -
+
+- (void)testViewWillAppearCallsNumberOfItemsInCartTransaction {
+    [self.sut viewWillAppear];
+    NumberOfItemsInCartTransactionSpy *numberOfItemsTransactionSpy = (NumberOfItemsInCartTransactionSpy *)self.spyFactory.currentTransaction;
+    XCTAssertTrue(numberOfItemsTransactionSpy.didCallExecute, @"Presenter should have called execute on NumberOfItemsInCartTransaction");
+}
+
+- (void)testReceivingAddToCartCallsNumberOfItemsInCartTransaction {
+    [self.sut addToCartItemWithId:nil];
+    NumberOfItemsInCartTransactionSpy *numberOfItemsTransactionSpy = (NumberOfItemsInCartTransactionSpy *)self.spyFactory.currentTransaction;
+    XCTAssertTrue(numberOfItemsTransactionSpy.didCallExecute, @"Presenter should have called execute on NumberOfItemsInCartTransaction");
+}
+
+- (void)testReceivingNumberOfItemsInCartPassesItOnToTheViewController {
+    [self.sut numberOfItemsCurrentlyInCart:2];
+    XCTAssertTrue(self.viewControllerSpy.didReceiveNumberOfItemsInCartMessage, @"Receiving the number of items in the cart should have passed it on to the UI");
+}
+
+#pragma mark - Add to cart -
+
 
 #pragma mark - Navigation message handling -
 

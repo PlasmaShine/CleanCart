@@ -15,7 +15,7 @@
 #import "Section.h"
 #import "PresentableListItem.h"
 #import "ListItemsCollectionCell.h"
-#import "ListItemsCellEventHandlerIO.h"
+#import "ListItemsCollectionCellDelegate.h"
 
 @interface ListItemsViewControllerTests : XCTestCase
 
@@ -76,7 +76,7 @@
     XCTAssertTrue([self.sut conformsToProtocol:@protocol(ListItemsPresenterResponse)], @"ViewController should conform to the proper protocol");
     XCTAssertTrue([self.sut conformsToProtocol:@protocol(UICollectionViewDataSource)], @"ViewController should conform to the proper protocol");
     XCTAssertTrue([self.sut conformsToProtocol:@protocol(UICollectionViewDelegate)], @"ViewController should conform to the proper protocol");
-    XCTAssertTrue([self.sut conformsToProtocol:@protocol(ListItemsCellEventHandlerRequest)], @"ViewController should conform to the proper protocol");
+    XCTAssertTrue([self.sut conformsToProtocol:@protocol(ListItemsCollectionCellDelegate)], @"ViewController should conform to the proper protocol");
 }
 
 - (void)testViewControllerHasADataSourceSetToItsself {
@@ -127,6 +127,7 @@
     [self.sut refreshUIWithData:self.testData];
     ListItemsCollectionCell *cell = (ListItemsCollectionCell *)[self _cellInSection0Row1];
     XCTAssertEqualObjects(cell.item, self.item2, @"The cell should be configured for item2");
+    XCTAssertEqualObjects(cell.delegate, self.sut,@"View controller should be the delegate for the cell");
 }
 
 - (void)testReceivingNumberOfItemsInTheCartUpdateCartButtonTitle {
@@ -145,7 +146,7 @@
 }
 
 - (void)testReceivingAddToCartMessageSendsAddToCartMethodToPresenter {
-    [self.sut didTapAddToCartForItemId:@"1"];
+    [self.sut didTapAddToCartForItemWithId:@"1"];
     XCTAssertTrue(self.presenterSpy.didReceiveAddToCartMessage, @"Should have received add to cart message");
     XCTAssertEqualObjects(self.presenterSpy.addToCartId, @"1", @"The correct item ID should have been sent to presenter");
 }

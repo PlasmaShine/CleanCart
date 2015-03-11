@@ -42,6 +42,8 @@
 }
 
 - (void)addToCartItemWithId:(NSString *)itemId {
+    Transaction *transaction = [self.transactionFactory createTransaction:AddToCartTransactionId forCaller:self andParameter:itemId];
+    [transaction execute];
     [self _executeNumberOfItemsInCartTransaction];
 }
 
@@ -90,7 +92,7 @@
 #pragma mark - NumberOfItemsInCartTransaction response -
 
 - (void)numberOfItemsCurrentlyInCart:(NSInteger)number {
-    NSString *strNumber = [NSString stringWithFormat:@"( %ld )",number];
+    NSString *strNumber = [NSString stringWithFormat:@"Cart (%ld)",number];
     [self.delegate numberOfItemsCurrentlyInCart:strNumber];
 }
 
