@@ -1,5 +1,5 @@
 //
-//  TransactionIdentifier.h
+//  TransactionIds.h
 //  CleanCart
 //
 //  Created by Nemes Norbert on 3/8/15.
