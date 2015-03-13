@@ -8,16 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "DataSource.h"
-#import "ItemRepositoryIO.h"
 #import "Item.h"
 
-@interface ItemRepository : NSObject <DataSourceResponse>
+@interface ItemRepository : NSObject
 
 @property (nonatomic, strong) DataSource *dataSource;
-@property (nonatomic, strong) id<ItemRepositoryResponse> delegate;
 
-- (void)fetchItems;
-- (NSArray *)allItems;
+- (void)fetchAllItemsWithCompletion:(void(^)(NSArray *items)) completionBlock;
 - (Item *)itemForId:(NSString *)itemId;
 - (void)selectItemForId:(NSString *)itemId;
 - (Item *)selectedItem;

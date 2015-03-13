@@ -8,10 +8,9 @@
 
 #import "Transaction.h"
 #import "ListItemsTransactionIO.h"
-#import "ItemRepositoryIO.h"
 #import "ItemRepository.h"
 
-@interface ListItemsTransaction : Transaction <ItemRepositoryResponse>
+@interface ListItemsTransaction : Transaction
 
 @property (nonatomic, weak) id<ListItemsTransactionResponse> delegate;
 @property (nonatomic, strong) ItemRepository *itemRepository;

@@ -6,10 +6,9 @@
 //  Copyright (c) 2015 Norbert Nemes. All rights reserved.
 //
 
-#import "Transaction.h"
-#import "ItemRepositoryIO.h"
+#import "ListItemsTransaction.h"
 
-@interface ListItemsTransactionSpy : Transaction <ItemRepositoryResponse>
+@interface ListItemsTransactionSpy : ListItemsTransaction
 
 @property (nonatomic, assign) BOOL didReceiveItemsReceivedMessage;
 @property (nonatomic, assign) BOOL didReceiveExecuteMessage;

@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataSourceIO.h"
 
 @interface DataSource : NSObject
 
-@property (nonatomic, weak) id<DataSourceResponse> delegate;
-
-- (void)fetchItems;
+- (void)fetchItemsWithCompletion:(void(^)(NSArray *items)) completionBlock;
 
 @end

@@ -17,17 +17,13 @@
 
 @implementation ItemRepository
 
-- (void)fetchItems {
-    [self.dataSource fetchItems];
-}
-
-#pragma mark - ItemRepositoryRequestMethods
-
-- (NSArray *)allItems {
-    if (self.items.count == 0) {
-        [self.dataSource fetchItems];
-    }
-    return self.items;
+- (void)fetchAllItemsWithCompletion:(void (^)(NSArray *))completionBlock {
+    [self.dataSource fetchItemsWithCompletion:^(NSArray *items) {
+        self.items = items;
+        if (completionBlock) {
+            completionBlock(items);
+        }
+    }];
 }
 
 - (Item *)itemForId:(NSString *)itemId {
@@ -52,14 +48,6 @@
 
 - (Item *)selectedItem {
     return self.currentlySelectedItem;
-}
-
-#pragma mark - DataSourceResponse protocol methods
-
-- (void)didReceiveItems:(NSArray *)items {
-    if (items.count == 0) return;
-    self.items = items;
-    [self.delegate didReceiveItems:items];
 }
 
 @end

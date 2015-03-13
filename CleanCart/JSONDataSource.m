@@ -11,9 +11,11 @@
 
 @implementation JSONDataSource
 
-- (void)fetchItems {
+- (void)fetchItemsWithCompletion:(void (^)(NSArray *))completionBlock {
     NSArray *itemList = [self _loadItemsFromJSONFile];
-    [self.delegate didReceiveItems:itemList];
+    if (completionBlock) {
+        completionBlock(itemList);
+    }
 }
 
 - (NSArray *)_loadItemsFromJSONFile {

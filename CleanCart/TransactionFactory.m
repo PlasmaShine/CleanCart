@@ -32,7 +32,6 @@
         self.itemRepository = [[ItemRepository alloc] init];
         JSONDataSource *dataSource = [[JSONDataSource alloc] init];
         self.itemRepository.dataSource = dataSource;
-        dataSource.delegate = self.itemRepository;
         self.cart = [[Cart alloc] init];
     }
     return self;
@@ -63,7 +62,6 @@
     }
     ListItemsTransaction *transaction = [[ListItemsTransaction alloc] init];
     transaction.itemRepository = self.itemRepository;
-    self.itemRepository.delegate = transaction;
     transaction.delegate = (id<ListItemsTransactionResponse>)caller;
     return transaction;
 }

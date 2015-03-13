@@ -42,9 +42,7 @@
     ListItemsTransaction *transaction = (ListItemsTransaction *)[self.sut createTransaction:ListItemsTransactionId forCaller:caller andParameter:nil];
     XCTAssertNotNil(transaction.itemRepository,@"Repository should not be nil");
     XCTAssertEqualObjects(transaction.delegate, caller, @"Transaction delegate should be set to the caller");
-    XCTAssertEqualObjects(transaction.itemRepository.delegate, transaction, @"Transaction should be the delegate for the item repository");
     XCTAssertNotNil(transaction.itemRepository.dataSource, @"Data source should not be nil");
-    XCTAssertEqualObjects(transaction.itemRepository.dataSource.delegate, transaction.itemRepository, @"The repository should be the delegate for the data source");
 }
 
 #pragma mark - SelectItemTransaction -
@@ -64,7 +62,6 @@
     SelectItemTransaction *transaction = (SelectItemTransaction *)[self.sut createTransaction:SelectItemTransactionId forCaller:caller andParameter:@"1"];
     XCTAssertNotNil(transaction.itemRepository,@"Repository should not be nil");
     XCTAssertNotNil(transaction.itemRepository.dataSource, @"Data source should not be nil");
-    XCTAssertEqualObjects(transaction.itemRepository.dataSource.delegate, transaction.itemRepository, @"The repository should be the delegate for the data source");
     XCTAssertEqualObjects(transaction.itemId, @"1", @"Item ID should be set");
 }
 
@@ -80,7 +77,6 @@
     XCTAssertNotNil(transaction.itemRepository,@"Repository should not be nil");
     XCTAssertEqualObjects(transaction.delegate, caller, @"Transaction delegate should be set to the caller");
     XCTAssertNotNil(transaction.itemRepository.dataSource, @"Data source should not be nil");
-    XCTAssertEqualObjects(transaction.itemRepository.dataSource.delegate, transaction.itemRepository, @"The repository should be the delegate for the data source");
 }
 
 #pragma mark - NumberOfItemsInCartTransaction -
@@ -101,7 +97,6 @@
     AddToCartTransaction *transaction = (AddToCartTransaction *)[self.sut createTransaction:AddToCartTransactionId forCaller:caller andParameter:@"1"];
     XCTAssertNotNil(transaction.itemRepository,@"Repository should not be nil");
     XCTAssertNotNil(transaction.itemRepository.dataSource, @"Data source should not be nil");
-    XCTAssertEqualObjects(transaction.itemRepository.dataSource.delegate, transaction.itemRepository, @"The repository should be the delegate for the data source");
     XCTAssertNotNil(transaction.cart,@"Cart should not be nil");
     XCTAssertEqualObjects(transaction.itemId, @"1", @"Item ID should be set");
 }

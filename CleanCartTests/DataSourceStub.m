@@ -1,17 +1,17 @@
 //
-//  DataSourceSpy.m
+//  DataSourceStub.m
 //  CleanCart
 //
-//  Created by Nemes Norbert on 3/8/15.
+//  Created by Nemes Norbert on 3/13/15.
 //  Copyright (c) 2015 Norbert Nemes. All rights reserved.
 //
 
-#import "DataSourceSpy.h"
+#import "DataSourceStub.h"
 
-@implementation DataSourceSpy
+@implementation DataSourceStub
 
 - (void)fetchItemsWithCompletion:(void (^)(NSArray *))completionBlock {
-    self.didReceiveFetchItemsMessage = YES;
+    completionBlock(self.itemsToReturn);
 }
 
 @end

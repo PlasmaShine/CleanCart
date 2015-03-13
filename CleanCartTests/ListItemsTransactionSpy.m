@@ -10,13 +10,12 @@
 
 @implementation ListItemsTransactionSpy
 
-- (void)didReceiveItems:(NSArray *)items {
-    self.didReceiveItemsReceivedMessage = YES;
-    self.receivedItems = items;
-}
-
 - (void)execute {
     self.didReceiveExecuteMessage = YES;
+    [self.itemRepository fetchAllItemsWithCompletion:^(NSArray *items) {
+        self.didReceiveItemsReceivedMessage = YES;
+        self.receivedItems = items;
+    }];
 }
 
 @end

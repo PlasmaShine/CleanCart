@@ -14,13 +14,9 @@
 
 
 - (void)execute {
-    [self.itemRepository allItems];
-}
-
-#pragma mark - ItemRepositoryResponse
-
-- (void)didReceiveItems:(NSArray *)items {
-    [self.delegate didReceiveItems:items];
+    [self.itemRepository fetchAllItemsWithCompletion:^(NSArray *items) {
+        [self.delegate didReceiveItems:items];
+    }];
 }
 
 @end

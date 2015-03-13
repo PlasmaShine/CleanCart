@@ -39,6 +39,8 @@
 		C88871301AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C888712F1AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m */; };
 		C88871331AB0366A00256F57 /* NumberOfItemsInCartTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C88871321AB0366A00256F57 /* NumberOfItemsInCartTransaction.m */; };
 		C88871391AB0385700256F57 /* CartSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C88871381AB0385700256F57 /* CartSpy.m */; };
+		C8B2786E1AB2F45A00AA605C /* DataSourceStub.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2786D1AB2F45A00AA605C /* DataSourceStub.m */; };
+		C8B278711AB307D000AA605C /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B278701AB307D000AA605C /* TestHelpers.m */; };
 		DE119D491A997FC700FEEBCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D481A997FC700FEEBCB /* main.m */; };
 		DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D4B1A997FC700FEEBCB /* AppDelegate.m */; };
 		DE119D521A997FC700FEEBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE119D501A997FC700FEEBCB /* Main.storyboard */; };
@@ -93,7 +95,6 @@
 		C83F28461A9D927C00E3DA7B /* ListItemsTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsTransaction.h; sourceTree = "<group>"; };
 		C83F28471A9D927C00E3DA7B /* ListItemsTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsTransaction.m; sourceTree = "<group>"; };
 		C83F284A1A9D934900E3DA7B /* ListItemsTransactionIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItemsTransactionIO.h; sourceTree = "<group>"; };
-		C83F284C1A9E82A400E3DA7B /* ItemRepositoryIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemRepositoryIO.h; sourceTree = "<group>"; };
 		C83F284E1A9E847700E3DA7B /* ListItemsTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemsTransactionSpy.h; sourceTree = "<group>"; };
 		C83F284F1A9E847700E3DA7B /* ListItemsTransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsTransactionSpy.m; sourceTree = "<group>"; };
 		C83F28521AA047C100E3DA7B /* ListItemsPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemsPresenterTests.m; sourceTree = "<group>"; };
@@ -132,7 +133,6 @@
 		C84622AD1A9AE10D00520FE1 /* JSONDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDataSource.h; sourceTree = "<group>"; };
 		C84622AE1A9AE10D00520FE1 /* JSONDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDataSource.m; sourceTree = "<group>"; };
 		C84622B11A9AE12800520FE1 /* DataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceTests.m; sourceTree = "<group>"; };
-		C84622B51A9AE2E600520FE1 /* DataSourceIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSourceIO.h; sourceTree = "<group>"; };
 		C84622B71A9AECC200520FE1 /* ItemRepositorySpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemRepositorySpy.h; sourceTree = "<group>"; };
 		C84622B81A9AECC200520FE1 /* ItemRepositorySpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepositorySpy.m; sourceTree = "<group>"; };
 		C84622BB1A9AECFB00520FE1 /* ItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemRepository.h; sourceTree = "<group>"; };
@@ -149,6 +149,10 @@
 		C88871351AB036EB00256F57 /* NumberOfItemsInCartTransactionIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberOfItemsInCartTransactionIO.h; sourceTree = "<group>"; };
 		C88871371AB0385700256F57 /* CartSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartSpy.h; sourceTree = "<group>"; };
 		C88871381AB0385700256F57 /* CartSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartSpy.m; sourceTree = "<group>"; };
+		C8B2786C1AB2F45A00AA605C /* DataSourceStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceStub.h; sourceTree = "<group>"; };
+		C8B2786D1AB2F45A00AA605C /* DataSourceStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceStub.m; sourceTree = "<group>"; };
+		C8B2786F1AB307D000AA605C /* TestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelpers.h; sourceTree = "<group>"; };
+		C8B278701AB307D000AA605C /* TestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelpers.m; sourceTree = "<group>"; };
 		DE119D431A997FC700FEEBCB /* CleanCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE119D471A997FC700FEEBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE119D481A997FC700FEEBCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -305,14 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				C83F284A1A9D934900E3DA7B /* ListItemsTransactionIO.h */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		C83F284D1A9E82B400E3DA7B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				C83F284C1A9E82A400E3DA7B /* ItemRepositoryIO.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -510,14 +506,6 @@
 			name = ItemRepository;
 			sourceTree = "<group>";
 		};
-		C84622B61A9AE2EA00520FE1 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				C84622B51A9AE2E600520FE1 /* DataSourceIO.h */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
 		C84622BA1A9AECCA00520FE1 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,7 +520,6 @@
 		C84622BE1A9AED0100520FE1 /* ItemRepository */ = {
 			isa = PBXGroup;
 			children = (
-				C83F284D1A9E82B400E3DA7B /* Protocols */,
 				C84622BB1A9AECFB00520FE1 /* ItemRepository.h */,
 				C84622BC1A9AECFB00520FE1 /* ItemRepository.m */,
 			);
@@ -542,7 +529,6 @@
 		C888711F1AB0185600256F57 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				C84622B61A9AE2EA00520FE1 /* Protocols */,
 				C888711C1AB0184800256F57 /* DataSource.h */,
 				C888711D1AB0184800256F57 /* DataSource.m */,
 			);
@@ -681,6 +667,15 @@
 			name = NumberOfItemsInCartTransaction;
 			sourceTree = "<group>";
 		};
+		C8B278721AB307D400AA605C /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				C8B2786F1AB307D000AA605C /* TestHelpers.h */,
+				C8B278701AB307D000AA605C /* TestHelpers.m */,
+			);
+			name = TestHelpers;
+			sourceTree = "<group>";
+		};
 		DE119D3A1A997FC700FEEBCB = {
 			isa = PBXGroup;
 			children = (
@@ -740,6 +735,7 @@
 				C88871241AB0200C00256F57 /* Transactions */,
 				C88871251AB0203700256F57 /* Navigators */,
 				C800FE241AB2A4AB002B324F /* Screens */,
+				C8B278721AB307D400AA605C /* TestHelpers */,
 			);
 			path = CleanCartTests;
 			sourceTree = "<group>";
@@ -918,6 +914,8 @@
 			children = (
 				DEAE56571AAC814A00D9C3D2 /* DataSourceSpy.h */,
 				DEAE56581AAC814A00D9C3D2 /* DataSourceSpy.m */,
+				C8B2786C1AB2F45A00AA605C /* DataSourceStub.h */,
+				C8B2786D1AB2F45A00AA605C /* DataSourceStub.m */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -1211,6 +1209,7 @@
 				DEAE56231AA352CC00D9C3D2 /* ListItemsViewControllerSpy.m in Sources */,
 				DEAE566F1AADE2CC00D9C3D2 /* ItemDetailsViewControllerSpy.m in Sources */,
 				C88871391AB0385700256F57 /* CartSpy.m in Sources */,
+				C8B2786E1AB2F45A00AA605C /* DataSourceStub.m in Sources */,
 				C88871291AB020F800256F57 /* CartTests.m in Sources */,
 				C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */,
 				C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */,
@@ -1236,6 +1235,7 @@
 				C83F28691AA8A03E00E3DA7B /* ListItemsCellTest.m in Sources */,
 				C84399C81AA9926D0084C73D /* ListItemsCellDelegateSpy.m in Sources */,
 				C84399EE1AAEC2660084C73D /* ListItemNavigatorTests.m in Sources */,
+				C8B278711AB307D000AA605C /* TestHelpers.m in Sources */,
 				DEAE56411AAC2EED00D9C3D2 /* NavigatorSpy.m in Sources */,
 				DEAE56511AAC754700D9C3D2 /* SpyTransactionFactory.m in Sources */,
 				C84399CF1AAD84DE0084C73D /* ItemDetailsTransactionTests.m in Sources */,
