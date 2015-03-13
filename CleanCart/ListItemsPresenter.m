@@ -64,7 +64,7 @@
             section = [[Section alloc] init];
             sectionItems = [NSMutableArray array];
         }
-        PresentableListItem *presentableItem =  [self _createDisplayListItemFromItem:items[i]];
+        PresentableListItem *presentableItem = [[PresentableListItem alloc] initWithItem:items[i]];
         [sectionItems addObject:presentableItem];
         if (i%2!=0) {
             section.items = sectionItems;
@@ -77,16 +77,6 @@
         [sectionList addObject:section];
     }
     return sectionList;
-}
-
-- (PresentableListItem *)_createDisplayListItemFromItem:(Item *)item {
-    PresentableListItem *presentableItem = [[PresentableListItem alloc] init];
-    presentableItem.itemId = [item.itemId copy];
-    presentableItem.itemName = [item.itemName copy];
-    presentableItem.itemPrice = [NSString stringWithFormat:@"%ld", item.itemPrice];
-    presentableItem.itemStock = [NSString stringWithFormat:@"%ld", item.itemStock];
-    presentableItem.enabled = item.itemStock > 0 ? YES : NO;
-    return presentableItem;
 }
 
 #pragma mark - NumberOfItemsInCartTransaction response -

@@ -18,12 +18,7 @@
 #pragma mark - ItemDetailsTransactionResponse -
 
 - (void)presentItem:(Item *)item {
-    PresentableItemDetails *itemDetails = [[PresentableItemDetails alloc] init];
-    itemDetails.itemId = [item.itemId copy];
-    itemDetails.itemName = [item.itemName copy];
-    itemDetails.itemDescription = [item.itemDescription copy];
-    itemDetails.itemPrice = [NSString stringWithFormat:@"%ld", item.itemPrice];
-    itemDetails.itemStock = [NSString stringWithFormat:@"%ld", item.itemStock];
+    PresentableItemDetails *itemDetails = [[PresentableItemDetails alloc] initWithItem:item];
     [self.delegate presentItemDetails:itemDetails];
 }
 

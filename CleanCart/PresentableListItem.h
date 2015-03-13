@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Item.h"
 
 @interface PresentableListItem : NSObject
 
@@ -15,5 +16,7 @@
 @property (nonatomic, copy) NSString *itemPrice;
 @property (nonatomic, copy) NSString *itemStock;
 @property (nonatomic, assign) BOOL enabled;
+
+- (instancetype) initWithItem:(Item *)item;
 
 @end

@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.eventHandler fetchData];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -56,7 +55,6 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return self.displayData.count;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     Section *currentSection = self.displayData[section];

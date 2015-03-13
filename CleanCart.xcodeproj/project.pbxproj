@@ -234,6 +234,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C800FE221AB15142002B324F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C83F28491A9D928500E3DA7B /* ListItems */,
+				C84399D61AAD88A40084C73D /* ItemDetails */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		C800FE231AB2A2E6002B324F /* PresentableItemDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56761AADE67000D9C3D2 /* PresentableItemDetails.h */,
+				DEAE56771AADE67000D9C3D2 /* PresentableItemDetails.m */,
+			);
+			name = PresentableItemDetails;
+			sourceTree = "<group>";
+		};
+		C800FE241AB2A4AB002B324F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE56561AAC778800D9C3D2 /* ListItems */,
+				C84399D11AAD84F70084C73D /* ItemDetails */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
 		C83F28401A9D8E0200E3DA7B /* ListItemsTransaction */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +287,7 @@
 				DEAE567E1AADEFDF00D9C3D2 /* Presenter */,
 				C83F28441A9D924E00E3DA7B /* Transaction */,
 				DEAE563C1AAC1A5100D9C3D2 /* Navigator */,
+				C888711F1AB0185600256F57 /* DataSource */,
 			);
 			name = BaseClasses;
 			sourceTree = "<group>";
@@ -464,16 +492,6 @@
 			name = ListItemsNavigator;
 			sourceTree = "<group>";
 		};
-		C84622B01A9AE11300520FE1 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				C84622B61A9AE2EA00520FE1 /* Protocols */,
-				C888711F1AB0185600256F57 /* DataSource */,
-				C88871201AB0189C00256F57 /* JSONDataSource */,
-			);
-			name = DataSource;
-			sourceTree = "<group>";
-		};
 		C84622B31A9AE12E00520FE1 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +542,7 @@
 		C888711F1AB0185600256F57 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				C84622B61A9AE2EA00520FE1 /* Protocols */,
 				C888711C1AB0184800256F57 /* DataSource.h */,
 				C888711D1AB0184800256F57 /* DataSource.m */,
 			);
@@ -696,8 +715,7 @@
 				C88871261AB0208600256F57 /* Entities */,
 				C88871211AB01F1900256F57 /* Transactions */,
 				C88871221AB01F2D00256F57 /* Navigators */,
-				C83F28491A9D928500E3DA7B /* ListItems */,
-				C84399D61AAD88A40084C73D /* ItemDetails */,
+				C800FE221AB15142002B324F /* Screens */,
 				DE119D461A997FC700FEEBCB /* Supporting Files */,
 			);
 			path = CleanCart;
@@ -721,8 +739,7 @@
 				C88871271AB0209B00256F57 /* Entities */,
 				C88871241AB0200C00256F57 /* Transactions */,
 				C88871251AB0203700256F57 /* Navigators */,
-				DEAE56561AAC778800D9C3D2 /* ListItems */,
-				C84399D11AAD84F70084C73D /* ItemDetails */,
+				C800FE241AB2A4AB002B324F /* Screens */,
 			);
 			path = CleanCartTests;
 			sourceTree = "<group>";
@@ -927,10 +944,9 @@
 			isa = PBXGroup;
 			children = (
 				DEAE56681AADC65700D9C3D2 /* Protocols */,
+				C800FE231AB2A2E6002B324F /* PresentableItemDetails */,
 				DEAE56631AADC57500D9C3D2 /* ItemDetailsPresenter.h */,
 				DEAE56641AADC57500D9C3D2 /* ItemDetailsPresenter.m */,
-				DEAE56761AADE67000D9C3D2 /* PresentableItemDetails.h */,
-				DEAE56771AADE67000D9C3D2 /* PresentableItemDetails.m */,
 			);
 			name = ItemDetailsPresenter;
 			sourceTree = "<group>";
@@ -990,7 +1006,7 @@
 		DEAE567F1AB063CB00D9C3D2 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
-				C84622B01A9AE11300520FE1 /* DataSource */,
+				C88871201AB0189C00256F57 /* JSONDataSource */,
 			);
 			name = Gateways;
 			sourceTree = "<group>";
