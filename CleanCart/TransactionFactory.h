@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TransactionIdentifier.h"
+#import "TransactionIds.h"
 
 @class Transaction;
 

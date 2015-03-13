@@ -9,7 +9,7 @@
 #import "ListItemsPresenter.h"
 #import "Section.h"
 #import "NavigationMessage.h"
-#import "TransactionIdentifier.h"
+#import "TransactionIds.h"
 #import "PresentableListItem.h"
 #import "Item.h"
 
