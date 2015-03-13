@@ -188,7 +188,7 @@
 		DEAE56471AAC3E0300D9C3D2 /* NavigatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigatorTests.m; sourceTree = "<group>"; };
 		DEAE564A1AAC691E00D9C3D2 /* TransactionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionFactory.h; sourceTree = "<group>"; };
 		DEAE564B1AAC691E00D9C3D2 /* TransactionFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionFactory.m; sourceTree = "<group>"; };
-		DEAE564E1AAC6C2E00D9C3D2 /* TransactionIdentifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionIdentifier.h; sourceTree = "<group>"; };
+		DEAE564E1AAC6C2E00D9C3D2 /* TransactionIds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionIds.h; sourceTree = "<group>"; };
 		DEAE564F1AAC754700D9C3D2 /* SpyTransactionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpyTransactionFactory.h; sourceTree = "<group>"; };
 		DEAE56501AAC754700D9C3D2 /* SpyTransactionFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpyTransactionFactory.m; sourceTree = "<group>"; };
 		DEAE56541AAC775800D9C3D2 /* TransactionFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionFactoryTests.m; sourceTree = "<group>"; };
@@ -875,7 +875,7 @@
 		DEAE564D1AAC692600D9C3D2 /* TransactionFactory */ = {
 			isa = PBXGroup;
 			children = (
-				DEAE564E1AAC6C2E00D9C3D2 /* TransactionIdentifier.h */,
+				DEAE564E1AAC6C2E00D9C3D2 /* TransactionIds.h */,
 				DEAE564A1AAC691E00D9C3D2 /* TransactionFactory.h */,
 				DEAE564B1AAC691E00D9C3D2 /* TransactionFactory.m */,
 			);
