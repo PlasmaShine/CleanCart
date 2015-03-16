@@ -8,9 +8,8 @@
 
 #import "SpyTransactionFactory.h"
 #import "ListItemsTransactionSpy.h"
-#import "ItemDetailsTransactionSpy.h"
+#import "TransactionSpy.h"
 #import "SelectItemTransactionSpy.h"
-#import "NumberOfItemsInCartTransactionSpy.h"
 
 @implementation SpyTransactionFactory
 
@@ -21,7 +20,7 @@
             break;
         }
         case ItemDetailsTransactionId: {
-            self.currentTransaction = [[ItemDetailsTransactionSpy alloc] init];
+            self.currentTransaction = [[TransactionSpy alloc] init];
             break;
         }
         case SelectItemTransactionId: {
@@ -31,7 +30,7 @@
             break;
         }
         case NumberOfItemsInCartTransactionId: {
-            NumberOfItemsInCartTransactionSpy *transaction = [[NumberOfItemsInCartTransactionSpy alloc] init];
+            TransactionSpy *transaction = [[TransactionSpy alloc] init];
             self.currentTransaction = transaction;
             break;
         }

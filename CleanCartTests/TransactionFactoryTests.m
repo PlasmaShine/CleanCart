@@ -15,6 +15,8 @@
 #import "SelectItemTransaction.h"
 #import "NumberOfItemsInCartTransaction.h"
 #import "AddToCartTransaction.h"
+#import "CartPresenterSpy.h"
+#import "ListCartItemsTransaction.h"
 
 @interface TransactionFactoryTests : XCTestCase
 
@@ -92,6 +94,8 @@
     XCTAssertEqualObjects(transaction.delegate, caller, @"Transaction delegate should be set to the caller");
 }
 
+#pragma mark - AddToCartTransaction -
+
 - (void)testAddToCartTransactionIsProperlyConfigured {
     ListItemsPresenterSpy *caller = [[ListItemsPresenterSpy alloc] init];
     AddToCartTransaction *transaction = (AddToCartTransaction *)[self.sut createTransaction:AddToCartTransactionId forCaller:caller andParameter:@"1"];
@@ -99,6 +103,19 @@
     XCTAssertNotNil(transaction.itemRepository.dataSource, @"Data source should not be nil");
     XCTAssertNotNil(transaction.cart,@"Cart should not be nil");
     XCTAssertEqualObjects(transaction.itemId, @"1", @"Item ID should be set");
+}
+
+#pragma mark - ListItemsInCartTransaction -
+
+- (void)testCreatingListCartItemsTransactionWithoutConformingCallerThrowsException {
+    XCTAssertThrows([self.sut createTransaction:ListCartItemsTransactionId forCaller:nil andParameter:nil], @"Should have thrown exception for nonconforming caller");
+}
+
+- (void)testListCartItemsTransactionIsProperlyConfigured {
+    CartPresenterSpy *caller = [[CartPresenterSpy alloc] init];
+    ListCartItemsTransaction *transaction = (ListCartItemsTransaction *)[self.sut createTransaction: ListCartItemsTransactionId forCaller:caller andParameter:nil];
+    XCTAssertNotNil(transaction.cart,@"Cart should not be nil");
+    XCTAssertEqualObjects(transaction.delegate, caller, @"Transaction delegate should be set to the caller");
 }
 
 @end

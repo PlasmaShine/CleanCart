@@ -20,7 +20,6 @@
 		C84399CF1AAD84DE0084C73D /* ItemDetailsTransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399CE1AAD84DE0084C73D /* ItemDetailsTransactionTests.m */; };
 		C84399D41AAD88950084C73D /* ItemDetailsTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399D31AAD88950084C73D /* ItemDetailsTransaction.m */; };
 		C84399D91AAD8CFD0084C73D /* ItemRepositoryStub.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399D81AAD8CFD0084C73D /* ItemRepositoryStub.m */; };
-		C84399DC1AAE742C0084C73D /* ItemDetailsTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399DB1AAE742C0084C73D /* ItemDetailsTransactionSpy.m */; };
 		C84399E01AAE7FFD0084C73D /* SelectItemTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399DF1AAE7FFD0084C73D /* SelectItemTransaction.m */; };
 		C84399E41AAE80D10084C73D /* SelectItemTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399E31AAE80D10084C73D /* SelectItemTransactionSpy.m */; };
 		C84399E81AAE86640084C73D /* SelectItemTransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C84399E71AAE86640084C73D /* SelectItemTransactionTests.m */; };
@@ -41,6 +40,13 @@
 		C88871391AB0385700256F57 /* CartSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C88871381AB0385700256F57 /* CartSpy.m */; };
 		C8B2786E1AB2F45A00AA605C /* DataSourceStub.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2786D1AB2F45A00AA605C /* DataSourceStub.m */; };
 		C8B278711AB307D000AA605C /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B278701AB307D000AA605C /* TestHelpers.m */; };
+		C8B278741AB6B97400AA605C /* ListCartItemsTransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B278731AB6B97400AA605C /* ListCartItemsTransactionTests.m */; };
+		C8B278781AB6BB6E00AA605C /* ListCartItemsTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B278771AB6BB6E00AA605C /* ListCartItemsTransaction.m */; };
+		C8B2787C1AB6C41D00AA605C /* CartStub.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2787B1AB6C41D00AA605C /* CartStub.m */; };
+		C8B2787F1AB6C51D00AA605C /* CartPresenterSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2787E1AB6C51D00AA605C /* CartPresenterSpy.m */; };
+		C8B278841AB6C54400AA605C /* CartPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B278831AB6C54400AA605C /* CartPresenter.m */; };
+		C8B2788C1AB6CF7100AA605C /* TransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2788B1AB6CF7100AA605C /* TransactionSpy.m */; };
+		C8B278901AB6D22900AA605C /* CartPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2788F1AB6D22900AA605C /* CartPresenterTests.m */; };
 		DE119D491A997FC700FEEBCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D481A997FC700FEEBCB /* main.m */; };
 		DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D4B1A997FC700FEEBCB /* AppDelegate.m */; };
 		DE119D521A997FC700FEEBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE119D501A997FC700FEEBCB /* Main.storyboard */; };
@@ -72,10 +78,8 @@
 		DEAE56781AADE67000D9C3D2 /* PresentableItemDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56771AADE67000D9C3D2 /* PresentableItemDetails.m */; };
 		DEAE567A1AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56791AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m */; };
 		DEAE567D1AADEFDA00D9C3D2 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE567C1AADEFDA00D9C3D2 /* Presenter.m */; };
-		DEAE56851AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56841AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m */; };
 		DEAE56881AB07ACC00D9C3D2 /* AddToCartTransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE56871AB07ACC00D9C3D2 /* AddToCartTransactionTests.m */; };
 		DEAE568C1AB07B6000D9C3D2 /* AddToCartTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE568B1AB07B6000D9C3D2 /* AddToCartTransaction.m */; };
-		DEAE56901AB0841100D9C3D2 /* AddToCartTransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAE568F1AB0841100D9C3D2 /* AddToCartTransactionSpy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,8 +121,6 @@
 		C84399D31AAD88950084C73D /* ItemDetailsTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsTransaction.m; sourceTree = "<group>"; };
 		C84399D71AAD8CFD0084C73D /* ItemRepositoryStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemRepositoryStub.h; sourceTree = "<group>"; };
 		C84399D81AAD8CFD0084C73D /* ItemRepositoryStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepositoryStub.m; sourceTree = "<group>"; };
-		C84399DA1AAE742C0084C73D /* ItemDetailsTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsTransactionSpy.h; sourceTree = "<group>"; };
-		C84399DB1AAE742C0084C73D /* ItemDetailsTransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsTransactionSpy.m; sourceTree = "<group>"; };
 		C84399DE1AAE7FFD0084C73D /* SelectItemTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectItemTransaction.h; sourceTree = "<group>"; };
 		C84399DF1AAE7FFD0084C73D /* SelectItemTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectItemTransaction.m; sourceTree = "<group>"; };
 		C84399E21AAE80D10084C73D /* SelectItemTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectItemTransactionSpy.h; sourceTree = "<group>"; };
@@ -153,6 +155,19 @@
 		C8B2786D1AB2F45A00AA605C /* DataSourceStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceStub.m; sourceTree = "<group>"; };
 		C8B2786F1AB307D000AA605C /* TestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelpers.h; sourceTree = "<group>"; };
 		C8B278701AB307D000AA605C /* TestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelpers.m; sourceTree = "<group>"; };
+		C8B278731AB6B97400AA605C /* ListCartItemsTransactionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCartItemsTransactionTests.m; sourceTree = "<group>"; };
+		C8B278761AB6BB6E00AA605C /* ListCartItemsTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCartItemsTransaction.h; sourceTree = "<group>"; };
+		C8B278771AB6BB6E00AA605C /* ListCartItemsTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCartItemsTransaction.m; sourceTree = "<group>"; };
+		C8B2787A1AB6C41D00AA605C /* CartStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartStub.h; sourceTree = "<group>"; };
+		C8B2787B1AB6C41D00AA605C /* CartStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartStub.m; sourceTree = "<group>"; };
+		C8B2787D1AB6C51D00AA605C /* CartPresenterSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartPresenterSpy.h; sourceTree = "<group>"; };
+		C8B2787E1AB6C51D00AA605C /* CartPresenterSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartPresenterSpy.m; sourceTree = "<group>"; };
+		C8B278821AB6C54400AA605C /* CartPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartPresenter.h; sourceTree = "<group>"; };
+		C8B278831AB6C54400AA605C /* CartPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartPresenter.m; sourceTree = "<group>"; };
+		C8B278881AB6C63B00AA605C /* ListCartItemsTransactionIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListCartItemsTransactionIO.h; sourceTree = "<group>"; };
+		C8B2788A1AB6CF7100AA605C /* TransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionSpy.h; sourceTree = "<group>"; };
+		C8B2788B1AB6CF7100AA605C /* TransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionSpy.m; sourceTree = "<group>"; };
+		C8B2788F1AB6D22900AA605C /* CartPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartPresenterTests.m; sourceTree = "<group>"; };
 		DE119D431A997FC700FEEBCB /* CleanCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE119D471A997FC700FEEBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE119D481A997FC700FEEBCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -211,13 +226,9 @@
 		DEAE56791AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewControllerTests.m; sourceTree = "<group>"; };
 		DEAE567B1AADEFDA00D9C3D2 /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
 		DEAE567C1AADEFDA00D9C3D2 /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
-		DEAE56831AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOfItemsInCartTransactionSpy.h; sourceTree = "<group>"; };
-		DEAE56841AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOfItemsInCartTransactionSpy.m; sourceTree = "<group>"; };
 		DEAE56871AB07ACC00D9C3D2 /* AddToCartTransactionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartTransactionTests.m; sourceTree = "<group>"; };
 		DEAE568A1AB07B6000D9C3D2 /* AddToCartTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToCartTransaction.h; sourceTree = "<group>"; };
 		DEAE568B1AB07B6000D9C3D2 /* AddToCartTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartTransaction.m; sourceTree = "<group>"; };
-		DEAE568E1AB0841100D9C3D2 /* AddToCartTransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToCartTransactionSpy.h; sourceTree = "<group>"; };
-		DEAE568F1AB0841100D9C3D2 /* AddToCartTransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartTransactionSpy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +254,7 @@
 			children = (
 				C83F28491A9D928500E3DA7B /* ListItems */,
 				C84399D61AAD88A40084C73D /* ItemDetails */,
+				C8B278861AB6C55000AA605C /* Cart */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -261,6 +273,7 @@
 			children = (
 				DEAE56561AAC778800D9C3D2 /* ListItems */,
 				C84399D11AAD84F70084C73D /* ItemDetails */,
+				C8B278811AB6C52900AA605C /* Cart */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -401,7 +414,6 @@
 		C84399D01AAD84E70084C73D /* ItemDetailsTransaction */ = {
 			isa = PBXGroup;
 			children = (
-				C84399DD1AAE74300084C73D /* Mocks */,
 				C84399CE1AAD84DE0084C73D /* ItemDetailsTransactionTests.m */,
 			);
 			name = ItemDetailsTransaction;
@@ -433,15 +445,6 @@
 				DEAE56751AADE32D00D9C3D2 /* ItemDetailsViewController */,
 			);
 			name = ItemDetails;
-			sourceTree = "<group>";
-		};
-		C84399DD1AAE74300084C73D /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				C84399DA1AAE742C0084C73D /* ItemDetailsTransactionSpy.h */,
-				C84399DB1AAE742C0084C73D /* ItemDetailsTransactionSpy.m */,
-			);
-			name = Mocks;
 			sourceTree = "<group>";
 		};
 		C84399E11AAE80040084C73D /* SelectItemTransaction */ = {
@@ -552,6 +555,7 @@
 				C84399D51AAD88990084C73D /* ItemDetailsTransaction */,
 				C88871341AB0367100256F57 /* NumberOfItemsInCartTransaction */,
 				DEAE568D1AB07B6600D9C3D2 /* AddToCartTransaction */,
+				C8B278791AB6BB7300AA605C /* ListCartItems */,
 			);
 			name = Transactions;
 			sourceTree = "<group>";
@@ -577,11 +581,13 @@
 		C88871241AB0200C00256F57 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
+				C8B2788D1AB6CF7900AA605C /* Transaction */,
 				C83F28401A9D8E0200E3DA7B /* ListItemsTransaction */,
 				C84399E61AAE80DD0084C73D /* SelectItemTransaction */,
 				C84399D01AAD84E70084C73D /* ItemDetailsTransaction */,
 				C888713B1AB03E8000256F57 /* NumberOfItemsInCartTransaction */,
 				DEAE56891AB07AD000D9C3D2 /* AddToCartTransaction */,
+				C8B278751AB6B97E00AA605C /* ListCartItemsTransaction */,
 			);
 			name = Transactions;
 			sourceTree = "<group>";
@@ -654,6 +660,8 @@
 			children = (
 				C88871371AB0385700256F57 /* CartSpy.h */,
 				C88871381AB0385700256F57 /* CartSpy.m */,
+				C8B2787A1AB6C41D00AA605C /* CartStub.h */,
+				C8B2787B1AB6C41D00AA605C /* CartStub.m */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -661,7 +669,6 @@
 		C888713B1AB03E8000256F57 /* NumberOfItemsInCartTransaction */ = {
 			isa = PBXGroup;
 			children = (
-				DEAE56861AB064DC00D9C3D2 /* Mocks */,
 				C888712F1AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m */,
 			);
 			name = NumberOfItemsInCartTransaction;
@@ -674,6 +681,92 @@
 				C8B278701AB307D000AA605C /* TestHelpers.m */,
 			);
 			name = TestHelpers;
+			sourceTree = "<group>";
+		};
+		C8B278751AB6B97E00AA605C /* ListCartItemsTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278731AB6B97400AA605C /* ListCartItemsTransactionTests.m */,
+			);
+			name = ListCartItemsTransaction;
+			sourceTree = "<group>";
+		};
+		C8B278791AB6BB7300AA605C /* ListCartItems */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278891AB6C64000AA605C /* Protocols */,
+				C8B278761AB6BB6E00AA605C /* ListCartItemsTransaction.h */,
+				C8B278771AB6BB6E00AA605C /* ListCartItemsTransaction.m */,
+			);
+			name = ListCartItems;
+			sourceTree = "<group>";
+		};
+		C8B278801AB6C52100AA605C /* CartPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278871AB6C58E00AA605C /* Mocks */,
+				C8B2788F1AB6D22900AA605C /* CartPresenterTests.m */,
+			);
+			name = CartPresenter;
+			sourceTree = "<group>";
+		};
+		C8B278811AB6C52900AA605C /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278801AB6C52100AA605C /* CartPresenter */,
+			);
+			name = Cart;
+			sourceTree = "<group>";
+		};
+		C8B278851AB6C54800AA605C /* CartPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278821AB6C54400AA605C /* CartPresenter.h */,
+				C8B278831AB6C54400AA605C /* CartPresenter.m */,
+			);
+			name = CartPresenter;
+			sourceTree = "<group>";
+		};
+		C8B278861AB6C55000AA605C /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278851AB6C54800AA605C /* CartPresenter */,
+			);
+			name = Cart;
+			sourceTree = "<group>";
+		};
+		C8B278871AB6C58E00AA605C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C8B2787D1AB6C51D00AA605C /* CartPresenterSpy.h */,
+				C8B2787E1AB6C51D00AA605C /* CartPresenterSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		C8B278891AB6C64000AA605C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278881AB6C63B00AA605C /* ListCartItemsTransactionIO.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C8B2788D1AB6CF7900AA605C /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				C8B2788E1AB6CF8300AA605C /* Mocks */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
+		C8B2788E1AB6CF8300AA605C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C8B2788A1AB6CF7100AA605C /* TransactionSpy.h */,
+				C8B2788B1AB6CF7100AA605C /* TransactionSpy.m */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 		DE119D3A1A997FC700FEEBCB = {
@@ -1035,19 +1128,9 @@
 			name = Gateways;
 			sourceTree = "<group>";
 		};
-		DEAE56861AB064DC00D9C3D2 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				DEAE56831AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.h */,
-				DEAE56841AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m */,
-			);
-			name = Mocks;
-			sourceTree = "<group>";
-		};
 		DEAE56891AB07AD000D9C3D2 /* AddToCartTransaction */ = {
 			isa = PBXGroup;
 			children = (
-				DEAE56911AB0841600D9C3D2 /* Mocks */,
 				DEAE56871AB07ACC00D9C3D2 /* AddToCartTransactionTests.m */,
 			);
 			name = AddToCartTransaction;
@@ -1060,15 +1143,6 @@
 				DEAE568B1AB07B6000D9C3D2 /* AddToCartTransaction.m */,
 			);
 			name = AddToCartTransaction;
-			sourceTree = "<group>";
-		};
-		DEAE56911AB0841600D9C3D2 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				DEAE568E1AB0841100D9C3D2 /* AddToCartTransactionSpy.h */,
-				DEAE568F1AB0841100D9C3D2 /* AddToCartTransactionSpy.m */,
-			);
-			name = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1175,12 +1249,14 @@
 				DEAE565D1AAC95AC00D9C3D2 /* ListItemsCollectionCell.m in Sources */,
 				DEAE56781AADE67000D9C3D2 /* PresentableItemDetails.m in Sources */,
 				C888711E1AB0184800256F57 /* DataSource.m in Sources */,
+				C8B278781AB6BB6E00AA605C /* ListCartItemsTransaction.m in Sources */,
 				DEAE568C1AB07B6000D9C3D2 /* AddToCartTransaction.m in Sources */,
 				C84399EB1AAEBA500084C73D /* ItemDetailsNavigator.m in Sources */,
 				C84399D41AAD88950084C73D /* ItemDetailsTransaction.m in Sources */,
 				DEAE56451AAC392E00D9C3D2 /* ListItemsNavigator.m in Sources */,
 				DEAE56741AADE32900D9C3D2 /* ItemDetailsViewController.m in Sources */,
 				C83F28431A9D924A00E3DA7B /* Transaction.m in Sources */,
+				C8B278841AB6C54400AA605C /* CartPresenter.m in Sources */,
 				C83F28601AA45BD300E3DA7B /* ListItemsViewController.m in Sources */,
 				DEAE561B1A9B71B700D9C3D2 /* Item.m in Sources */,
 				C88871331AB0366A00256F57 /* NumberOfItemsInCartTransaction.m in Sources */,
@@ -1218,8 +1294,8 @@
 				DEAE566B1AADC71900D9C3D2 /* ItemDetailsPresenterTests.m in Sources */,
 				C84622AC1A9ADF1D00520FE1 /* ItemRepositoryTests.m in Sources */,
 				DEAE56551AAC775800D9C3D2 /* TransactionFactoryTests.m in Sources */,
+				C8B278901AB6D22900AA605C /* CartPresenterTests.m in Sources */,
 				C84399D91AAD8CFD0084C73D /* ItemRepositoryStub.m in Sources */,
-				DEAE56901AB0841100D9C3D2 /* AddToCartTransactionSpy.m in Sources */,
 				DEAE565C1AAC875E00D9C3D2 /* NavigatorFactoryTests.m in Sources */,
 				DEAE56601AADC54900D9C3D2 /* ItemDetailsPresenterSpy.m in Sources */,
 				DEAE562D1AAC115300D9C3D2 /* AppDelegateTests.m in Sources */,
@@ -1227,13 +1303,16 @@
 				DEAE561F1AA202EF00D9C3D2 /* ListItemsPresenterSpy.m in Sources */,
 				DEAE567A1AADE7CF00D9C3D2 /* ItemDetailsViewControllerTests.m in Sources */,
 				C88871301AB0344E00256F57 /* NumberOfItemsInCartTransactionTests.m in Sources */,
+				C8B2788C1AB6CF7100AA605C /* TransactionSpy.m in Sources */,
 				DEAE56481AAC3E0300D9C3D2 /* NavigatorTests.m in Sources */,
 				C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */,
+				C8B278741AB6B97400AA605C /* ListCartItemsTransactionTests.m in Sources */,
 				DEAE56881AB07ACC00D9C3D2 /* AddToCartTransactionTests.m in Sources */,
 				C83F285D1AA4585F00E3DA7B /* ListItemsViewControllerTests.m in Sources */,
 				C84399F21AAEC4100084C73D /* SpyNavigatorFactory.m in Sources */,
 				C83F28691AA8A03E00E3DA7B /* ListItemsCellTest.m in Sources */,
 				C84399C81AA9926D0084C73D /* ListItemsCellDelegateSpy.m in Sources */,
+				C8B2787F1AB6C51D00AA605C /* CartPresenterSpy.m in Sources */,
 				C84399EE1AAEC2660084C73D /* ListItemNavigatorTests.m in Sources */,
 				C8B278711AB307D000AA605C /* TestHelpers.m in Sources */,
 				DEAE56411AAC2EED00D9C3D2 /* NavigatorSpy.m in Sources */,
@@ -1241,8 +1320,7 @@
 				C84399CF1AAD84DE0084C73D /* ItemDetailsTransactionTests.m in Sources */,
 				C84399E41AAE80D10084C73D /* SelectItemTransactionSpy.m in Sources */,
 				C84622B21A9AE12800520FE1 /* DataSourceTests.m in Sources */,
-				DEAE56851AB064D700D9C3D2 /* NumberOfItemsInCartTransactionSpy.m in Sources */,
-				C84399DC1AAE742C0084C73D /* ItemDetailsTransactionSpy.m in Sources */,
+				C8B2787C1AB6C41D00AA605C /* CartStub.m in Sources */,
 				C84399E81AAE86640084C73D /* SelectItemTransactionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

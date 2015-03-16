@@ -11,7 +11,7 @@
 #import "ItemDetailsTransactionIO.h"
 #import "ItemDetailsViewControllerSpy.h"
 #import "SpyTransactionFactory.h"
-#import "ItemDetailsTransactionSpy.h"
+#import "TransactionSpy.h"
 
 @interface ItemDetailsPresenterTests : XCTestCase
 
@@ -66,8 +66,7 @@
     SpyTransactionFactory *spyFactory = [[SpyTransactionFactory alloc] init];
     self.sut.transactionFactory = spyFactory;
     [self.sut fetchItemToPresent];
-    XCTAssertTrue([spyFactory.currentTransaction isKindOfClass:[ItemDetailsTransaction class]]);
-    ItemDetailsTransactionSpy *transactionSpy = (ItemDetailsTransactionSpy *)spyFactory.currentTransaction;
+    TransactionSpy *transactionSpy = (TransactionSpy *)spyFactory.currentTransaction;
     XCTAssertTrue(transactionSpy.didCallExecute, @"Should have called execute on the transaction");
 }
 

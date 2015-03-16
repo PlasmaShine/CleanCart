@@ -166,7 +166,7 @@
 
 #pragma mark - Navigation message handling -
 
-- (void)testReceivingCartTappedMessagePasesItOnToTheNavigator {
+- (void)testReceivingCartTappedMessagePassesItOnToTheNavigator {
     [self.sut cartButtonTapped];
     XCTAssertEqual(self.navigatorSpy.receivedMessage, NavigationMessageShowCart, @"Should have received show cart message");
 }
@@ -179,7 +179,7 @@
     XCTAssertTrue(transaction.didCallExecute , @"Should have called execute on the transaction");
 }
 
-- (void)testReceivingItemTappedMessagePasesItOnToTheNavigator {
+- (void)testReceivingItemTappedMessagePassesItOnToTheNavigator {
     [self.sut didSelectItemWithId:@"1"];
     XCTAssertEqual(self.navigatorSpy.receivedMessage, NavigationMessageShowItemDetails, @"Should have received show item details message");
 }

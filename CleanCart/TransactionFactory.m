@@ -17,6 +17,8 @@
 #import "NumberOfItemsInCartTransactionIO.h"
 #import "NumberOfItemsInCartTransaction.h"
 #import "AddToCartTransaction.h"
+#import "ListCartItemsTransaction.h"
+#import "ListCartItemsTransactionIO.h"
 
 @interface TransactionFactory()
 
@@ -49,6 +51,8 @@
             return [self _createNumberOfItemsInCartTransactionForCaller:caller andParameter:parameter];
         case AddToCartTransactionId:
             return [self _createAddToCartTransactionForCaller:caller andParameter:parameter];
+        case ListCartItemsTransactionId:
+            return [self _createListCartItemsTransactionForCaller:caller andParameter:parameter];
         default:
             return nil;
     }
@@ -100,6 +104,17 @@
     transaction.itemRepository = self.itemRepository;
     transaction.cart = self.cart;
     transaction.itemId = (NSString *)parameter;
+    return transaction;
+}
+
+- (Transaction *)_createListCartItemsTransactionForCaller:(NSObject *)caller andParameter:(NSObject *)parameter {
+    if (![caller conformsToProtocol:@protocol(ListCartItemsTransactionResponse)]) {
+        NSException *exception = [NSException exceptionWithName:@"Invalid caller" reason:@"Caller does not conform to the ListCartItemsTransactionResponse protocol" userInfo:nil];
+        [exception raise];
+    }
+    ListCartItemsTransaction *transaction = [[ListCartItemsTransaction alloc] init];
+    transaction.cart = self.cart;
+    transaction.delegate = (id<ListCartItemsTransactionResponse>)caller;
     return transaction;
 }
 
