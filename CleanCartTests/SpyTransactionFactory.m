@@ -19,23 +19,15 @@
             self.currentTransaction = [[ListItemsTransactionSpy alloc] init];
             break;
         }
-        case ItemDetailsTransactionId: {
-            self.currentTransaction = [[TransactionSpy alloc] init];
-            break;
-        }
         case SelectItemTransactionId: {
             SelectItemTransactionSpy *transaction = [[SelectItemTransactionSpy alloc] init];
             transaction.itemId = (NSString *)parameter;
             self.currentTransaction = transaction;
             break;
         }
-        case NumberOfItemsInCartTransactionId: {
+        default:{
             TransactionSpy *transaction = [[TransactionSpy alloc] init];
             self.currentTransaction = transaction;
-            break;
-        }
-        default:{
-            self.currentTransaction = nil;
             break;
         }
     }

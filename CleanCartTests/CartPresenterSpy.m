@@ -10,7 +10,7 @@
 
 @implementation CartPresenterSpy
 
-- (void)cartItemsReceived:(NSArray *)cartItems {
+- (void)didReceiveCartItems:(NSArray *)cartItems {
     self.receivedItems = cartItems;
     self.didReceiveCartItems = YES;
 }

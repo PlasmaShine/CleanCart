@@ -12,7 +12,7 @@
 
 - (void)execute {
     NSArray *cartItems = [self.cart itemsInCart];
-    [self.delegate cartItemsReceived:cartItems];
+    [self.delegate didReceiveCartItems:cartItems];
 }
 
 @end

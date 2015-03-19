@@ -20,8 +20,8 @@
 #import "SpyTransactionFactory.h"
 #import "Item.h"
 #import "SelectItemTransactionSpy.h"
-#import "NumberOfItemsInCartTransactionSpy.h"
-#import "AddToCartTransactionSpy.h"
+#import "TransactionSpy.h"
+#import "TransactionSpy.h"
 
 @interface ListItemsPresenterTests : XCTestCase
 
@@ -146,13 +146,13 @@
 
 - (void)testViewWillAppearCallsNumberOfItemsInCartTransaction {
     [self.sut viewWillAppear];
-    NumberOfItemsInCartTransactionSpy *numberOfItemsTransactionSpy = (NumberOfItemsInCartTransactionSpy *)self.spyFactory.currentTransaction;
+    TransactionSpy *numberOfItemsTransactionSpy = (TransactionSpy *)self.spyFactory.currentTransaction;
     XCTAssertTrue(numberOfItemsTransactionSpy.didCallExecute, @"Presenter should have called execute on NumberOfItemsInCartTransaction");
 }
 
 - (void)testReceivingAddToCartCallsNumberOfItemsInCartTransaction {
     [self.sut addToCartItemWithId:nil];
-    NumberOfItemsInCartTransactionSpy *numberOfItemsTransactionSpy = (NumberOfItemsInCartTransactionSpy *)self.spyFactory.currentTransaction;
+    TransactionSpy *numberOfItemsTransactionSpy = (TransactionSpy *)self.spyFactory.currentTransaction;
     XCTAssertTrue(numberOfItemsTransactionSpy.didCallExecute, @"Presenter should have called execute on NumberOfItemsInCartTransaction");
 }
 

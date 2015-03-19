@@ -15,8 +15,8 @@
     return [super itemsInCart];
 }
 
-- (void)addItemToCart:(Item *)item {
-    [super addItemToCart:item];
+- (void)addItemToCart:(Item *)item inQuantity:(NSInteger)quantity{
+    [super addItemToCart:item inQuantity:quantity];
     self.didReceiveAddToCartMessage = YES;
     self.itemAddedToCart = item;
 }

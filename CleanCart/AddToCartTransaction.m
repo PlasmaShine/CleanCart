@@ -13,7 +13,7 @@
 - (void)execute {
     Item *item = [self.itemRepository itemForId:self.itemId];
     if (item) {
-        [self.cart addItemToCart:item];
+        [self.cart addItemToCart:item inQuantity:1];
     }
 }
 

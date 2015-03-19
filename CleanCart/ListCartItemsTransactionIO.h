@@ -8,6 +8,6 @@
 
 @protocol ListCartItemsTransactionResponse <NSObject>
 
-- (void)cartItemsReceived:(NSArray *)cartItems;
+- (void)didReceiveCartItems:(NSArray *)cartItems;
 
 @end

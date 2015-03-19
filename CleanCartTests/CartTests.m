@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "Cart.h"
 #import "Item.h"
+#import "CartItem.h"
 
 @interface CartTests : XCTestCase
 
@@ -24,7 +25,9 @@
     [super setUp];
     self.sut = [[Cart alloc] init];
     self.item1 = [[Item alloc] init];
+    self.item1.itemId = @"1";
     self.item2 = [[Item alloc] init];
+    self.item2.itemId = @"2";
 }
 
 - (void)tearDown {
@@ -37,33 +40,45 @@
 #pragma mark - Tests -
 
 - (void)testAddingOneItemToCart {
-    [self.sut addItemToCart:self.item1];
+    [self.sut addItemToCart:self.item1 inQuantity:1];
     NSArray *cartItems = [self.sut itemsInCart];
     XCTAssertEqual(cartItems.count, 1, @"There should be 1 item in the cart");
-    XCTAssertEqualObjects(cartItems[0], self.item1, @"Items should match");
+    CartItem *cartItem = cartItems[0];
+    XCTAssertEqualObjects(cartItem.item, self.item1, @"Items should match");
 }
 
 - (void)testAddingTwoItemsToCart {
-    [self.sut addItemToCart:self.item1];
-    [self.sut addItemToCart:self.item2];
+    [self.sut addItemToCart:self.item1 inQuantity:1];
+    [self.sut addItemToCart:self.item2 inQuantity:1];
     NSArray *cartItems = [self.sut itemsInCart];
     XCTAssertEqual(cartItems.count, 2, @"There should be 2 item in the cart");
-    XCTAssertTrue([cartItems containsObject:self.item1], @"Item should be in the cart");
-    XCTAssertTrue([cartItems containsObject:self.item2], @"Item should be in the cart");
+    CartItem *cartItem1 = cartItems[0];
+    CartItem *cartItem2 = cartItems[1];
+    XCTAssertEqualObjects(cartItem1.item, self.item1, @"Item should be in the cart");
+    XCTAssertEqualObjects(cartItem2.item, self.item2, @"Item should be in the cart");
 }
 
 - (void)testCanRemoveItemsFromCart {
-    [self.sut addItemToCart:self.item1];
+    [self.sut addItemToCart:self.item1 inQuantity:1];
     [self.sut removeItemFromCart:self.item1];
     NSArray *cartItems = [self.sut itemsInCart];
     XCTAssertEqual(cartItems.count, 0, @"There should only be 0 item in the cart");
 }
 
 - (void)testRemovingNonExistentItemHasNoEffect {
-    [self.sut addItemToCart:self.item1];
+    [self.sut addItemToCart:self.item1 inQuantity:1];
     [self.sut removeItemFromCart:self.item2];
     NSArray *cartItems = [self.sut itemsInCart];
     XCTAssertEqual(cartItems.count, 1, @"There should be 1 item in the cart");
+}
+
+- (void)testAddingTheSameItemTwiceIncreasesQuantity {
+    [self.sut addItemToCart:self.item1 inQuantity:1];
+    [self.sut addItemToCart:self.item1 inQuantity:1];
+    NSArray *cartItems = [self.sut itemsInCart];
+    CartItem *item = cartItems[0];
+    XCTAssertEqual(cartItems.count, 1, @"There should be only one item in the cart");
+    XCTAssertEqual(item.quantity, 2, @"Quantity of item in the cart should be 2");
 }
 
 @end

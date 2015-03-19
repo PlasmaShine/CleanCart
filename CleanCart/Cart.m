@@ -7,6 +7,7 @@
 //
 
 #import "Cart.h"
+#import "CartItem.h"
 
 @interface Cart()
 
@@ -22,8 +23,22 @@
     return self;
 }
 
-- (void)addItemToCart:(Item *)item {
-    [self.cartItems addObject:item];
+- (void)addItemToCart:(Item *)item inQuantity:(NSInteger)quantity{
+    BOOL itemFound = NO;
+    for (NSInteger i = 0; i<self.cartItems.count; i++) {
+        CartItem *currentCartItem = self.cartItems[i];
+        Item *currentItem = currentCartItem.item;
+        if([currentItem.itemId isEqualToString:item.itemId]) {
+            itemFound = YES;
+            currentCartItem.quantity++;
+        }
+    }
+    if (!itemFound) {
+        CartItem *newCartItem = [[CartItem alloc] init];
+        newCartItem.item = item;
+        newCartItem.quantity = quantity;
+        [self.cartItems addObject:newCartItem];
+    }
 }
 
 - (NSArray *)itemsInCart {
@@ -31,7 +46,17 @@
 }
 
 - (void)removeItemFromCart:(Item *)item {
-    [self.cartItems removeObject:item];
+    CartItem *cartItemToRemove = nil;
+    for (NSInteger i=0; i<self.cartItems.count; i++) {
+        CartItem *currentCartItem = self.cartItems[i];
+        if ([currentCartItem.item.itemId isEqualToString:item.itemId]) {
+            cartItemToRemove = currentCartItem;
+            break;
+        }
+    }
+    if (cartItemToRemove) {
+        [self.cartItems removeObject:cartItemToRemove];
+    }
 }
 
 @end

@@ -11,7 +11,7 @@
 
 @interface Cart : NSObject
 
-- (void)addItemToCart:(Item *)item;
+- (void)addItemToCart:(Item *)item inQuantity:(NSInteger)quantity;
 - (NSArray *)itemsInCart;
 - (void)removeItemFromCart:(Item *)itemId;
 

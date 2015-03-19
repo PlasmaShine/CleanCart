@@ -47,6 +47,10 @@
 		C8B278841AB6C54400AA605C /* CartPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B278831AB6C54400AA605C /* CartPresenter.m */; };
 		C8B2788C1AB6CF7100AA605C /* TransactionSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2788B1AB6CF7100AA605C /* TransactionSpy.m */; };
 		C8B278901AB6D22900AA605C /* CartPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2788F1AB6D22900AA605C /* CartPresenterTests.m */; };
+		C8B278951ABA9D7000AA605C /* CartViewControllerSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B278941ABA9D7000AA605C /* CartViewControllerSpy.m */; };
+		C8B2789A1ABA9E8100AA605C /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B278991ABA9E8100AA605C /* CartViewController.m */; };
+		C8B2789E1ABAA58100AA605C /* PresentableCartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2789D1ABAA58100AA605C /* PresentableCartItem.m */; };
+		C8B278A21ABAB4B300AA605C /* CartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B278A11ABAB4B300AA605C /* CartItem.m */; };
 		DE119D491A997FC700FEEBCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D481A997FC700FEEBCB /* main.m */; };
 		DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE119D4B1A997FC700FEEBCB /* AppDelegate.m */; };
 		DE119D521A997FC700FEEBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE119D501A997FC700FEEBCB /* Main.storyboard */; };
@@ -168,6 +172,15 @@
 		C8B2788A1AB6CF7100AA605C /* TransactionSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionSpy.h; sourceTree = "<group>"; };
 		C8B2788B1AB6CF7100AA605C /* TransactionSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionSpy.m; sourceTree = "<group>"; };
 		C8B2788F1AB6D22900AA605C /* CartPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartPresenterTests.m; sourceTree = "<group>"; };
+		C8B278911ABA988B00AA605C /* CartPresenterIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartPresenterIO.h; sourceTree = "<group>"; };
+		C8B278931ABA9D7000AA605C /* CartViewControllerSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewControllerSpy.h; sourceTree = "<group>"; };
+		C8B278941ABA9D7000AA605C /* CartViewControllerSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewControllerSpy.m; sourceTree = "<group>"; };
+		C8B278981ABA9E8100AA605C /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		C8B278991ABA9E8100AA605C /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
+		C8B2789C1ABAA58100AA605C /* PresentableCartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentableCartItem.h; sourceTree = "<group>"; };
+		C8B2789D1ABAA58100AA605C /* PresentableCartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentableCartItem.m; sourceTree = "<group>"; };
+		C8B278A01ABAB4B300AA605C /* CartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartItem.h; sourceTree = "<group>"; };
+		C8B278A11ABAB4B300AA605C /* CartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartItem.m; sourceTree = "<group>"; };
 		DE119D431A997FC700FEEBCB /* CleanCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE119D471A997FC700FEEBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE119D481A997FC700FEEBCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -300,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				DEAE561C1A9B71BD00D9C3D2 /* Item */,
+				C8B278A31ABAB4B700AA605C /* CartItem */,
 				DEAE563E1AAC1BDC00D9C3D2 /* Section */,
 				DEAE567E1AADEFDF00D9C3D2 /* Presenter */,
 				C83F28441A9D924E00E3DA7B /* Transaction */,
@@ -714,6 +728,7 @@
 			isa = PBXGroup;
 			children = (
 				C8B278801AB6C52100AA605C /* CartPresenter */,
+				C8B278971ABA9D7B00AA605C /* CartViewController */,
 			);
 			name = Cart;
 			sourceTree = "<group>";
@@ -721,6 +736,8 @@
 		C8B278851AB6C54800AA605C /* CartPresenter */ = {
 			isa = PBXGroup;
 			children = (
+				C8B278921ABA989700AA605C /* Protocols */,
+				C8B2789F1ABAA58700AA605C /* PresentableCartItem */,
 				C8B278821AB6C54400AA605C /* CartPresenter.h */,
 				C8B278831AB6C54400AA605C /* CartPresenter.m */,
 			);
@@ -731,6 +748,7 @@
 			isa = PBXGroup;
 			children = (
 				C8B278851AB6C54800AA605C /* CartPresenter */,
+				C8B2789B1ABA9E8700AA605C /* CartViewController */,
 			);
 			name = Cart;
 			sourceTree = "<group>";
@@ -767,6 +785,58 @@
 				C8B2788B1AB6CF7100AA605C /* TransactionSpy.m */,
 			);
 			name = Mocks;
+			sourceTree = "<group>";
+		};
+		C8B278921ABA989700AA605C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278911ABA988B00AA605C /* CartPresenterIO.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C8B278961ABA9D7500AA605C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278931ABA9D7000AA605C /* CartViewControllerSpy.h */,
+				C8B278941ABA9D7000AA605C /* CartViewControllerSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		C8B278971ABA9D7B00AA605C /* CartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278961ABA9D7500AA605C /* Mocks */,
+			);
+			name = CartViewController;
+			sourceTree = "<group>";
+		};
+		C8B2789B1ABA9E8700AA605C /* CartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278981ABA9E8100AA605C /* CartViewController.h */,
+				C8B278991ABA9E8100AA605C /* CartViewController.m */,
+			);
+			name = CartViewController;
+			sourceTree = "<group>";
+		};
+		C8B2789F1ABAA58700AA605C /* PresentableCartItem */ = {
+			isa = PBXGroup;
+			children = (
+				C8B2789C1ABAA58100AA605C /* PresentableCartItem.h */,
+				C8B2789D1ABAA58100AA605C /* PresentableCartItem.m */,
+			);
+			name = PresentableCartItem;
+			sourceTree = "<group>";
+		};
+		C8B278A31ABAB4B700AA605C /* CartItem */ = {
+			isa = PBXGroup;
+			children = (
+				C8B278A01ABAB4B300AA605C /* CartItem.h */,
+				C8B278A11ABAB4B300AA605C /* CartItem.m */,
+			);
+			name = CartItem;
 			sourceTree = "<group>";
 		};
 		DE119D3A1A997FC700FEEBCB = {
@@ -1262,6 +1332,7 @@
 				C88871331AB0366A00256F57 /* NumberOfItemsInCartTransaction.m in Sources */,
 				DEAE56651AADC57500D9C3D2 /* ItemDetailsPresenter.m in Sources */,
 				C84622AF1A9AE10D00520FE1 /* JSONDataSource.m in Sources */,
+				C8B2789A1ABA9E8100AA605C /* CartViewController.m in Sources */,
 				DEAE56361AAC176000D9C3D2 /* NavigatorFactory.m in Sources */,
 				DE119D4C1A997FC700FEEBCB /* AppDelegate.m in Sources */,
 				DEAE56281AA35A4900D9C3D2 /* PresentableListItem.m in Sources */,
@@ -1272,8 +1343,10 @@
 				C83F28571AA04CC900E3DA7B /* ListItemsPresenter.m in Sources */,
 				C888712D1AB0240900256F57 /* Cart.m in Sources */,
 				DEAE567D1AADEFDA00D9C3D2 /* Presenter.m in Sources */,
+				C8B2789E1ABAA58100AA605C /* PresentableCartItem.m in Sources */,
 				DEAE562B1AA5E7A900D9C3D2 /* Section.m in Sources */,
 				C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */,
+				C8B278A21ABAB4B300AA605C /* CartItem.m in Sources */,
 				DE119D491A997FC700FEEBCB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1286,6 +1359,7 @@
 				DEAE566F1AADE2CC00D9C3D2 /* ItemDetailsViewControllerSpy.m in Sources */,
 				C88871391AB0385700256F57 /* CartSpy.m in Sources */,
 				C8B2786E1AB2F45A00AA605C /* DataSourceStub.m in Sources */,
+				C8B278951ABA9D7000AA605C /* CartViewControllerSpy.m in Sources */,
 				C88871291AB020F800256F57 /* CartTests.m in Sources */,
 				C83F28531AA047C100E3DA7B /* ListItemsPresenterTests.m in Sources */,
 				C83F28501A9E847700E3DA7B /* ListItemsTransactionSpy.m in Sources */,

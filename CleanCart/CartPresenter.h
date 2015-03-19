@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "ListCartItemsTransactionIO.h"
+#import "CartPresenterIO.h"
+#import "Presenter.h"
 
-@interface CartPresenter : NSObject <ListCartItemsTransactionResponse>
+@interface CartPresenter : Presenter <ListCartItemsTransactionResponse, CartPresenterRequest>
 
+@property (nonatomic, weak) id<CartPresenterResponse> delegate;
 @end
