@@ -8,6 +8,8 @@
 
 #import "Cart.h"
 #import "CartItem.h"
+#import "ErrorCodes.h"
+#import "ErrorDomains.h"
 
 @interface Cart()
 
@@ -24,21 +26,38 @@
 }
 
 - (void)addItemToCart:(Item *)item inQuantity:(NSInteger)quantity{
-    BOOL itemFound = NO;
+    CartItem *cartItem = [self _findCartItemById:item.itemId];
+    BOOL isError = NO;
+    if (cartItem ) {
+        if (cartItem.quantity + quantity <=cartItem.item.itemStock) {
+            cartItem.quantity+=quantity;
+        } else {
+            isError = YES;
+        }
+    } else {
+        if (quantity <= item.itemStock) {
+            cartItem = [[CartItem alloc] init];
+            cartItem.item = item;
+            cartItem.quantity = quantity;
+            [self.cartItems addObject:cartItem];
+        } else {
+            isError = YES;
+        }
+    }
+    if (isError) {
+        [self.errorManager pushErrorWithDomain:CartErrorDomain andCode:QuantityExceedsStockErrorCode];
+    }
+}
+
+- (CartItem *)_findCartItemById:(NSString *)itemId {
     for (NSInteger i = 0; i<self.cartItems.count; i++) {
         CartItem *currentCartItem = self.cartItems[i];
         Item *currentItem = currentCartItem.item;
-        if([currentItem.itemId isEqualToString:item.itemId]) {
-            itemFound = YES;
-            currentCartItem.quantity++;
+        if([currentItem.itemId isEqualToString:itemId]) {
+            return currentCartItem;
         }
     }
-    if (!itemFound) {
-        CartItem *newCartItem = [[CartItem alloc] init];
-        newCartItem.item = item;
-        newCartItem.quantity = quantity;
-        [self.cartItems addObject:newCartItem];
-    }
+    return nil;
 }
 
 - (NSArray *)itemsInCart {

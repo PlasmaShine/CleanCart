@@ -32,6 +32,9 @@
 		C84622B91A9AECC200520FE1 /* ItemRepositorySpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622B81A9AECC200520FE1 /* ItemRepositorySpy.m */; };
 		C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = C84622BC1A9AECFB00520FE1 /* ItemRepository.m */; };
 		C84622C01A9AED8100520FE1 /* ItemList.json in Resources */ = {isa = PBXBuildFile; fileRef = C84622BF1A9AED8100520FE1 /* ItemList.json */; };
+		C86106261AC126AE00AC8AA7 /* ErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C86106251AC126AE00AC8AA7 /* ErrorManager.m */; };
+		C86106301AC1273200AC8AA7 /* ErrorManagerSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = C861062F1AC1273200AC8AA7 /* ErrorManagerSpy.m */; };
+		C86106331AC127B600AC8AA7 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = C86106321AC127B600AC8AA7 /* Entity.m */; };
 		C888711E1AB0184800256F57 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C888711D1AB0184800256F57 /* DataSource.m */; };
 		C88871291AB020F800256F57 /* CartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C88871281AB020F800256F57 /* CartTests.m */; };
 		C888712D1AB0240900256F57 /* Cart.m in Sources */ = {isa = PBXBuildFile; fileRef = C888712C1AB0240900256F57 /* Cart.m */; };
@@ -144,6 +147,15 @@
 		C84622BB1A9AECFB00520FE1 /* ItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemRepository.h; sourceTree = "<group>"; };
 		C84622BC1A9AECFB00520FE1 /* ItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemRepository.m; sourceTree = "<group>"; };
 		C84622BF1A9AED8100520FE1 /* ItemList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ItemList.json; sourceTree = "<group>"; };
+		C86106241AC126AE00AC8AA7 /* ErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorManager.h; sourceTree = "<group>"; };
+		C86106251AC126AE00AC8AA7 /* ErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorManager.m; sourceTree = "<group>"; };
+		C861062E1AC1273200AC8AA7 /* ErrorManagerSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorManagerSpy.h; sourceTree = "<group>"; };
+		C861062F1AC1273200AC8AA7 /* ErrorManagerSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorManagerSpy.m; sourceTree = "<group>"; };
+		C86106311AC127B600AC8AA7 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		C86106321AC127B600AC8AA7 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		C86106361AC1281900AC8AA7 /* ErrorManagerIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorManagerIO.h; sourceTree = "<group>"; };
+		C86106371AC12F7F00AC8AA7 /* ErrorCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorCodes.h; sourceTree = "<group>"; };
+		C86106381AC1313700AC8AA7 /* ErrorDomains.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorDomains.h; sourceTree = "<group>"; };
 		C888711C1AB0184800256F57 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		C888711D1AB0184800256F57 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		C88871281AB020F800256F57 /* CartTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTests.m; sourceTree = "<group>"; };
@@ -303,6 +315,7 @@
 		C83F28441A9D924E00E3DA7B /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE564E1AAC6C2E00D9C3D2 /* TransactionIds.h */,
 				C83F28411A9D924A00E3DA7B /* Transaction.h */,
 				C83F28421A9D924A00E3DA7B /* Transaction.m */,
 			);
@@ -312,13 +325,15 @@
 		C83F28451A9D925600E3DA7B /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				C86106341AC127BC00AC8AA7 /* Entity */,
+				DEAE567E1AADEFDF00D9C3D2 /* Presenter */,
 				DEAE561C1A9B71BD00D9C3D2 /* Item */,
 				C8B278A31ABAB4B700AA605C /* CartItem */,
 				DEAE563E1AAC1BDC00D9C3D2 /* Section */,
-				DEAE567E1AADEFDF00D9C3D2 /* Presenter */,
 				C83F28441A9D924E00E3DA7B /* Transaction */,
 				DEAE563C1AAC1A5100D9C3D2 /* Navigator */,
 				C888711F1AB0185600256F57 /* DataSource */,
+				C86106271AC126B300AC8AA7 /* ErrorManager */,
 			);
 			name = BaseClasses;
 			sourceTree = "<group>";
@@ -543,6 +558,52 @@
 			name = ItemRepository;
 			sourceTree = "<group>";
 		};
+		C86106271AC126B300AC8AA7 /* ErrorManager */ = {
+			isa = PBXGroup;
+			children = (
+				C86106351AC1280100AC8AA7 /* Protocols */,
+				C86106371AC12F7F00AC8AA7 /* ErrorCodes.h */,
+				C86106381AC1313700AC8AA7 /* ErrorDomains.h */,
+				C86106241AC126AE00AC8AA7 /* ErrorManager.h */,
+				C86106251AC126AE00AC8AA7 /* ErrorManager.m */,
+			);
+			name = ErrorManager;
+			sourceTree = "<group>";
+		};
+		C861062C1AC1270100AC8AA7 /* ErrorManager */ = {
+			isa = PBXGroup;
+			children = (
+				C861062D1AC1272200AC8AA7 /* Mocks */,
+			);
+			name = ErrorManager;
+			sourceTree = "<group>";
+		};
+		C861062D1AC1272200AC8AA7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C861062E1AC1273200AC8AA7 /* ErrorManagerSpy.h */,
+				C861062F1AC1273200AC8AA7 /* ErrorManagerSpy.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		C86106341AC127BC00AC8AA7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C86106311AC127B600AC8AA7 /* Entity.h */,
+				C86106321AC127B600AC8AA7 /* Entity.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		C86106351AC1280100AC8AA7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C86106361AC1281900AC8AA7 /* ErrorManagerIO.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		C888711F1AB0185600256F57 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,7 +630,7 @@
 				C84399D51AAD88990084C73D /* ItemDetailsTransaction */,
 				C88871341AB0367100256F57 /* NumberOfItemsInCartTransaction */,
 				DEAE568D1AB07B6600D9C3D2 /* AddToCartTransaction */,
-				C8B278791AB6BB7300AA605C /* ListCartItems */,
+				C8B278791AB6BB7300AA605C /* ListCartItemsTransaction */,
 			);
 			name = Transactions;
 			sourceTree = "<group>";
@@ -627,6 +688,7 @@
 		C88871271AB0209B00256F57 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				C861062C1AC1270100AC8AA7 /* ErrorManager */,
 				C84622B41A9AE13A00520FE1 /* ItemRepository */,
 				C888712A1AB0238900256F57 /* Cart */,
 			);
@@ -705,14 +767,14 @@
 			name = ListCartItemsTransaction;
 			sourceTree = "<group>";
 		};
-		C8B278791AB6BB7300AA605C /* ListCartItems */ = {
+		C8B278791AB6BB7300AA605C /* ListCartItemsTransaction */ = {
 			isa = PBXGroup;
 			children = (
 				C8B278891AB6C64000AA605C /* Protocols */,
 				C8B278761AB6BB6E00AA605C /* ListCartItemsTransaction.h */,
 				C8B278771AB6BB6E00AA605C /* ListCartItemsTransaction.m */,
 			);
-			name = ListCartItems;
+			name = ListCartItemsTransaction;
 			sourceTree = "<group>";
 		};
 		C8B278801AB6C52100AA605C /* CartPresenter */ = {
@@ -983,7 +1045,6 @@
 		DEAE56371AAC176500D9C3D2 /* NavigatorFactory */ = {
 			isa = PBXGroup;
 			children = (
-				DEAE56381AAC183600D9C3D2 /* NavigationMessage.h */,
 				DEAE56341AAC176000D9C3D2 /* NavigatorFactory.h */,
 				DEAE56351AAC176000D9C3D2 /* NavigatorFactory.m */,
 			);
@@ -993,6 +1054,7 @@
 		DEAE563C1AAC1A5100D9C3D2 /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE56381AAC183600D9C3D2 /* NavigationMessage.h */,
 				DEAE56391AAC1A4C00D9C3D2 /* Navigator.h */,
 				DEAE563A1AAC1A4C00D9C3D2 /* Navigator.m */,
 			);
@@ -1038,7 +1100,6 @@
 		DEAE564D1AAC692600D9C3D2 /* TransactionFactory */ = {
 			isa = PBXGroup;
 			children = (
-				DEAE564E1AAC6C2E00D9C3D2 /* TransactionIds.h */,
 				DEAE564A1AAC691E00D9C3D2 /* TransactionFactory.h */,
 				DEAE564B1AAC691E00D9C3D2 /* TransactionFactory.m */,
 			);
@@ -1345,6 +1406,8 @@
 				DEAE567D1AADEFDA00D9C3D2 /* Presenter.m in Sources */,
 				C8B2789E1ABAA58100AA605C /* PresentableCartItem.m in Sources */,
 				DEAE562B1AA5E7A900D9C3D2 /* Section.m in Sources */,
+				C86106261AC126AE00AC8AA7 /* ErrorManager.m in Sources */,
+				C86106331AC127B600AC8AA7 /* Entity.m in Sources */,
 				C84622BD1A9AECFB00520FE1 /* ItemRepository.m in Sources */,
 				C8B278A21ABAB4B300AA605C /* CartItem.m in Sources */,
 				DE119D491A997FC700FEEBCB /* main.m in Sources */,
@@ -1388,6 +1451,7 @@
 				C84399C81AA9926D0084C73D /* ListItemsCellDelegateSpy.m in Sources */,
 				C8B2787F1AB6C51D00AA605C /* CartPresenterSpy.m in Sources */,
 				C84399EE1AAEC2660084C73D /* ListItemNavigatorTests.m in Sources */,
+				C86106301AC1273200AC8AA7 /* ErrorManagerSpy.m in Sources */,
 				C8B278711AB307D000AA605C /* TestHelpers.m in Sources */,
 				DEAE56411AAC2EED00D9C3D2 /* NavigatorSpy.m in Sources */,
 				DEAE56511AAC754700D9C3D2 /* SpyTransactionFactory.m in Sources */,

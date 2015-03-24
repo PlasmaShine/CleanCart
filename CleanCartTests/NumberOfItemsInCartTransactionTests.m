@@ -43,9 +43,11 @@
 
 - (void)testCallingExecuteSendsNumberToDelegate {
     Item *item = [[Item alloc] init];
-    [self.cartSpy addItemToCart:item inQuantity:1];
+    item.itemStock = 2;
+    [self.cartSpy addItemToCart:item inQuantity:2];
     [self.sut execute];
     XCTAssertTrue(self.presenterSpy.didReceiveNumberOfItemsInCart, @"Should have received number of items in cart");
-    XCTAssertEqual(self.presenterSpy.numberOfItemsInCart,1, @"There should be 1 item in the cart");
+    XCTAssertEqual(self.presenterSpy.numberOfItemsInCart,2, @"There should be 2 item in the cart");
 }
+
 @end

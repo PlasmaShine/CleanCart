@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Item.h"
+#import "Entity.h"
 
-@interface Cart : NSObject
+@interface Cart : Entity
 
 - (void)addItemToCart:(Item *)item inQuantity:(NSInteger)quantity;
 - (NSArray *)itemsInCart;
