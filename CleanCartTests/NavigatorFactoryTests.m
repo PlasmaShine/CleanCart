@@ -9,7 +9,6 @@
 #import <XCTest/XCTest.h>
 #import "NavigatorFactory.h"
 #import "NavigationMessage.h"
-#import "ListItemsNavigator.h"
 #import "ListItemsViewController.h"
 #import "ListItemsPresenter.h"
 #import "ItemDetailsViewController.h"
@@ -35,7 +34,7 @@
 #pragma mark - Tests -
 
 - (void)testListItemsNavigatorIsCorrectlySetUp {
-    ListItemsNavigator *navigator = (ListItemsNavigator *)[self.sut navigatorForMessage:NavigationMessageRoot];
+    Navigator *navigator = [self.sut navigatorForMessage:NavigationMessageRoot];
     UINavigationController *navController = (UINavigationController *)navigator.rootViewController;
     ListItemsViewController *listItemsVc = (ListItemsViewController *)navController.viewControllers[0];
     ListItemsPresenter *presenter = (ListItemsPresenter *)listItemsVc.eventHandler;
@@ -50,7 +49,7 @@
 }
 
 - (void)testShowItemDetailsIsCorrectlySetUp {
-    ListItemsNavigator *navigator = (ListItemsNavigator *)[self.sut navigatorForMessage:NavigationMessageShowItemDetails];
+    Navigator *navigator = [self.sut navigatorForMessage:NavigationMessageShowItemDetails];
      ItemDetailsViewController *viewController = (ItemDetailsViewController *)navigator.rootViewController;
     ItemDetailsPresenter *presenter = (ItemDetailsPresenter *)viewController.eventHandler;
     XCTAssertNotNil(navigator.navigatorFactory, @"Navigator factory should not be nil");

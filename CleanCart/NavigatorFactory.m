@@ -9,17 +9,16 @@
 #import "NavigatorFactory.h"
 #import "ListItemsViewController.h"
 #import "ListItemsPresenter.h"
-#import "ListItemsNavigator.h"
 #import "TransactionFactory.h"
 #import "ItemDetailsViewController.h"
 #import "ItemDetailsViewController.h"
 #import "ItemDetailsPresenter.h"
-#import "ItemDetailsNavigator.h"
 
 @interface NavigatorFactory()
 
 @property (nonatomic, strong) TransactionFactory *transactionFactory;
 @property (nonatomic, strong) UIStoryboard *mainStoryboard;
+
 @end
 
 @implementation NavigatorFactory
@@ -45,20 +44,26 @@
     }
 }
 
+#pragma mark - Presenter Common Setup -
+
+- (void)_setupCommonFeaturesForPresenter:(Presenter *)presenter withViewController: (UIViewController *)vc {
+    Navigator *navigator = [[Navigator alloc] init];
+    navigator.navigatorFactory = self;
+    navigator.rootViewController = vc;
+    presenter.navigator = navigator;
+    presenter.transactionFactory = self.transactionFactory;
+}
+
 #pragma mark - ListItems -
 
 - (Navigator *)_createListItemsStack {
     UINavigationController *navigationController = [self.mainStoryboard instantiateInitialViewController];
     ListItemsViewController *listItemsVc = navigationController.viewControllers[0];
     ListItemsPresenter *listPresenter = [[ListItemsPresenter alloc] init];
-    ListItemsNavigator *listNavigator = [[ListItemsNavigator alloc] init];
-    listNavigator.navigatorFactory = self;
-    listNavigator.rootViewController = navigationController;
+    [self _setupCommonFeaturesForPresenter:listPresenter withViewController:navigationController];
     listItemsVc.eventHandler = listPresenter;
-    listPresenter.transactionFactory = self.transactionFactory;
     listPresenter.delegate = listItemsVc;
-    listPresenter.navigator = listNavigator;
-    return listNavigator;
+    return listPresenter.navigator;
 }
 
 #pragma mark - ItemDetails -
@@ -66,14 +71,10 @@
 - (Navigator *)_createItemDetailsStack {
     ItemDetailsViewController *itemDetailsController = [self.mainStoryboard instantiateViewControllerWithIdentifier:@"ItemDetailsViewController"];
     ItemDetailsPresenter *itemDetailsPresenter = [[ItemDetailsPresenter alloc] init];
-    ItemDetailsNavigator *itemDetailsNavigator = [[ItemDetailsNavigator alloc] init];
-    itemDetailsNavigator.navigatorFactory = self;
-    itemDetailsNavigator.rootViewController = itemDetailsController;
+    [self _setupCommonFeaturesForPresenter:itemDetailsPresenter withViewController:itemDetailsController];
     itemDetailsController.eventHandler = itemDetailsPresenter;
-    itemDetailsPresenter.transactionFactory = self.transactionFactory;
     itemDetailsPresenter.delegate = itemDetailsController;
-    itemDetailsPresenter.navigator = itemDetailsNavigator;
-    return itemDetailsNavigator;
+    return itemDetailsPresenter.navigator;
 }
 
 @end

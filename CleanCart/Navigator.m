@@ -16,6 +16,12 @@
 }
 
 - (void)presentViewFromViewController:(UIViewController *)fromViewController {
+    if ([fromViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navController = (UINavigationController *)fromViewController;
+        [navController pushViewController:self.rootViewController animated:YES];
+    } else {
+        [fromViewController presentViewController:self.rootViewController animated:YES completion:nil];
+    }
 }
 
 @end
